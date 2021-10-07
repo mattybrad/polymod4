@@ -1,0 +1,126 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 74xx:74HC595 U?
+U 1 1 615AF7FD
+P 4300 2950
+F 0 "U?" H 4300 3731 50  0000 C CNN
+F 1 "74HC595" H 4300 3640 50  0000 C CNN
+F 2 "" H 4300 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 4300 2950 50  0001 C CNN
+	1    4300 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS165 U?
+U 1 1 615B125D
+P 6650 3100
+F 0 "U?" H 6650 4181 50  0000 C CNN
+F 1 "74LS165" H 6650 4090 50  0000 C CNN
+F 2 "" H 6650 3100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS165" H 6650 3100 50  0001 C CNN
+	1    6650 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 615D706D
+P 5200 2550
+F 0 "R?" V 4993 2550 50  0000 C CNN
+F 1 "10K" V 5084 2550 50  0000 C CNN
+F 2 "" V 5130 2550 50  0001 C CNN
+F 3 "~" H 5200 2550 50  0001 C CNN
+	1    5200 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 615D78F3
+P 5200 2850
+F 0 "R?" V 4993 2850 50  0000 C CNN
+F 1 "10K" V 5084 2850 50  0000 C CNN
+F 2 "" V 5130 2850 50  0001 C CNN
+F 3 "~" H 5200 2850 50  0001 C CNN
+	1    5200 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 615D8119
+P 5200 3150
+F 0 "R?" V 4993 3150 50  0000 C CNN
+F 1 "10K" V 5084 3150 50  0000 C CNN
+F 2 "" V 5130 3150 50  0001 C CNN
+F 3 "~" H 5200 3150 50  0001 C CNN
+	1    5200 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 615D8368
+P 5200 3450
+F 0 "R?" V 4993 3450 50  0000 C CNN
+F 1 "10K" V 5084 3450 50  0000 C CNN
+F 2 "" V 5130 3450 50  0001 C CNN
+F 3 "~" H 5200 3450 50  0001 C CNN
+	1    5200 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 615D8665
+P 5200 3750
+F 0 "R?" V 4993 3750 50  0000 C CNN
+F 1 "10K" V 5084 3750 50  0000 C CNN
+F 2 "" V 5130 3750 50  0001 C CNN
+F 3 "~" H 5200 3750 50  0001 C CNN
+	1    5200 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 615D8B2D
+P 5200 4050
+F 0 "R?" V 4993 4050 50  0000 C CNN
+F 1 "10K" V 5084 4050 50  0000 C CNN
+F 2 "" V 5130 4050 50  0001 C CNN
+F 3 "~" H 5200 4050 50  0001 C CNN
+	1    5200 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 615D8EE6
+P 5200 4350
+F 0 "R?" V 4993 4350 50  0000 C CNN
+F 1 "10K" V 5084 4350 50  0000 C CNN
+F 2 "" V 5130 4350 50  0001 C CNN
+F 3 "~" H 5200 4350 50  0001 C CNN
+	1    5200 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 615D9404
+P 5200 4650
+F 0 "R?" V 4993 4650 50  0000 C CNN
+F 1 "10K" V 5084 4650 50  0000 C CNN
+F 2 "" V 5130 4650 50  0001 C CNN
+F 3 "~" H 5200 4650 50  0001 C CNN
+	1    5200 4650
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC
