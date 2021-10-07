@@ -1,0 +1,12 @@
+Pins required to connect microcontroller (Teensy, Arduino, etc) to patchbay board:
+
+(IN ORDER, TOP TO BOTTOM)
+VCC (3.3V/5V)
+Output data (arduino 2)
+Output clock (arduino 3, etc)
+Output latch
+Input load
+Input clock
+Input clock enable
+Input data (...arduino 8)
+GND
