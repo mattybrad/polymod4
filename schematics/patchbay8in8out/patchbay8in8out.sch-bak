@@ -393,4 +393,11 @@ Wire Wire Line
 	3300 5000 3300 3250
 Wire Wire Line
 	3300 3250 2550 3250
+NoConn ~ 8350 2600
+NoConn ~ 7350 2500
+NoConn ~ 4700 3450
+Text Notes 4800 2250 0    50   ~ 0
+maybe diodes instead?
+Text Notes 6600 2300 0    50   ~ 0
+oops forgot need pull-down resistors
 $EndSCHEMATC
