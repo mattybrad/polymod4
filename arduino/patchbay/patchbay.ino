@@ -3,12 +3,28 @@
 Patchbay p;
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
   p.setPins(2,3,4,5,6,7,8);
+  p.setCallbacks(handleConnection, handleDisconnection);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   p.update();
+  
+  // handle any connections or disconnections
+  
+}
+
+void handleConnection(unsigned int outNum, unsigned int inNum) {
+  Serial.print("con ");
+  Serial.print(outNum);
+  Serial.print("---");
+  Serial.println(inNum);
+}
+
+void handleDisconnection(unsigned int outNum, unsigned int inNum) {
+  Serial.print("dis ");
+  Serial.print(outNum);
+  Serial.print("-x-");
+  Serial.println(inNum);
 }
