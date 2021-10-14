@@ -5,7 +5,7 @@
 
 /* How many shift register chips are daisy-chained.
 */
-#define NUMBER_OF_SHIFT_CHIPS   1
+#define NUMBER_OF_SHIFT_CHIPS   2
 
 /* Width of data (how many ext lines).
 */
@@ -43,10 +43,10 @@ void Patchbay::setPins(int outData, int outClock, int outLatch, int inLoad, int 
   _ready = true;
 }
 
-void Patchbay::setCallbacks(ConnectionCallback a, ConnectionCallback b)
+void Patchbay::setCallbacks(ConnectionCallback connectionCallback, ConnectionCallback disconnectionCallback)
 {
-  _connectionCallback = a;
-  _disconnectionCallback = b;
+  _connectionCallback = connectionCallback;
+  _disconnectionCallback = disconnectionCallback;
 }
 
 void Patchbay::update()
@@ -57,27 +57,53 @@ void Patchbay::update()
 
       // ADD MORE COMMENTS HERE, THIS WILL MAKE NO SENSE TO ANYONE
 
-      // calculate byte value to send (currently using just one byte because we're outputting to just one 8-bit shift register)
-      // byte is made up of bits from the 8 channel numbers
-      // this is hard to explain...
-      byte b = B00000000;
-      for(int j=0; j<8; j++) {
-        // for each channel number
-        bitWrite(b, j, bitRead(j+1, _bitPosition));
+      byte b[_numOutputRegisters];
+      for(int i=0; i<_numOutputRegisters; i++) {
+        b[i] = B00000000;
+        for(int j=0; j<8; j++) {
+          // for each channel number
+          bitWrite(b[i], j, bitRead(j+1+8*i, _bitPosition));
+        }
       }
-  
-      // shift out byte b
-      digitalWrite(_pinOutLatch, LOW);
-      shiftOut(_pinOutData, _pinOutClock, MSBFIRST, b);
-      digitalWrite(_pinOutLatch, HIGH);
+      for(int i=0; i<_numOutputRegisters; i++) {
+        // shift out byte b[i]
+        digitalWrite(_pinOutLatch, LOW);
+        shiftOut(_pinOutData, _pinOutClock, MSBFIRST, b[_numOutputRegisters-i-1]);
+        digitalWrite(_pinOutLatch, HIGH);
+      }
+
       delayMicroseconds(100); // could maybe eliminate or reduce this? shouldn't have blocking delay if possible
   
       // shift in read from shift out
-      byte testByte = _read_shift_regs();
-      for(int j=0; j<8; j++) {
+      //byte testByte = _read_shift_regs();
+
+      byte bb[_numInputRegisters];
+      digitalWrite(_pinInClockEnable, HIGH);
+      digitalWrite(_pinInLoad, LOW);
+      delayMicroseconds(PULSE_WIDTH_USEC);
+      digitalWrite(_pinInLoad, HIGH);
+      digitalWrite(_pinInClockEnable, LOW);
+      for(int i=0; i<_numInputRegisters; i++) {
+        bb[i] = B00000000;
+
+        for(int j=0; j<8; j++) {
+          bool thisBit = digitalRead(_pinInData);
+          bitWrite(bb[i], 7-j, thisBit);
+
+          digitalWrite(_pinInClock, HIGH);
+          delayMicroseconds(PULSE_WIDTH_USEC);
+          digitalWrite(_pinInClock, LOW);
+        }
+      }
+
+      for(int j=0; j<16; j++) {
         // for each channel number
-        bitWrite(_inBytes[j], _bitPosition, bitRead(testByte, j));
+        byte test = j/8;
+        bitWrite(_inBytes[j], _bitPosition, bitRead(bb[j/8], j%8));
         if(_bitPosition==7) {
+          //Serial.print(j);
+          //Serial.print(" ");
+          //Serial.println(_inBytes[j]);
           if(_prevInBytes[j] != _inBytes[j]) {
             _stableCycles[j] = 0;
           } else if(_stableCycles[j]<3) {
@@ -86,13 +112,13 @@ void Patchbay::update()
           if(_stableCycles[j]==2) {
             if(_inBytes[j]) {
               // connection
-              if(_inBytes[j]-1 != _stableBytes[j]) {
+              if(_inBytes[j] != _stableBytes[j]) {
                 _connectionCallback(_inBytes[j]-1,j);
-                _stableBytes[j] = _inBytes[j]-1;
+                _stableBytes[j] = _inBytes[j];
               }
             } else {
               if(_stableBytes[j] != 0) {
-                _disconnectionCallback(_stableBytes[j],j);
+                _disconnectionCallback(_stableBytes[j]-1,j);
                 _stableBytes[j] = 0;
               }
             }

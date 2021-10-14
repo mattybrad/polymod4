@@ -10,13 +10,15 @@ class Patchbay
   public:
     Patchbay();
     void setPins(int outData, int outClock, int outLatch, int inLoad, int inClock, int inClockEnable, int inData);
-    void setCallbacks(ConnectionCallback a, ConnectionCallback b);
+    void setCallbacks(ConnectionCallback connectionCallback, ConnectionCallback disconnectionCallback);
     void update();
   private:
     ConnectionCallback _connectionCallback;
     ConnectionCallback _disconnectionCallback;
     unsigned int _read_shift_regs();
     bool _ready = false;
+    unsigned int _numOutputRegisters = 2;
+    unsigned int _numInputRegisters = 2;
     int _pinOutData;
     int _pinOutClock;
     int _pinOutLatch;
@@ -26,13 +28,11 @@ class Patchbay
     int _pinInData; 
     unsigned int _updateDelay = 1; // ms
     unsigned long _nextUpdate = 0; // millis, overflows after 50 days
-    unsigned int _numOutputRegisters = 1; // not yet implemented
-    unsigned int _numInputRegisters = 1; // not yet implemented
     unsigned int _bitPosition;
-    byte _inBytes[8];
-    byte _prevInBytes[8];
-    byte _stableCycles[8];
-    byte _stableBytes[8];
+    byte _inBytes[16];
+    byte _prevInBytes[16];
+    byte _stableCycles[16];
+    byte _stableBytes[16];
 };
 
 #endif
