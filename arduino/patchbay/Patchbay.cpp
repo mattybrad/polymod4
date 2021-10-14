@@ -1,24 +1,6 @@
 #include "Arduino.h"
 #include "Patchbay.h"
 
-// this stuff below is copy-pasted, clean up later...
-
-/* How many shift register chips are daisy-chained.
-*/
-#define NUMBER_OF_SHIFT_CHIPS   2
-
-/* Width of data (how many ext lines).
-*/
-#define DATA_WIDTH   NUMBER_OF_SHIFT_CHIPS * 8
-
-/* Width of pulse to trigger the shift register to read and latch.
-*/
-#define PULSE_WIDTH_USEC   5
-
-/* Optional delay between shift register reads.
-*/
-#define POLL_DELAY_MSEC   1
-
 Patchbay::Patchbay()
 {
   
@@ -57,112 +39,72 @@ void Patchbay::update()
 
       // ADD MORE COMMENTS HERE, THIS WILL MAKE NO SENSE TO ANYONE
 
-      byte b[_numOutputRegisters];
+      byte b_send[_numOutputRegisters];
       for(int i=0; i<_numOutputRegisters; i++) {
-        b[i] = B00000000;
+        b_send[i] = B00000000;
         for(int j=0; j<8; j++) {
           // for each channel number
-          bitWrite(b[i], j, bitRead(j+1+8*i, _bitPosition));
+          bitWrite(b_send[i], j, bitRead(j+1+8*i, _bitPosition));
         }
       }
       for(int i=0; i<_numOutputRegisters; i++) {
         // shift out byte b[i]
         digitalWrite(_pinOutLatch, LOW);
-        shiftOut(_pinOutData, _pinOutClock, MSBFIRST, b[_numOutputRegisters-i-1]);
+        shiftOut(_pinOutData, _pinOutClock, MSBFIRST, b_send[_numOutputRegisters-i-1]);
         digitalWrite(_pinOutLatch, HIGH);
       }
 
       delayMicroseconds(100); // could maybe eliminate or reduce this? shouldn't have blocking delay if possible
   
       // shift in read from shift out
-      //byte testByte = _read_shift_regs();
 
-      byte bb[_numInputRegisters];
+      byte b_recv[_numInputRegisters];
       digitalWrite(_pinInClockEnable, HIGH);
       digitalWrite(_pinInLoad, LOW);
-      delayMicroseconds(PULSE_WIDTH_USEC);
+      delayMicroseconds(5);
       digitalWrite(_pinInLoad, HIGH);
       digitalWrite(_pinInClockEnable, LOW);
       for(int i=0; i<_numInputRegisters; i++) {
-        bb[i] = B00000000;
+        b_recv[i] = B00000000;
 
         for(int j=0; j<8; j++) {
           bool thisBit = digitalRead(_pinInData);
-          bitWrite(bb[i], 7-j, thisBit);
+          bitWrite(b_recv[i], 7-j, thisBit);
 
           digitalWrite(_pinInClock, HIGH);
-          delayMicroseconds(PULSE_WIDTH_USEC);
+          delayMicroseconds(5);
           digitalWrite(_pinInClock, LOW);
         }
       }
 
-      for(int j=0; j<16; j++) {
+      for(int i=0; i<16; i++) {
         // for each channel number
-        byte test = j/8;
-        bitWrite(_inBytes[j], _bitPosition, bitRead(bb[j/8], j%8));
+        bitWrite(_inBytes[i], _bitPosition, bitRead(b_recv[i/8], i%8));
         if(_bitPosition==7) {
-          //Serial.print(j);
-          //Serial.print(" ");
-          //Serial.println(_inBytes[j]);
-          if(_prevInBytes[j] != _inBytes[j]) {
-            _stableCycles[j] = 0;
-          } else if(_stableCycles[j]<3) {
-            _stableCycles[j] ++;
+          if(_prevInBytes[i] != _inBytes[i]) {
+            _stableCycles[i] = 0;
+          } else if(_stableCycles[i]<3) {
+            _stableCycles[i] ++;
           }
-          if(_stableCycles[j]==2) {
-            if(_inBytes[j]) {
+          if(_stableCycles[i]==2) {
+            if(_inBytes[i]) {
               // connection
-              if(_inBytes[j] != _stableBytes[j]) {
-                _connectionCallback(_inBytes[j]-1,j);
-                _stableBytes[j] = _inBytes[j];
+              if(_inBytes[i] != _stableBytes[i]) {
+                _connectionCallback(_inBytes[i]-1,i);
+                _stableBytes[i] = _inBytes[i];
               }
             } else {
-              if(_stableBytes[j] != 0) {
-                _disconnectionCallback(_stableBytes[j]-1,j);
-                _stableBytes[j] = 0;
+              if(_stableBytes[i] != 0) {
+                _disconnectionCallback(_stableBytes[i]-1,i);
+                _stableBytes[i] = 0;
               }
             }
           }
-          _prevInBytes[j] = _inBytes[j];
+          _prevInBytes[i] = _inBytes[i];
         }
       }
       
       _bitPosition = (_bitPosition + 1) % 8;
     }
   }
-}
-
-// copy-pasted function, maybe tidy up...
-unsigned int Patchbay::_read_shift_regs()
-{
-    long bitVal;
-    unsigned int bytesVal = 0;
-
-    /* Trigger a parallel Load to latch the state of the data lines,
-    */
-    digitalWrite(_pinInClockEnable, HIGH);
-    digitalWrite(_pinInLoad, LOW);
-    delayMicroseconds(PULSE_WIDTH_USEC);
-    digitalWrite(_pinInLoad, HIGH);
-    digitalWrite(_pinInClockEnable, LOW);
-
-    /* Loop to read each bit value from the serial out line
-     * of the SN74HC165N.
-    */
-    for(int i = 0; i < DATA_WIDTH; i++)
-    {
-        bitVal = digitalRead(_pinInData);
-
-        /* Set the corresponding bit in bytesVal.
-        */
-        bytesVal |= (bitVal << ((DATA_WIDTH-1) - i));
-
-        /* Pulse the Clock (rising edge shifts the next bit).
-        */
-        digitalWrite(_pinInClock, HIGH);
-        delayMicroseconds(PULSE_WIDTH_USEC);
-        digitalWrite(_pinInClock, LOW);
-    }
-
-    return(bytesVal);
 }

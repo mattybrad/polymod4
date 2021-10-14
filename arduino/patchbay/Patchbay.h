@@ -15,7 +15,6 @@ class Patchbay
   private:
     ConnectionCallback _connectionCallback;
     ConnectionCallback _disconnectionCallback;
-    unsigned int _read_shift_regs();
     bool _ready = false;
     unsigned int _numOutputRegisters = 2;
     unsigned int _numInputRegisters = 2;
