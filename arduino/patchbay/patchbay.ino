@@ -1,30 +1,27 @@
 #include "Patchbay.h"
 
-Patchbay p;
+Patchbay p(2,2,2,3,4,5,6,7,8);
 
 void setup() {
   Serial.begin(9600);
-  p.setPins(2,3,4,5,6,7,8);
+  p.begin();
   p.setCallbacks(handleConnection, handleDisconnection);
 }
 
 void loop() {
   p.update();
-  
-  // handle any connections or disconnections
-  
 }
 
 void handleConnection(unsigned int outNum, unsigned int inNum) {
-  Serial.print("con ");
+  Serial.print("output ");
   Serial.print(outNum);
-  Serial.print("---");
+  Serial.print(" connected to input ");
   Serial.println(inNum);
 }
 
 void handleDisconnection(unsigned int outNum, unsigned int inNum) {
-  Serial.print("dis ");
+  Serial.print("output ");
   Serial.print(outNum);
-  Serial.print("-x-");
+  Serial.print(" disconnected from input ");
   Serial.println(inNum);
 }

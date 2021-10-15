@@ -1,13 +1,10 @@
 #include "Arduino.h"
 #include "Patchbay.h"
 
-Patchbay::Patchbay()
+Patchbay::Patchbay(int numOutputRegisters, int numInputRegisters, int outData, int outClock, int outLatch, int inLoad, int inClock, int inClockEnable, int inData)
 {
-  
-}
-
-void Patchbay::setPins(int outData, int outClock, int outLatch, int inLoad, int inClock, int inClockEnable, int inData)
-{
+  _numOutputRegisters = numOutputRegisters;
+  _numInputRegisters = numInputRegisters;
   _pinOutData = outData;
   _pinOutClock = outClock;
   _pinOutLatch = outLatch;
@@ -15,6 +12,10 @@ void Patchbay::setPins(int outData, int outClock, int outLatch, int inLoad, int 
   _pinInClock = inClock;
   _pinInClockEnable = inClockEnable;
   _pinInData = inData;
+}
+
+void Patchbay::begin()
+{
   pinMode(_pinOutData,OUTPUT);
   pinMode(_pinOutClock,OUTPUT);
   pinMode(_pinOutLatch,OUTPUT);
@@ -77,7 +78,7 @@ void Patchbay::update()
         }
       }
 
-      for(int i=0; i<16; i++) {
+      for(int i=0; i<8*_numInputRegisters; i++) {
         // for each channel number
         bitWrite(_inBytes[i], _bitPosition, bitRead(b_recv[i/8], i%8));
         if(_bitPosition==7) {
