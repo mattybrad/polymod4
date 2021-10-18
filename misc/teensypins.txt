@@ -1,0 +1,29 @@
+Pins for interim stripboard prototype.
+Pins in round brackets are required by audio board.
+Pins in square brackets likely to change for next version.
+
+0       MIDI input
+1
+2       Patching 595 data
+3       Patching 595 clock
+4       Patching 595 latch
+5
+6
+7       (Audio data)
+8       (Audio data)
+9       Patching 165 load
+10      Patching 165 clock
+11      Patching 165 clock enable
+12      Patching 165 data
+
+13
+14  A0  [Pot 0]
+15  A1  [Pot 1]
+16  A2  [Pot 2]
+17  A3  [Pot 3]
+18  A4  (Audio control)
+19  A5  (Audio control)
+20  A6  (Audio data)
+21  A7  (Audio data)
+22  A8
+23  A9  (Audio data)

@@ -1,6 +1,6 @@
 #include "Patchbay.h"
 
-Patchbay p(2,2,2,3,4,5,6,7,8);
+Patchbay p(2,2,2,3,4,9,10,11,12);
 
 void setup() {
   Serial.begin(9600);
