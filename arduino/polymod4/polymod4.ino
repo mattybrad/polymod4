@@ -35,29 +35,32 @@ SocketOutput *socketOutputs[NUM_OUTPUT_CHANNELS];
 SocketInput *socketInputs[NUM_INPUT_CHANNELS];
 
 
-void setup() {  
+void setup() {
   Serial.begin(9600);
   Serial.println("polymod 4 v1");
 
-  AudioMemory(50);
+  // initialise teensy audio hardware
+  AudioMemory(500); // tweak this number for performance
   sgtl5000_1.enable();
   sgtl5000_1.volume(0.3);
-  
+
+  // initialise all socket pointers as null
   for(byte i=0; i<NUM_OUTPUT_CHANNELS; i++) {
     socketOutputs[i] = NULL;
   }
   for(byte i=0; i<NUM_INPUT_CHANNELS; i++) {
     socketInputs[i] = NULL;
-  }  
+  }
+
+  // set references to individual sockets
   socketOutputs[0] = &moduleSine.audioOut;
   socketOutputs[1] = &moduleVCO.audioOut;
   socketInputs[0] = &moduleVCO.freqModIn;
   socketInputs[1] = &moduleMain.audioIn;
   
+  // initialise patchbay
   p.begin();
   p.setCallbacks(handleConnection, handleDisconnection);
-
-  connections[0].connect(*socketOutputs[1], *socketInputs[1]);
 }
 
 void loop() {
@@ -68,12 +71,36 @@ void handleConnection(unsigned int outNum, unsigned int inNum) {
   Serial.print("output ");
   Serial.print(outNum);
   Serial.print(" connected to input ");
-  Serial.println(inNum);
+  Serial.print(inNum);
+
+  unsigned int i;
+  bool foundAvailableConnection = false;
+  // naive/slow - should probably start at last disconnection index..?
+  for(i=0; i<MAX_CONNECTIONS && !foundAvailableConnection; i++) {
+    if(!connections[i].inUse) {
+      connections[i].connect(outNum, *socketOutputs[outNum], inNum, *socketInputs[inNum]);
+      Serial.print(", connection ");
+      Serial.print(i);
+      foundAvailableConnection = true;
+    }
+  }
+  Serial.print("\n");
 }
 
 void handleDisconnection(unsigned int outNum, unsigned int inNum) {
   Serial.print("output ");
   Serial.print(outNum);
   Serial.print(" disconnected from input ");
-  Serial.println(inNum);
+  Serial.print(inNum);
+
+  // find cable using outNum and inNum (or just use polymod3 method, which is faster)
+  unsigned int i;
+  for(i=0; i<MAX_CONNECTIONS; i++) {
+    if(connections[i].outputSocketNum==outNum && connections[i].inputSocketNum==inNum && connections[i].inUse) {
+      connections[i].disconnect();
+      Serial.print(", connection ");
+      Serial.print(i);
+    }
+  }
+  Serial.print("\n");
 }
