@@ -14,6 +14,7 @@ AudioControlSGTL5000 sgtl5000_1;
 
 #include "ModuleSine.h"
 #include "ModuleVCO.h"
+#include "ModuleMixer.h"
 #include "ModuleMain.h"
 #include "SocketConnection.h"
 #include "Globals.h"
@@ -28,13 +29,13 @@ Patchbay p(NUM_OUTPUT_REGISTERS,NUM_INPUT_REGISTERS,2,3,4,9,10,11,12);
 ModuleSine moduleSine;
 ModuleVCO moduleVCO;
 ModuleVCO moduleVCO2;
+ModuleMixer moduleMixer;
 ModuleMain moduleMain;
 SocketConnection connections[MAX_CONNECTIONS];
 byte connectionIndex = 0;
 
 SocketOutput *socketOutputs[NUM_OUTPUT_CHANNELS];
 SocketInput *socketInputs[NUM_INPUT_CHANNELS];
-
 
 void setup() {
   Serial.begin(9600);
@@ -57,9 +58,13 @@ void setup() {
   socketOutputs[0] = &moduleSine.audioOut;
   socketOutputs[1] = &moduleVCO.audioOut;
   socketOutputs[2] = &moduleVCO2.audioOut;
+  socketOutputs[3] = &moduleMixer.audioOut;
+  
+  socketInputs[0] = &moduleMain.audioIn;
   socketInputs[1] = &moduleVCO.freqModIn;
   socketInputs[2] = &moduleVCO2.freqModIn;
-  socketInputs[0] = &moduleMain.audioIn;
+  socketInputs[3] = &moduleMixer.audioIn1;
+  socketInputs[4] = &moduleMixer.audioIn2;
 
   // set analog pins
   moduleVCO.analogPin = 17;
