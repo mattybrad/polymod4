@@ -27,6 +27,7 @@ Patchbay p(NUM_OUTPUT_REGISTERS,NUM_INPUT_REGISTERS,2,3,4,9,10,11,12);
 
 ModuleSine moduleSine;
 ModuleVCO moduleVCO;
+ModuleVCO moduleVCO2;
 ModuleMain moduleMain;
 SocketConnection connections[MAX_CONNECTIONS];
 byte connectionIndex = 0;
@@ -55,8 +56,14 @@ void setup() {
   // set references to individual sockets
   socketOutputs[0] = &moduleSine.audioOut;
   socketOutputs[1] = &moduleVCO.audioOut;
-  socketInputs[0] = &moduleVCO.freqModIn;
-  socketInputs[1] = &moduleMain.audioIn;
+  socketOutputs[2] = &moduleVCO2.audioOut;
+  socketInputs[1] = &moduleVCO.freqModIn;
+  socketInputs[2] = &moduleVCO2.freqModIn;
+  socketInputs[0] = &moduleMain.audioIn;
+
+  // set analog pins
+  moduleVCO.analogPin = 17;
+  moduleVCO2.analogPin = 16;
   
   // initialise patchbay
   p.begin();
@@ -64,7 +71,9 @@ void setup() {
 }
 
 void loop() {
-  p.update();
+  p.update(); // need to remove delays from this function to speed up loop
+  moduleVCO.update();
+  moduleVCO2.update();
 }
 
 void handleConnection(unsigned int outNum, unsigned int inNum) {

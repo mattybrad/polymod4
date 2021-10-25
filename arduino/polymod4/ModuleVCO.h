@@ -10,6 +10,7 @@ class ModuleVCO : public Module {
     virtual void update();
     SocketOutput audioOut;
     SocketInput freqModIn;
+    byte analogPin = 14;
   private:
     AnalogControl _freqControl;
     AudioSynthWaveformModulated _osc[MAX_POLYPHONY];
