@@ -11,6 +11,7 @@ class SocketOutput {
     AudioAmplifier amplifiers[MAX_POLYPHONY];
     SocketInput *socketInputs[8];
     int connNum = -1;
+    bool hardcodedPoly = false;
   private:
     
 };

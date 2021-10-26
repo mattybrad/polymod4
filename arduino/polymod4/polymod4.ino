@@ -139,13 +139,16 @@ void handleDisconnection(unsigned int outNum, unsigned int inNum) {
   calculatePolyStatuses();
 }
 
+unsigned int checkNum = 0;
 void calculatePolyStatuses() {
   Serial.println("Calculating poly statuses...");
   if(mainConnection != NULL) {
-    int checkNum = 0;
+    checkNum = 0;
     resetConnection(*mainConnection);
     while(checkNum < 2) {
-      //checkConnection(mainConnection);
+      Serial.print("Check num = ");
+      Serial.println(checkNum);
+      checkConnection(*mainConnection);
       checkNum ++;
     }
   }
@@ -159,12 +162,50 @@ void resetConnection(SocketConnection &c) {
   c.confirmed = false;
   for(unsigned int i=0; i<8; i++) {
     if(c._src->socketInputs[i] != NULL) {
-      Serial.println("Found related input socket...");
       int connNum = c._src->socketInputs[i]->connNum;
       if(connNum >= 0) {
-        Serial.println("Found active connection...");
+        if(connections[connNum].confirmed) {
+          resetConnection(connections[connNum]);
+        }
       }
     }
+  }
+}
+
+void checkConnection(SocketConnection &c) {
+  Serial.println("Check connection...");
+  bool prevConfirmed = c.confirmed;
+  c.checkNum ++;
+  if(c._src->hardcodedPoly) {
+    c.poly = true;
+    c.confirmed = true;
+  }
+  bool allMono = true;
+  bool allInputsConfirmed = true;
+  for(unsigned int i=0; i<8; i++) {
+    if(c._src->socketInputs[i] != NULL) {
+      int connNum = c._src->socketInputs[i]->connNum;
+      if(connNum >= 0) {
+        if(connections[connNum].checkNum == checkNum) {
+          checkConnection(connections[connNum]);
+        }
+        if(connections[connNum].poly) allMono = false;
+        if(!connections[connNum].confirmed) allInputsConfirmed = false;
+      }
+    }
+  }
+  
+  if(!allMono) {
+    c.poly = true;
+    c.confirmed = true;
+  }
+  if(allInputsConfirmed) {
+    c.confirmed = true;
+  }
+  if(!prevConfirmed && c.confirmed) {
+    Serial.print("Connection is ");
+    Serial.println(c.poly ? "poly" : "mono");
+    // this is where poly routing would be updated for this connection
   }
 }
 
@@ -174,6 +215,33 @@ void resetConnection(SocketConnection &c) {
   while(checkNum < 2) {
     checkSocketInput(moduleMain.audioIn);
     checkNum ++;
+  }
+}
+
+
+void checkSocket(Socket &s) {
+  bool prevConfirmed = s.confirmed;
+  s.checkNum ++;
+  if(s.hardcodedPoly) {
+    s.poly = true;
+    s.confirmed = true;
+  }
+  bool allMono = true;
+  bool allInputsConfirmed = true;
+  for(byte i=0; i<MAX_MODULE_INPUTS; i++) {
+    if(s.inputs[i].checkNum == checkNum) checkSocket(s); // also should check here that input[i] != socket, but not sure how to do that in C++ yet
+    if(s.inputs[i].poly) allMono = false;
+    if(!s.inputs[i].confirmed) allInputsConfirmed = false;
+  }
+  if(!allMono) {
+    s.poly = true;
+    s.confirmed = true;
+  }
+  if(allInputsConfirmed) {
+    s.confirmed = true;
+  }
+  if(!prevConfirmed && s.confirmed) {
+    s.updatePolyRouting();
   }
 }
 

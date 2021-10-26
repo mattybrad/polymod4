@@ -29,5 +29,8 @@ void SocketConnection::disconnect() {
   _dest->connNum = -1;
   _src = NULL;
   _dest = NULL;
+  checkNum = 0;
+  poly = false;
+  confirmed = false;
   inUse = false;
 }

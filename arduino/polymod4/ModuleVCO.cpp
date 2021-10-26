@@ -11,6 +11,7 @@ ModuleVCO::ModuleVCO() {
     _oscCables[i] = new AudioConnection(_osc[i], 0, audioOut.amplifiers[i], 0);
   }
   audioOut.socketInputs[0] = &freqModIn;
+  //audioOut.hardcodedPoly = true;
 }
 
 void ModuleVCO::update() {
