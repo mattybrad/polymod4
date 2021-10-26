@@ -33,6 +33,7 @@ ModuleMixer moduleMixer;
 ModuleMain moduleMain;
 SocketConnection connections[MAX_CONNECTIONS];
 byte connectionIndex = 0;
+SocketConnection *mainConnection = NULL;
 
 SocketOutput *socketOutputs[NUM_OUTPUT_CHANNELS];
 SocketInput *socketInputs[NUM_INPUT_CHANNELS];
@@ -73,6 +74,17 @@ void setup() {
   // initialise patchbay
   p.begin();
   p.setCallbacks(handleConnection, handleDisconnection);
+
+  // optional stress test for connections/disconnections:
+  if(false) {
+    for(unsigned int i=0; i<50000; i++) {
+      handleConnection(1,0);
+      if(i%1000 == 0) delay(100);
+      handleDisconnection(1,0);
+      if(i%1000 == 0) delay(100);
+    }
+    Serial.println("stress test success");
+  }
 }
 
 void loop() {
@@ -92,13 +104,17 @@ void handleConnection(unsigned int outNum, unsigned int inNum) {
   // naive/slow - should probably start at last disconnection index..?
   for(i=0; i<MAX_CONNECTIONS && !foundAvailableConnection; i++) {
     if(!connections[i].inUse) {
-      connections[i].connect(outNum, *socketOutputs[outNum], inNum, *socketInputs[inNum]);
+      connections[i].connect(outNum, *socketOutputs[outNum], inNum, *socketInputs[inNum], i);
+      if(inNum==0) {
+        mainConnection = &connections[i];
+      }
       Serial.print(", connection ");
       Serial.print(i);
       foundAvailableConnection = true;
     }
   }
   Serial.print("\n");
+  calculatePolyStatuses();
 }
 
 void handleDisconnection(unsigned int outNum, unsigned int inNum) {
@@ -112,9 +128,60 @@ void handleDisconnection(unsigned int outNum, unsigned int inNum) {
   for(i=0; i<MAX_CONNECTIONS; i++) {
     if(connections[i].outputSocketNum==outNum && connections[i].inputSocketNum==inNum && connections[i].inUse) {
       connections[i].disconnect();
+      if(inNum==0) {
+        mainConnection = NULL;
+      }
       Serial.print(", connection ");
       Serial.print(i);
     }
   }
   Serial.print("\n");
+  calculatePolyStatuses();
 }
+
+void calculatePolyStatuses() {
+  Serial.println("Calculating poly statuses...");
+  if(mainConnection != NULL) {
+    int checkNum = 0;
+    resetConnection(*mainConnection);
+    while(checkNum < 2) {
+      //checkConnection(mainConnection);
+      checkNum ++;
+    }
+  }
+  Serial.println("Done with poly stuff");
+}
+
+void resetConnection(SocketConnection &c) {
+  Serial.println("Reset connection...");
+  c.checkNum = 0;
+  c.poly = false;
+  c.confirmed = false;
+  for(unsigned int i=0; i<8; i++) {
+    if(c._src->socketInputs[i] != NULL) {
+      Serial.println("Found related input socket...");
+      int connNum = c._src->socketInputs[i]->connNum;
+      if(connNum >= 0) {
+        Serial.println("Found active connection...");
+      }
+    }
+  }
+}
+
+/*void calculatePolyStatuses() {
+  int checkNum = 0; // number of times the whole tree has been checked(?)
+  resetSocketInput(moduleMain.audioIn);
+  while(checkNum < 2) {
+    checkSocketInput(moduleMain.audioIn);
+    checkNum ++;
+  }
+}
+
+void resetSocketInput(SocketInput &s) {
+  s.checkNum = 0;
+  s.poly = false;
+  s.confirmed = false;
+  for(byte i=0; i<MAX_MODULE_INPUTS; i++) {
+    if(s.inputs[i].confirmed) resetSocket(s.inputs[i]);
+  }
+}*/

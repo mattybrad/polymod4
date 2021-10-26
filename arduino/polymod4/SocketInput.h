@@ -8,7 +8,7 @@ class SocketInput {
   public:
     SocketInput();
     AudioAmplifier amplifiers[MAX_POLYPHONY];
-    
+    int connNum = -1;
   private:
     
 };

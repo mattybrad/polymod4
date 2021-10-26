@@ -10,6 +10,7 @@ ModuleVCO::ModuleVCO() {
     _modCables3[i] = new AudioConnection(_modMixer[i], 0, _osc[i], 0);
     _oscCables[i] = new AudioConnection(_osc[i], 0, audioOut.amplifiers[i], 0);
   }
+  audioOut.socketInputs[0] = &freqModIn;
 }
 
 void ModuleVCO::update() {

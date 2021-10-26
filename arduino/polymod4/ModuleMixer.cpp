@@ -12,6 +12,5 @@ ModuleMixer::ModuleMixer() {
 }
 
 void ModuleMixer::update() {
-  //_freqControl.pin = analogPin; // temp
-  //_freqControl.update();
+  
 }

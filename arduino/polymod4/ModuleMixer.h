@@ -4,6 +4,8 @@
 #include "Module.h"
 #include "AnalogControl.h"
 
+// two-channel mixer for now
+
 class ModuleMixer : public Module {
   public:
     ModuleMixer();
@@ -11,9 +13,7 @@ class ModuleMixer : public Module {
     SocketOutput audioOut;
     SocketInput audioIn1;
     SocketInput audioIn2;
-    byte analogPin = 14;
   private:
-    AnalogControl _mixControl;
     AudioMixer4 _audioMixer[MAX_POLYPHONY];
     AudioConnection* _mixerCables1[MAX_POLYPHONY];
     AudioConnection* _mixerCables2[MAX_POLYPHONY];
