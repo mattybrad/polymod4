@@ -15,6 +15,7 @@ AudioControlSGTL5000 sgtl5000_1;
 #include "ModuleSine.h"
 #include "ModuleVCO.h"
 #include "ModuleMixer.h"
+#include "ModulePolySource.h"
 #include "ModuleMain.h"
 #include "SocketConnection.h"
 #include "Globals.h"
@@ -30,6 +31,7 @@ ModuleSine moduleSine;
 ModuleVCO moduleVCO;
 ModuleVCO moduleVCO2;
 ModuleMixer moduleMixer;
+ModulePolySource modulePolySource;
 ModuleMain moduleMain;
 SocketConnection connections[MAX_CONNECTIONS];
 byte connectionIndex = 0;
@@ -60,6 +62,7 @@ void setup() {
   socketOutputs[1] = &moduleVCO.audioOut;
   socketOutputs[2] = &moduleVCO2.audioOut;
   socketOutputs[3] = &moduleMixer.audioOut;
+  socketOutputs[4] = &modulePolySource.audioOut;
   
   socketInputs[0] = &moduleMain.audioIn;
   socketInputs[1] = &moduleVCO.freqModIn;
@@ -146,17 +149,17 @@ void calculatePolyStatuses() {
     checkNum = 0;
     resetConnection(*mainConnection);
     while(checkNum < 2) {
-      Serial.print("Check num = ");
-      Serial.println(checkNum);
+      //Serial.print("Check num = ");
+      //Serial.println(checkNum);
       checkConnection(*mainConnection);
       checkNum ++;
     }
   }
-  Serial.println("Done with poly stuff");
+  //Serial.println("Done with poly stuff");
 }
 
 void resetConnection(SocketConnection &c) {
-  Serial.println("Reset connection...");
+  //Serial.println("Reset connection...");
   c.checkNum = 0;
   c.poly = false;
   c.confirmed = false;
@@ -173,7 +176,7 @@ void resetConnection(SocketConnection &c) {
 }
 
 void checkConnection(SocketConnection &c) {
-  Serial.println("Check connection...");
+  //Serial.println("Check connection...");
   bool prevConfirmed = c.confirmed;
   c.checkNum ++;
   if(c._src->hardcodedPoly) {
@@ -208,48 +211,3 @@ void checkConnection(SocketConnection &c) {
     // this is where poly routing would be updated for this connection
   }
 }
-
-/*void calculatePolyStatuses() {
-  int checkNum = 0; // number of times the whole tree has been checked(?)
-  resetSocketInput(moduleMain.audioIn);
-  while(checkNum < 2) {
-    checkSocketInput(moduleMain.audioIn);
-    checkNum ++;
-  }
-}
-
-
-void checkSocket(Socket &s) {
-  bool prevConfirmed = s.confirmed;
-  s.checkNum ++;
-  if(s.hardcodedPoly) {
-    s.poly = true;
-    s.confirmed = true;
-  }
-  bool allMono = true;
-  bool allInputsConfirmed = true;
-  for(byte i=0; i<MAX_MODULE_INPUTS; i++) {
-    if(s.inputs[i].checkNum == checkNum) checkSocket(s); // also should check here that input[i] != socket, but not sure how to do that in C++ yet
-    if(s.inputs[i].poly) allMono = false;
-    if(!s.inputs[i].confirmed) allInputsConfirmed = false;
-  }
-  if(!allMono) {
-    s.poly = true;
-    s.confirmed = true;
-  }
-  if(allInputsConfirmed) {
-    s.confirmed = true;
-  }
-  if(!prevConfirmed && s.confirmed) {
-    s.updatePolyRouting();
-  }
-}
-
-void resetSocketInput(SocketInput &s) {
-  s.checkNum = 0;
-  s.poly = false;
-  s.confirmed = false;
-  for(byte i=0; i<MAX_MODULE_INPUTS; i++) {
-    if(s.inputs[i].confirmed) resetSocket(s.inputs[i]);
-  }
-}*/
