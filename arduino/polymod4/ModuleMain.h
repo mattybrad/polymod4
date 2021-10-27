@@ -10,8 +10,10 @@ class ModuleMain : public Module {
     SocketInput audioIn;
   private:
     AudioOutputI2S _i2s;
-    AudioMixer4 _mixer;
-    AudioConnection* _mixerCables[MAX_POLYPHONY];
+    AudioMixer4 _primaryMixers[4];
+    AudioMixer4 _secondaryMixer;
+    AudioConnection* _primaryMixerCables[16];
+    AudioConnection* _secondaryMixerCables[4];
     AudioConnection* _outputCables[2];
     
 };

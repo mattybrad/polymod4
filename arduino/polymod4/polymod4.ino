@@ -88,12 +88,25 @@ void setup() {
     }
     Serial.println("stress test success");
   }
+
+  // optionally manually set patching
+  
 }
+
+// temp?
+unsigned long nextCpuCheck = 0;
 
 void loop() {
   p.update(); // need to remove delays from this function to speed up loop
   moduleVCO.update();
   moduleVCO2.update();
+  if(nextCpuCheck<=millis()) {
+    Serial.print("CPU usage = ");
+    Serial.print(AudioProcessorUsage());
+    Serial.print(", max = ");
+    Serial.println(AudioProcessorUsageMax());
+    nextCpuCheck += 5000;
+  }
 }
 
 void handleConnection(unsigned int outNum, unsigned int inNum) {
