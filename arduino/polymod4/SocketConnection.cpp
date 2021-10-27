@@ -2,20 +2,25 @@
 #include "SocketConnection.h"
 
 SocketConnection::SocketConnection() {
-  
+
 }
 
 void SocketConnection::connect(unsigned int outNum, SocketOutput& src, unsigned int inNum, SocketInput& dest, int connNum) {
-  outputSocketNum = outNum;
-  inputSocketNum = inNum;
-  _src = &src;
-  _dest = &dest;
-  _src->connNum = connNum;
-  _dest->connNum = connNum;
-  for(byte i=0; i<MAX_POLYPHONY; i++) {
-    _patchCables[i] = new AudioConnection(src.amplifiers[i], 0, dest.amplifiers[i], 0);
+  if(&src==NULL || &dest==NULL) {
+    // not the cleanest way of detecting bad connections, but good enough to stop everything crashing for now
+    Serial.print(" (BAD CONNECTION!) ")
+  } else {
+    outputSocketNum = outNum;
+    inputSocketNum = inNum;
+    _src = &src;
+    _dest = &dest;
+    _src->connNum = connNum;
+    _dest->connNum = connNum;
+    for(byte i=0; i<MAX_POLYPHONY; i++) {
+      _patchCables[i] = new AudioConnection(src.amplifiers[i], 0, dest.amplifiers[i], 0);
+    }
+    inUse = true;
   }
-  inUse = true;
 }
 
 void SocketConnection::disconnect() {
