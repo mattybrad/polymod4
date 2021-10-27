@@ -14,6 +14,7 @@ AudioControlSGTL5000 sgtl5000_1;
 
 #include "ModuleSine.h"
 #include "ModuleVCO.h"
+#include "ModuleVCF.h"
 #include "ModuleMixer.h"
 #include "ModulePolySource.h"
 #include "ModuleMain.h"
@@ -30,6 +31,7 @@ Patchbay p(NUM_OUTPUT_REGISTERS,NUM_INPUT_REGISTERS,2,3,4,9,10,11,12);
 ModuleSine moduleSine;
 ModuleVCO moduleVCO;
 ModuleVCO moduleVCO2;
+ModuleVCF moduleVCF;
 ModuleMixer moduleMixer;
 ModulePolySource modulePolySource;
 ModuleMain moduleMain;
@@ -63,17 +65,20 @@ void setup() {
   socketOutputs[2] = &moduleVCO2.audioOut;
   socketOutputs[3] = &moduleMixer.audioOut;
   socketOutputs[4] = &modulePolySource.audioOut;
-  
+  socketOutputs[5] = &moduleVCF.audioOut;
+
   socketInputs[0] = &moduleMain.audioIn;
   socketInputs[1] = &moduleVCO.freqModIn;
   socketInputs[2] = &moduleVCO2.freqModIn;
   socketInputs[3] = &moduleMixer.audioIn1;
   socketInputs[4] = &moduleMixer.audioIn2;
+  socketInputs[5] = &moduleVCF.audioIn;
+  socketInputs[6] = &moduleVCF.freqModIn;
 
   // set analog pins
   moduleVCO.analogPin = 17;
   moduleVCO2.analogPin = 16;
-  
+
   // initialise patchbay
   p.begin();
   p.setCallbacks(handleConnection, handleDisconnection);
@@ -90,7 +95,11 @@ void setup() {
   }
 
   // optionally manually set patching
-  
+  handleConnection(4,1);
+  handleConnection(1,5);
+  handleConnection(0,6);
+  handleConnection(5,0);
+  //handleConnection(1,0);
 }
 
 // temp?
@@ -100,6 +109,8 @@ void loop() {
   p.update(); // need to remove delays from this function to speed up loop
   moduleVCO.update();
   moduleVCO2.update();
+  moduleVCF.update();
+
   if(nextCpuCheck<=millis()) {
     Serial.print("CPU usage = ");
     Serial.print(AudioProcessorUsage());
@@ -210,7 +221,7 @@ void checkConnection(SocketConnection &c) {
       }
     }
   }
-  
+
   if(!allMono) {
     c.poly = true;
     c.confirmed = true;

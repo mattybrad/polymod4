@@ -8,7 +8,7 @@ SocketConnection::SocketConnection() {
 void SocketConnection::connect(unsigned int outNum, SocketOutput& src, unsigned int inNum, SocketInput& dest, int connNum) {
   if(&src==NULL || &dest==NULL) {
     // not the cleanest way of detecting bad connections, but good enough to stop everything crashing for now
-    Serial.print(" (BAD CONNECTION!) ")
+    Serial.print(" (BAD CONNECTION!) ");
   } else {
     outputSocketNum = outNum;
     inputSocketNum = inNum;
