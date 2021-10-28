@@ -47,7 +47,7 @@ void setup() {
   Serial.println("polymod 4 v1");
 
   // initialise teensy audio hardware
-  AudioMemory(500); // tweak this number for performance
+  AudioMemory(1000); // tweak this number for performance
   sgtl5000_1.enable();
   sgtl5000_1.volume(0.3);
 
@@ -95,15 +95,17 @@ void setup() {
   }
 
   // optionally manually set patching
-  handleConnection(4,1);
+
+  // oscillators through LFO-modulated filters
+  //handleConnection(4,1);
   handleConnection(1,5);
   handleConnection(0,6);
   handleConnection(5,0);
-  //handleConnection(1,0);
 }
 
 // temp?
 unsigned long nextCpuCheck = 0;
+bool toggleTempConn = false;
 
 void loop() {
   p.update(); // need to remove delays from this function to speed up loop
@@ -116,6 +118,18 @@ void loop() {
     Serial.print(AudioProcessorUsage());
     Serial.print(", max = ");
     Serial.println(AudioProcessorUsageMax());
+    Serial.print("Memory usage = ");
+    Serial.print(AudioMemoryUsage());
+    Serial.print(", max = ");
+    Serial.println(AudioMemoryUsageMax());
+    if(!toggleTempConn) {
+      Serial.println("CONNECT TEMP");
+      handleConnection(4,1);
+    } else {
+      Serial.println("DISCONNECT TEMP");
+      handleDisconnection(4,1);
+    }
+    toggleTempConn = !toggleTempConn;
     nextCpuCheck += 5000;
   }
 }
@@ -140,6 +154,7 @@ void handleConnection(unsigned int outNum, unsigned int inNum) {
       foundAvailableConnection = true;
     }
   }
+  if(!foundAvailableConnection) Serial.print("RAN OUT OF CONNECTIONS");
   Serial.print("\n");
   calculatePolyStatuses();
 }
@@ -233,5 +248,6 @@ void checkConnection(SocketConnection &c) {
     Serial.print("Connection is ");
     Serial.println(c.poly ? "poly" : "mono");
     // this is where poly routing would be updated for this connection
+    c.updateRouting();
   }
 }

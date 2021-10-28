@@ -23,6 +23,30 @@ void SocketConnection::connect(unsigned int outNum, SocketOutput& src, unsigned 
   }
 }
 
+void SocketConnection::updateRouting() {
+  if(!_routingConnected || (poly != _routingIsPoly)) {
+    unsigned int i;
+    if(_routingConnected) {
+      // remove existing routing
+      for(i=0; i<MAX_POLYPHONY; i++) {
+        delete _patchCables[i];
+      }
+    }
+    if(poly) {
+      _routingIsPoly = true;
+      for(byte i=0; i<MAX_POLYPHONY; i++) {
+        _patchCables[i] = new AudioConnection(_src->amplifiers[i], 0, _dest->amplifiers[i], 0);
+      }
+    } else {
+      _routingIsPoly = false;
+      for(byte i=0; i<MAX_POLYPHONY; i++) {
+        _patchCables[i] = new AudioConnection(_src->amplifiers[0], 0, _dest->amplifiers[i], 0);
+      }
+    }
+    _routingConnected = true;
+  }
+}
+
 void SocketConnection::disconnect() {
   for(byte i=0; i<MAX_POLYPHONY; i++) {
     delete _patchCables[i];
@@ -38,4 +62,6 @@ void SocketConnection::disconnect() {
   poly = false;
   confirmed = false;
   inUse = false;
+  _routingConnected = false;
+  _routingIsPoly = false;
 }
