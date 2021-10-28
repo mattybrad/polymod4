@@ -17,6 +17,7 @@ AudioControlSGTL5000 sgtl5000_1;
 #include "ModuleVCF.h"
 #include "ModuleMixer.h"
 #include "ModulePolySource.h"
+#include "ModuleMidi.h"
 #include "ModuleMain.h"
 #include "SocketConnection.h"
 #include "Globals.h"
@@ -34,6 +35,7 @@ ModuleVCO moduleVCO2;
 ModuleVCF moduleVCF;
 ModuleMixer moduleMixer;
 ModulePolySource modulePolySource;
+ModuleMidi moduleMidi;
 ModuleMain moduleMain;
 SocketConnection connections[MAX_CONNECTIONS];
 byte connectionIndex = 0;
@@ -46,10 +48,13 @@ void setup() {
   Serial.begin(9600);
   Serial.println("polymod 4 v1");
 
+  usbMIDI.setHandleNoteOn(midiNoteOn);
+  usbMIDI.setHandleNoteOff(midiNoteOff);
+
   // initialise teensy audio hardware
   AudioMemory(1000); // tweak this number for performance
   sgtl5000_1.enable();
-  sgtl5000_1.volume(0.3);
+  sgtl5000_1.volume(0.15);
 
   // initialise all socket pointers as null
   for(byte i=0; i<NUM_OUTPUT_CHANNELS; i++) {
@@ -66,6 +71,7 @@ void setup() {
   socketOutputs[3] = &moduleMixer.audioOut;
   socketOutputs[4] = &modulePolySource.audioOut;
   socketOutputs[5] = &moduleVCF.audioOut;
+  socketOutputs[6] = &moduleMidi.freqOut;
 
   socketInputs[0] = &moduleMain.audioIn;
   socketInputs[1] = &moduleVCO.freqModIn;
@@ -97,7 +103,7 @@ void setup() {
   // optionally manually set patching
 
   // oscillators through LFO-modulated filters
-  //handleConnection(4,1);
+  handleConnection(6,1);
   handleConnection(1,5);
   handleConnection(0,6);
   handleConnection(5,0);
@@ -108,6 +114,7 @@ unsigned long nextCpuCheck = 0;
 bool toggleTempConn = false;
 
 void loop() {
+  usbMIDI.read();
   p.update(); // need to remove delays from this function to speed up loop
   moduleVCO.update();
   moduleVCO2.update();
@@ -122,13 +129,13 @@ void loop() {
     Serial.print(AudioMemoryUsage());
     Serial.print(", max = ");
     Serial.println(AudioMemoryUsageMax());
-    if(!toggleTempConn) {
+    /*if(!toggleTempConn) {
       Serial.println("CONNECT TEMP");
       handleConnection(4,1);
     } else {
       Serial.println("DISCONNECT TEMP");
       handleDisconnection(4,1);
-    }
+    }*/
     toggleTempConn = !toggleTempConn;
     nextCpuCheck += 5000;
   }
@@ -250,4 +257,13 @@ void checkConnection(SocketConnection &c) {
     // this is where poly routing would be updated for this connection
     c.updateRouting();
   }
+}
+
+void midiNoteOn(byte channel, byte note, byte velocity) {
+  Serial.println("note on");
+  moduleMidi.noteOn(channel, note, velocity);
+}
+
+void midiNoteOff(byte channel, byte note, byte velocity) {
+  Serial.println("note off");
 }
