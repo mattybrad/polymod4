@@ -10,6 +10,7 @@ ModuleMain::ModuleMain() {
       }
     }
     _secondaryMixerCables[i] = new AudioConnection(_primaryMixers[i], 0, _secondaryMixer, i);
+    _secondaryMixer.gain(i,1.0/MAX_POLYPHONY);
   }
   _outputCables[0] = new AudioConnection(_secondaryMixer, 0, _i2s, 0);
   _outputCables[0] = new AudioConnection(_secondaryMixer, 0, _i2s, 1);
@@ -21,5 +22,5 @@ ModuleMain::ModuleMain() {
 }
 
 void ModuleMain::update() {
-  
+
 }

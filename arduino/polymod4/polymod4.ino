@@ -72,6 +72,7 @@ void setup() {
   socketOutputs[4] = &modulePolySource.audioOut;
   socketOutputs[5] = &moduleVCF.audioOut;
   socketOutputs[6] = &moduleMidi.freqOut;
+  socketOutputs[7] = &moduleMidi.gateOut;
 
   socketInputs[0] = &moduleMain.audioIn;
   socketInputs[1] = &moduleVCO.freqModIn;
@@ -104,9 +105,9 @@ void setup() {
 
   // oscillators through LFO-modulated filters
   handleConnection(6,1);
-  handleConnection(1,5);
-  handleConnection(0,6);
-  handleConnection(5,0);
+  //handleConnection(1,5);
+  //handleConnection(7,6);
+  handleConnection(1,0);
 }
 
 // temp?
@@ -254,7 +255,6 @@ void checkConnection(SocketConnection &c) {
   if(!prevConfirmed && c.confirmed) {
     Serial.print("Connection is ");
     Serial.println(c.poly ? "poly" : "mono");
-    // this is where poly routing would be updated for this connection
     c.updateRouting();
   }
 }

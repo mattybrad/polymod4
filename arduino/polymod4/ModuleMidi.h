@@ -18,6 +18,7 @@ class ModuleMidi : public Module {
     AudioSynthWaveformDc _gateDC[MAX_POLYPHONY];
     AudioSynthWaveformDc _velDC[MAX_POLYPHONY];
     AudioConnection* _freqCables[MAX_POLYPHONY];
+    AudioConnection* _gateCables[MAX_POLYPHONY];
     Note _notes[MAX_POLYPHONY];
 
 };

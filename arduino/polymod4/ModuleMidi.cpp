@@ -4,9 +4,12 @@
 ModuleMidi::ModuleMidi() {;
   for(byte i=0; i<MAX_POLYPHONY; i++) {
     _freqDC[i].amplitude(0);
+    _gateDC[i].amplitude(0);
     _freqCables[i] = new AudioConnection(_freqDC[i], 0, freqOut.amplifiers[i], 0);
+    _gateCables[i] = new AudioConnection(_gateDC[i], 0, gateOut.amplifiers[i], 0);
   }
   freqOut.hardcodedPoly = true;
+  gateOut.hardcodedPoly = true;
 }
 
 void ModuleMidi::update() {
@@ -42,7 +45,8 @@ void ModuleMidi::noteOn(byte channel, byte note, byte velocity) {
   _notes[noteToUse].noteNum = note;
   _notes[noteToUse].timeStarted = millis();
   _notes[noteToUse].timeEnded = 4294967295;
-  _freqDC[noteToUse].amplitude((note-69)/12.0/8.0);
+  _freqDC[noteToUse].amplitude((note-69)/12.0/10.0); // 12.0 because 12 notes per octave, 10.0 because 10 octave range (over -1.0 to +1.0)
+  _gateDC[noteToUse].amplitude(1.0);
 }
 
 void ModuleMidi::noteOff(byte channel, byte note, byte velocity) {
@@ -54,6 +58,7 @@ void ModuleMidi::noteOff(byte channel, byte note, byte velocity) {
     if(_notes[i].noteDown && _notes[i].noteNum == note) {
       _notes[i].noteDown = false;
       _notes[i].timeEnded = millis();
+      _gateDC[i].amplitude(0);
     }
   }
 }
