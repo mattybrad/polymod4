@@ -266,4 +266,5 @@ void midiNoteOn(byte channel, byte note, byte velocity) {
 
 void midiNoteOff(byte channel, byte note, byte velocity) {
   Serial.println("note off");
+  moduleMidi.noteOff(channel, note, velocity);
 }
