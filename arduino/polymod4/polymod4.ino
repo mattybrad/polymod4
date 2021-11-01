@@ -15,6 +15,7 @@ AudioControlSGTL5000 sgtl5000_1;
 #include "ModuleSine.h"
 #include "ModuleVCO.h"
 #include "ModuleVCF.h"
+#include "ModuleVCA.h"
 #include "ModuleMixer.h"
 #include "ModulePolySource.h"
 #include "ModuleMidi.h"
@@ -33,6 +34,7 @@ ModuleSine moduleSine;
 ModuleVCO moduleVCO;
 ModuleVCO moduleVCO2;
 ModuleVCF moduleVCF;
+ModuleVCA moduleVCA;
 ModuleMixer moduleMixer;
 ModulePolySource modulePolySource;
 ModuleMidi moduleMidi;
@@ -73,6 +75,7 @@ void setup() {
   socketOutputs[5] = &moduleVCF.audioOut;
   socketOutputs[6] = &moduleMidi.freqOut;
   socketOutputs[7] = &moduleMidi.gateOut;
+  socketOutputs[8] = &moduleVCA.audioOut;
 
   socketInputs[0] = &moduleMain.audioIn;
   socketInputs[1] = &moduleVCO.freqModIn;
@@ -81,6 +84,8 @@ void setup() {
   socketInputs[4] = &moduleMixer.audioIn2;
   socketInputs[5] = &moduleVCF.audioIn;
   socketInputs[6] = &moduleVCF.freqModIn;
+  socketInputs[7] = &moduleVCA.audioIn;
+  socketInputs[8] = &moduleVCA.controlIn;
 
   // set analog pins
   moduleVCO.analogPin = 17;
@@ -103,11 +108,11 @@ void setup() {
 
   // optionally manually set patching
 
-  // oscillators through LFO-modulated filters
   handleConnection(6,1);
-  //handleConnection(1,5);
-  //handleConnection(7,6);
-  handleConnection(1,0);
+  handleConnection(1,5);
+  handleConnection(7,8);
+  handleConnection(1,7);
+  handleConnection(8,0);
 }
 
 // temp?

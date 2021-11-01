@@ -6,7 +6,7 @@ ModuleVCF::ModuleVCF() {
   for(byte i=0; i<MAX_POLYPHONY; i++) {
     _filter[i].frequency(600);
     _filter[i].resonance(0.7);
-    //_filter[i].octaveControl(8);
+    _filter[i].octaveControl(10);
     _modCables1[i] = new AudioConnection(freqModIn.amplifiers[i], 0, _modMixer[i], 0);
     _modCables2[i] = new AudioConnection(_freqControl.dc, 0, _modMixer[i], 1);
     _modCables3[i] = new AudioConnection(_modMixer[i], 0, _filter[i], 1);
