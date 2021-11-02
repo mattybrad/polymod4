@@ -17,8 +17,6 @@ void ModuleMidi::update() {
 }
 
 void ModuleMidi::noteOn(byte channel, byte note, byte velocity) {
-  Serial.println("MIDI MODULE NOTE ON");
-
   // find free note slot
   unsigned long oldestNoteTime = 4294967295;
   byte noteToUse = 0;
@@ -50,15 +48,13 @@ void ModuleMidi::noteOn(byte channel, byte note, byte velocity) {
 }
 
 void ModuleMidi::noteOff(byte channel, byte note, byte velocity) {
-  Serial.println("MIDI MODULE NOTE OFF");
-
   // find any active notes matching note off note
   byte i;
   for(i=0; i<MAX_POLYPHONY; i++) {
     if(_notes[i].noteDown && _notes[i].noteNum == note) {
       _notes[i].noteDown = false;
       _notes[i].timeEnded = millis();
-      _gateDC[i].amplitude(0);
+      _gateDC[i].amplitude(0.0);
     }
   }
 }

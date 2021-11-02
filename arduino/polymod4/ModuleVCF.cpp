@@ -4,8 +4,8 @@
 ModuleVCF::ModuleVCF() {
   //float niceFreqs[8] = {220.0, 277.2, 329.6, 440.0, 220.0, 277.2, 329.6, 440.0};
   for(byte i=0; i<MAX_POLYPHONY; i++) {
-    _filter[i].frequency(600);
-    _filter[i].resonance(0.7);
+    _filter[i].frequency(110);
+    _filter[i].resonance(1.1); // keep Q number above 1.1 for stability? in future maybe calculate stable zone as function of freq, Q and freq mod, then add some sort of limiter...
     _filter[i].octaveControl(10);
     _modCables1[i] = new AudioConnection(freqModIn.amplifiers[i], 0, _modMixer[i], 0);
     _modCables2[i] = new AudioConnection(_freqControl.dc, 0, _modMixer[i], 1);

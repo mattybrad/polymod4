@@ -16,7 +16,9 @@ AudioControlSGTL5000 sgtl5000_1;
 #include "ModuleVCO.h"
 #include "ModuleVCF.h"
 #include "ModuleVCA.h"
+#include "ModuleADSR.h"
 #include "ModuleMixer.h"
+#include "ModuleMult.h"
 #include "ModulePolySource.h"
 #include "ModuleMidi.h"
 #include "ModuleMain.h"
@@ -35,7 +37,10 @@ ModuleVCO moduleVCO;
 ModuleVCO moduleVCO2;
 ModuleVCF moduleVCF;
 ModuleVCA moduleVCA;
+ModuleADSR moduleADSR;
+ModuleADSR moduleADSR2;
 ModuleMixer moduleMixer;
+ModuleMult moduleMult;
 ModulePolySource modulePolySource;
 ModuleMidi moduleMidi;
 ModuleMain moduleMain;
@@ -56,7 +61,7 @@ void setup() {
   // initialise teensy audio hardware
   AudioMemory(1000); // tweak this number for performance
   sgtl5000_1.enable();
-  sgtl5000_1.volume(0.15);
+  sgtl5000_1.volume(0.4);
 
   // initialise all socket pointers as null
   for(byte i=0; i<NUM_OUTPUT_CHANNELS; i++) {
@@ -76,6 +81,10 @@ void setup() {
   socketOutputs[6] = &moduleMidi.freqOut;
   socketOutputs[7] = &moduleMidi.gateOut;
   socketOutputs[8] = &moduleVCA.audioOut;
+  socketOutputs[9] = &moduleADSR.controlOut;
+  socketOutputs[10] = &moduleMult.out1;
+  socketOutputs[11] = &moduleMult.out2;
+  socketOutputs[12] = &moduleADSR2.controlOut;
 
   socketInputs[0] = &moduleMain.audioIn;
   socketInputs[1] = &moduleVCO.freqModIn;
@@ -86,6 +95,9 @@ void setup() {
   socketInputs[6] = &moduleVCF.freqModIn;
   socketInputs[7] = &moduleVCA.audioIn;
   socketInputs[8] = &moduleVCA.controlIn;
+  socketInputs[9] = &moduleADSR.gateIn;
+  socketInputs[10] = &moduleMult.in;
+  socketInputs[11] = &moduleADSR2.gateIn;
 
   // set analog pins
   moduleVCO.analogPin = 17;
@@ -109,10 +121,16 @@ void setup() {
   // optionally manually set patching
 
   handleConnection(6,1);
-  handleConnection(1,5);
-  handleConnection(7,8);
+  handleConnection(12,6);
+  handleConnection(7,10);
+  handleConnection(10,9);
+  handleConnection(11,11);
+  handleConnection(9,8);
   handleConnection(1,7);
-  handleConnection(8,0);
+  handleConnection(8,5);
+  handleConnection(5,0);
+
+  moduleADSR2.tempChangeSettings();
 }
 
 // temp?
@@ -125,6 +143,8 @@ void loop() {
   moduleVCO.update();
   moduleVCO2.update();
   moduleVCF.update();
+  moduleADSR.update();
+  moduleADSR2.update();
 
   if(nextCpuCheck<=millis()) {
     Serial.print("CPU usage = ");
@@ -265,11 +285,9 @@ void checkConnection(SocketConnection &c) {
 }
 
 void midiNoteOn(byte channel, byte note, byte velocity) {
-  Serial.println("note on");
   moduleMidi.noteOn(channel, note, velocity);
 }
 
 void midiNoteOff(byte channel, byte note, byte velocity) {
-  Serial.println("note off");
   moduleMidi.noteOff(channel, note, velocity);
 }
