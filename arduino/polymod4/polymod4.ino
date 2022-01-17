@@ -52,7 +52,7 @@ SocketOutput *socketOutputs[NUM_OUTPUT_CHANNELS];
 SocketInput *socketInputs[NUM_INPUT_CHANNELS];
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(19200);
   Serial.println("polymod 4 v1");
 
   usbMIDI.setHandleNoteOn(midiNoteOn);
@@ -120,7 +120,7 @@ void setup() {
 
   // optionally manually set patching
 
-  handleConnection(6,1);
+  /*handleConnection(6,1);
   handleConnection(12,6);
   handleConnection(7,10);
   handleConnection(10,9);
@@ -128,7 +128,7 @@ void setup() {
   handleConnection(9,8);
   handleConnection(1,7);
   handleConnection(8,5);
-  handleConnection(5,0);
+  handleConnection(5,0);*/
 
   moduleADSR2.tempChangeSettings();
 }
@@ -147,14 +147,14 @@ void loop() {
   moduleADSR2.update();
 
   if(nextCpuCheck<=millis()) {
-    Serial.print("CPU usage = ");
+    /*Serial.print("CPU usage = ");
     Serial.print(AudioProcessorUsage());
     Serial.print(", max = ");
     Serial.println(AudioProcessorUsageMax());
     Serial.print("Memory usage = ");
     Serial.print(AudioMemoryUsage());
     Serial.print(", max = ");
-    Serial.println(AudioMemoryUsageMax());
+    Serial.println(AudioMemoryUsageMax());*/
     /*if(!toggleTempConn) {
       Serial.println("CONNECT TEMP");
       handleConnection(4,1);
@@ -202,6 +202,7 @@ void handleDisconnection(unsigned int outNum, unsigned int inNum) {
   unsigned int i;
   for(i=0; i<MAX_CONNECTIONS; i++) {
     if(connections[i].outputSocketNum==outNum && connections[i].inputSocketNum==inNum && connections[i].inUse) {
+      Serial.println("attempt disconnection...");
       connections[i].disconnect();
       if(inNum==0) {
         mainConnection = NULL;
@@ -218,6 +219,7 @@ unsigned int checkNum = 0;
 void calculatePolyStatuses() {
   Serial.println("Calculating poly statuses...");
   if(mainConnection != NULL) {
+    Serial.println("main connection is not null i guess");
     checkNum = 0;
     resetConnection(*mainConnection);
     while(checkNum < 2) {
@@ -226,6 +228,8 @@ void calculatePolyStatuses() {
       checkConnection(*mainConnection);
       checkNum ++;
     }
+  } else {
+    Serial.println("main connection is NULL! oh no!");
   }
   //Serial.println("Done with poly stuff");
 }
