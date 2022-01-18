@@ -120,7 +120,7 @@ void setup() {
 
   // optionally manually set patching
 
-  /*handleConnection(6,1);
+  handleConnection(6,1);
   handleConnection(12,6);
   handleConnection(7,10);
   handleConnection(10,9);
@@ -128,7 +128,7 @@ void setup() {
   handleConnection(9,8);
   handleConnection(1,7);
   handleConnection(8,5);
-  handleConnection(5,0);*/
+  //handleConnection(5,0);
 
   moduleADSR2.tempChangeSettings();
 }
@@ -226,6 +226,8 @@ void calculatePolyStatuses() {
       checkConnection(*mainConnection);
       checkNum ++;
     }
+  } else {
+    Serial.println("No connections to calculate");
   }
   //Serial.println("Done with poly stuff");
 }
