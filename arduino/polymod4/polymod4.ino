@@ -120,7 +120,7 @@ void setup() {
 
   // optionally manually set patching
 
-  handleConnection(6,1);
+  /*handleConnection(6,1);
   handleConnection(12,6);
   handleConnection(7,10);
   handleConnection(10,9);
@@ -128,7 +128,7 @@ void setup() {
   handleConnection(9,8);
   handleConnection(1,7);
   handleConnection(8,5);
-  handleConnection(5,0);
+  handleConnection(5,0);*/
 
   moduleADSR2.tempChangeSettings();
 }
@@ -146,7 +146,7 @@ void loop() {
   moduleADSR.update();
   moduleADSR2.update();
 
-  if(nextCpuCheck<=millis()) {
+  if(nextCpuCheck<=millis() && false) {
     Serial.print("CPU usage = ");
     Serial.print(AudioProcessorUsage());
     Serial.print(", max = ");
