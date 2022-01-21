@@ -120,7 +120,7 @@ void setup() {
 
   // optionally manually set patching
 
-  /*handleConnection(6,1);
+  handleConnection(6,1);
   handleConnection(12,6);
   handleConnection(7,10);
   handleConnection(10,9);

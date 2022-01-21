@@ -8,7 +8,7 @@ Pins in round brackets are required by audio board.
 4       Patching 595 latch
 5       Utility 595 data
 6       Utility 595 clock
-7       (Audio data)
+7       (Audio data) (N.B. ALSO PT8211 DIN)
 8       (Audio data)
 9       Patching 165 load
 10      Patching 165 clock
@@ -22,12 +22,12 @@ Pins in round brackets are required by audio board.
 17  A3  4051 #4
 18  A4  (Audio control)
 19  A5  (Audio control)
-20  A6  (Audio data)
-21  A7  (Audio data)
+20  A6  (Audio data) (N.B. ALSO PT8211 WS)
+21  A7  (Audio data) (N.B. ALSO PT8211 BCK)
 22  A8  Utility 595 latch
 23  A9  (Audio data)
 
-This design doesn't make optimal use of all the pins, but is a good compromise to make coding a bit easier. I'm using two separate chains of 595s so that patching (which is already complex) doesn't get any harder. LEDs are driven by 595s, which is not ideal but just makes things easy rather than learning about LED driver ICs just for a prototype. Tactile buttons are running through a 5th 4051 because I'm already addressing the 4051 group so it means I don't have to add more 165s. 4051s are addressed by the 595s because of lack of pins. One pin was spare, hence using pin 13 as LED for debugging etc.
+This design doesn't make optimal use of all the pins, but is a good compromise to make coding a bit easier. I'm using two separate chains of 595s so that patching (which is already complex) doesn't get any harder. LEDs are driven by 595s, which is not ideal but just makes things easy rather than learning about LED driver ICs just for a prototype. Tactile buttons are running through a 5th 4051 because I'm already addressing the 4051 group so it means I don't have to add more 165s. 4051s are addressed by the 595s because of lack of pins. One pin was spare, hence using pin 13 as LED for debugging etc. A Teensy 4.1 can be connected for extra pins. I've included pin info for the PT8211 because this might be the chip in the final design rather than an audio adaptor board. Happily, the PT8211 only uses a subset of the audio shield's pins, so I can try swapping out the boards on the prototype without changing the PCB.
 
 A more optimal design might be something like:
 
@@ -56,6 +56,26 @@ A more optimal design might be something like:
 21  A7  (Audio data)
 22  A8  LED driver?
 23  A9  (Audio data)
+
+24  A10 
+25  A11 
+26  A12 
+27  A13 
+28      
+29      
+30      
+31      
+32      
+
+33      
+34      
+35      
+36      
+37      
+38  A14 
+39  A15 
+40  A16 
+41  A17 
 
 To drive LEDs and an OLED display, we could either route the 4051 outputs into an extra 4051, or just switch to Teensy 4.1. Other future considerations include CV in/out and SD card stuff.
 
