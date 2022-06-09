@@ -20,8 +20,8 @@ Pins in round brackets are required by audio board.
 15  A1  4051 #2
 16  A2  4051 #3
 17  A3  4051 #4
-18  A4  (Audio control)
-19  A5  (Audio control)
+18  A4  (Audio control) (Display SDA)
+19  A5  (Audio control) (Display SCL)
 20  A6  (Audio data) (N.B. ALSO PT8211 WS)
 21  A7  (Audio data) (N.B. ALSO PT8211 BCK)
 22  A8  4051 #5 (buttons etc)
