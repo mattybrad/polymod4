@@ -8,6 +8,8 @@ A2* 4051 data
 A3* 4051 data
 A8
 A9 MIDI in
+B7
+B8
 D1 595
 D2 595
 D3 595
@@ -18,6 +20,7 @@ D7 165
 D8* 4051 data
 D9* 4051 data
 D10
+This arrangement allows 
 
 Possible Seed pins:
 0
