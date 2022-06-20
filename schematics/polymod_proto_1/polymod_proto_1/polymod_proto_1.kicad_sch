@@ -3563,100 +3563,100 @@
       (reference "D6") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/a6a53b82-d335-4d74-92a2-0537c3204661"
-      (reference "D7") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D7") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/6aca4e3d-1d02-4c98-8f09-19fc7c0943ca"
-      (reference "D8") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D8") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/222664ca-d151-4aa4-a5f7-d347ff7a74c8"
-      (reference "D9") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D9") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/6dec5546-536e-460a-978b-69ada296f03e"
-      (reference "D10") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D10") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/13fc4901-a0a7-4d5a-baa0-699080a964bd"
-      (reference "D11") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D11") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/1082e9fa-dcd6-4836-8a15-fd6a626e98f9"
-      (reference "D12") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D12") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/f6bf1b5d-8d7a-49db-a4c8-98d663d96274"
-      (reference "D13") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D13") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/3ee38f86-d853-443a-9436-8502621f5746"
-      (reference "D14") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D14") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/a6a53b82-d335-4d74-92a2-0537c3204661"
-      (reference "D15") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D15") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/6aca4e3d-1d02-4c98-8f09-19fc7c0943ca"
-      (reference "D16") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D16") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/222664ca-d151-4aa4-a5f7-d347ff7a74c8"
-      (reference "D17") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D17") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/6dec5546-536e-460a-978b-69ada296f03e"
-      (reference "D18") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D18") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/13fc4901-a0a7-4d5a-baa0-699080a964bd"
-      (reference "D19") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D19") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/1082e9fa-dcd6-4836-8a15-fd6a626e98f9"
-      (reference "D20") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D20") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/f6bf1b5d-8d7a-49db-a4c8-98d663d96274"
-      (reference "D21") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D21") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/3ee38f86-d853-443a-9436-8502621f5746"
-      (reference "D22") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D22") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/a6a53b82-d335-4d74-92a2-0537c3204661"
-      (reference "D23") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D23") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/6aca4e3d-1d02-4c98-8f09-19fc7c0943ca"
-      (reference "D24") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D24") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/222664ca-d151-4aa4-a5f7-d347ff7a74c8"
-      (reference "D25") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D25") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/6dec5546-536e-460a-978b-69ada296f03e"
-      (reference "D26") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D26") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/13fc4901-a0a7-4d5a-baa0-699080a964bd"
-      (reference "D27") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D27") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/1082e9fa-dcd6-4836-8a15-fd6a626e98f9"
-      (reference "D28") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D28") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/f6bf1b5d-8d7a-49db-a4c8-98d663d96274"
-      (reference "D29") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D29") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/3ee38f86-d853-443a-9436-8502621f5746"
-      (reference "D30") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D30") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/a6a53b82-d335-4d74-92a2-0537c3204661"
-      (reference "D31") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D31") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/6aca4e3d-1d02-4c98-8f09-19fc7c0943ca"
-      (reference "D32") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D32") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/222664ca-d151-4aa4-a5f7-d347ff7a74c8"
-      (reference "D33") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D33") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/6dec5546-536e-460a-978b-69ada296f03e"
-      (reference "D34") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D34") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/13fc4901-a0a7-4d5a-baa0-699080a964bd"
-      (reference "D35") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D35") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/1082e9fa-dcd6-4836-8a15-fd6a626e98f9"
-      (reference "D36") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D36") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/f6bf1b5d-8d7a-49db-a4c8-98d663d96274"
-      (reference "D37") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D37") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/3ee38f86-d853-443a-9436-8502621f5746"
-      (reference "D38") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")
+      (reference "D38") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
     )
     (path "/19a8083b-0c70-435a-82b6-4ba8f0169f6a"
       (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3")
