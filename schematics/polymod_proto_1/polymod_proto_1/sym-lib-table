@@ -1,3 +1,5 @@
 (sym_lib_table
   (lib (name "teensy")(type "Legacy")(uri "${KIPRJMOD}/teensy_library-master/teensy.lib")(options "")(descr ""))
+  (lib (name "Device_Audio_Electrosmith_Daisy_Seed")(type "Legacy")(uri "${KIPRJMOD}/daisy/Device_Audio_Electrosmith_Daisy_Seed.lib")(options "")(descr ""))
+  (lib (name "ES_Daisy_Patch_SM_FB_Rev1-eagle-import")(type "Legacy")(uri "${KIPRJMOD}/ES_Daisy_Patch_SM_FB_Rev1-eagle-import.lib")(options "")(descr ""))
 )
