@@ -3682,9 +3682,6 @@
     (path "/e87e5716-8f22-4154-814e-6d102bc4645c"
       (reference "J4") (unit 1) (value "Barrel_Jack") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
     )
-    (path "/abd8f63e-8fbf-4ad4-a216-38dee4937522/5e6f3146-8d81-4d38-9225-40a455fd4f1f"
-      (reference "J5") (unit 1) (value "AudioJack3") (footprint "")
-    )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/4e73cd1c-cc94-46f6-8246-5c52d980182a"
       (reference "J6") (unit 1) (value "Conn_01x08_Male") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical")
     )
@@ -3711,9 +3708,6 @@
     )
     (path "/7037204c-c472-4955-a395-1b1360c408cd"
       (reference "J14") (unit 1) (value "Conn_01x03_Male") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-    )
-    (path "/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/5e6f3146-8d81-4d38-9225-40a455fd4f1f"
-      (reference "J15") (unit 1) (value "AudioJack3") (footprint "")
     )
     (path "/57fbed25-6dba-42f1-84f1-002a8e5e6d1c"
       (reference "JP1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
