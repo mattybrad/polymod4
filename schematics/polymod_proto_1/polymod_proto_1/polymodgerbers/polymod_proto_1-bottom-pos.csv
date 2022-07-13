@@ -1,0 +1,4 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"A1","Device_Audio_Electrosmith_Daisy_Seed_Rev4","Device_Audio_Electrosmith_Daisy_Seed",-149.577500,-59.500000,180.000000,bottom
+"C1","470uF","CP_Radial_D6.3mm_P2.50mm",-199.082380,-54.100000,180.000000,bottom
+"U1","6N138","DIP-8_W7.62mm_Socket",-211.200000,-48.600000,180.000000,bottom

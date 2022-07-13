@@ -2289,7 +2289,7 @@
     (property "Value" "SW_Push" (id 1) (at 255.27 137.1599 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Button_Switch_THT:SW_PUSH-12mm" (id 2) (at 248.92 135.89 0)
+    (property "Footprint" "polymodcustom:SW_PUSH-12mm" (id 2) (at 248.92 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 248.92 135.89 0)
@@ -2343,7 +2343,7 @@
     (property "Value" "SW_Push" (id 1) (at 213.36 137.1599 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Button_Switch_THT:SW_PUSH-12mm" (id 2) (at 207.01 135.89 0)
+    (property "Footprint" "polymodcustom:SW_PUSH-12mm" (id 2) (at 207.01 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 207.01 135.89 0)
@@ -2379,7 +2379,7 @@
     (property "Value" "680R" (id 1) (at 323.85 63.4999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 319.532 62.23 90)
+    (property "Footprint" "polymodcustom:R_0805_2012Metric" (id 2) (at 319.532 62.23 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 321.31 62.23 0)
@@ -2394,7 +2394,7 @@
     (uuid 28ffef65-dd62-43cd-b3fb-88a98acbe302)
     (property "Reference" "R2" (id 0) (at 116.84 256.3622 90))
     (property "Value" "10k" (id 1) (at 116.84 258.6736 90))
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 116.84 259.842 90)
+    (property "Footprint" "polymodcustom:R_0805_2012Metric" (id 2) (at 116.84 259.842 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 116.84 261.62 0)
@@ -2464,7 +2464,7 @@
     (property "Value" "680R" (id 1) (at 334.01 63.4999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 329.692 62.23 90)
+    (property "Footprint" "polymodcustom:R_0805_2012Metric" (id 2) (at 329.692 62.23 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 331.47 62.23 0)
@@ -2483,7 +2483,7 @@
     (property "Value" "680R" (id 1) (at 303.53 63.4999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 299.212 62.23 90)
+    (property "Footprint" "polymodcustom:R_0805_2012Metric" (id 2) (at 299.212 62.23 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 300.99 62.23 0)
@@ -2639,7 +2639,7 @@
     (property "Value" "680R" (id 1) (at 313.69 63.4999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 309.372 62.23 90)
+    (property "Footprint" "polymodcustom:R_0805_2012Metric" (id 2) (at 309.372 62.23 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 311.15 62.23 0)
@@ -2737,7 +2737,7 @@
     (uuid 82f089e7-3305-4d9a-aab2-bf992b3ce5fb)
     (property "Reference" "R1" (id 0) (at 80.01 256.3622 90))
     (property "Value" "220" (id 1) (at 80.01 258.6736 90))
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 80.01 259.842 90)
+    (property "Footprint" "polymodcustom:R_0805_2012Metric" (id 2) (at 80.01 259.842 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 80.01 261.62 0)
@@ -2809,7 +2809,7 @@
     (property "Value" "SW_Push" (id 1) (at 227.33 137.1599 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Button_Switch_THT:SW_PUSH-12mm" (id 2) (at 220.98 135.89 0)
+    (property "Footprint" "polymodcustom:SW_PUSH-12mm" (id 2) (at 220.98 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 220.98 135.89 0)
@@ -2922,7 +2922,7 @@
     (property "Value" "680R" (id 1) (at 293.37 63.4999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 289.052 62.23 90)
+    (property "Footprint" "polymodcustom:R_0805_2012Metric" (id 2) (at 289.052 62.23 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 290.83 62.23 0)
@@ -2997,7 +2997,7 @@
     (property "Value" "SW_Push" (id 1) (at 241.3 137.1599 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Button_Switch_THT:SW_PUSH-12mm" (id 2) (at 234.95 135.89 0)
+    (property "Footprint" "polymodcustom:SW_PUSH-12mm" (id 2) (at 234.95 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 234.95 135.89 0)
@@ -3012,7 +3012,7 @@
     (uuid e2b0ba72-f753-4e53-ae19-0185a708287d)
     (property "Reference" "R4" (id 0) (at 175.26 250.3678 90))
     (property "Value" "220" (id 1) (at 175.26 248.0564 90))
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 175.26 246.888 90)
+    (property "Footprint" "polymodcustom:R_0805_2012Metric" (id 2) (at 175.26 246.888 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 175.26 245.11 0)
@@ -3137,7 +3137,7 @@
     (uuid f8f07dbe-5699-428e-b637-ddfac9877bdb)
     (property "Reference" "R3" (id 0) (at 157.48 261.4422 90))
     (property "Value" "470" (id 1) (at 157.48 263.7536 90))
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 157.48 264.922 90)
+    (property "Footprint" "polymodcustom:R_0805_2012Metric" (id 2) (at 157.48 264.922 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 157.48 266.7 0)
@@ -3152,7 +3152,7 @@
     (uuid fde2bcb1-b71e-45c6-8aa8-9fe01c6f4e27)
     (property "Reference" "R5" (id 0) (at 187.96 237.3122 90))
     (property "Value" "220" (id 1) (at 187.96 239.6236 90))
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 187.96 240.792 90)
+    (property "Footprint" "polymodcustom:R_0805_2012Metric" (id 2) (at 187.96 240.792 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 187.96 242.57 0)
@@ -3499,100 +3499,100 @@
       (reference "D6") (unit 1) (value "LED") (footprint "LED_THT:LED_D5.0mm")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/a6a53b82-d335-4d74-92a2-0537c3204661"
-      (reference "D7") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D7") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/6aca4e3d-1d02-4c98-8f09-19fc7c0943ca"
-      (reference "D8") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D8") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/222664ca-d151-4aa4-a5f7-d347ff7a74c8"
-      (reference "D9") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D9") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/6dec5546-536e-460a-978b-69ada296f03e"
-      (reference "D10") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D10") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/13fc4901-a0a7-4d5a-baa0-699080a964bd"
-      (reference "D11") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D11") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/1082e9fa-dcd6-4836-8a15-fd6a626e98f9"
-      (reference "D12") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D12") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/f6bf1b5d-8d7a-49db-a4c8-98d663d96274"
-      (reference "D13") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D13") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/667335cd-45fc-48b8-8dd3-faf8c21120ea/3ee38f86-d853-443a-9436-8502621f5746"
-      (reference "D14") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D14") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/a6a53b82-d335-4d74-92a2-0537c3204661"
-      (reference "D15") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D15") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/6aca4e3d-1d02-4c98-8f09-19fc7c0943ca"
-      (reference "D16") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D16") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/222664ca-d151-4aa4-a5f7-d347ff7a74c8"
-      (reference "D17") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D17") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/6dec5546-536e-460a-978b-69ada296f03e"
-      (reference "D18") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D18") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/13fc4901-a0a7-4d5a-baa0-699080a964bd"
-      (reference "D19") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D19") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/1082e9fa-dcd6-4836-8a15-fd6a626e98f9"
-      (reference "D20") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D20") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/f6bf1b5d-8d7a-49db-a4c8-98d663d96274"
-      (reference "D21") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D21") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/87586c87-91f1-4deb-a72b-b32fa07112f2/3ee38f86-d853-443a-9436-8502621f5746"
-      (reference "D22") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D22") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/a6a53b82-d335-4d74-92a2-0537c3204661"
-      (reference "D23") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D23") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/6aca4e3d-1d02-4c98-8f09-19fc7c0943ca"
-      (reference "D24") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D24") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/222664ca-d151-4aa4-a5f7-d347ff7a74c8"
-      (reference "D25") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D25") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/6dec5546-536e-460a-978b-69ada296f03e"
-      (reference "D26") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D26") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/13fc4901-a0a7-4d5a-baa0-699080a964bd"
-      (reference "D27") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D27") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/1082e9fa-dcd6-4836-8a15-fd6a626e98f9"
-      (reference "D28") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D28") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/f6bf1b5d-8d7a-49db-a4c8-98d663d96274"
-      (reference "D29") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D29") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/3ee38f86-d853-443a-9436-8502621f5746"
-      (reference "D30") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D30") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/a6a53b82-d335-4d74-92a2-0537c3204661"
-      (reference "D31") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D31") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/6aca4e3d-1d02-4c98-8f09-19fc7c0943ca"
-      (reference "D32") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D32") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/222664ca-d151-4aa4-a5f7-d347ff7a74c8"
-      (reference "D33") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D33") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/6dec5546-536e-460a-978b-69ada296f03e"
-      (reference "D34") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D34") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/13fc4901-a0a7-4d5a-baa0-699080a964bd"
-      (reference "D35") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D35") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/1082e9fa-dcd6-4836-8a15-fd6a626e98f9"
-      (reference "D36") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D36") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/f6bf1b5d-8d7a-49db-a4c8-98d663d96274"
-      (reference "D37") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D37") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/d241e2cb-4885-4463-bfe8-23ee06649587/3ee38f86-d853-443a-9436-8502621f5746"
-      (reference "D38") (unit 1) (value "1N4148") (footprint "Diode_SMD:Nexperia_CFP3_SOD-123W")
+      (reference "D38") (unit 1) (value "1N4148") (footprint "polymodcustom:Nexperia_CFP3_SOD-123W")
     )
     (path "/19a8083b-0c70-435a-82b6-4ba8f0169f6a"
       (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3")
@@ -3649,190 +3649,190 @@
       (reference "JP1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
     )
     (path "/82f089e7-3305-4d9a-aab2-bf992b3ce5fb"
-      (reference "R1") (unit 1) (value "220") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R1") (unit 1) (value "220") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/28ffef65-dd62-43cd-b3fb-88a98acbe302"
-      (reference "R2") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R2") (unit 1) (value "10k") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/f8f07dbe-5699-428e-b637-ddfac9877bdb"
-      (reference "R3") (unit 1) (value "470") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R3") (unit 1) (value "470") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/e2b0ba72-f753-4e53-ae19-0185a708287d"
-      (reference "R4") (unit 1) (value "220") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R4") (unit 1) (value "220") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/fde2bcb1-b71e-45c6-8aa8-9fe01c6f4e27"
-      (reference "R5") (unit 1) (value "220") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R5") (unit 1) (value "220") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/d4d23c5a-843e-4082-b26f-f1e32febb302"
-      (reference "R6") (unit 1) (value "680R") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R6") (unit 1) (value "680R") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/53215322-1fde-4084-997d-259c5342c83f"
-      (reference "R7") (unit 1) (value "680R") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R7") (unit 1) (value "680R") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/6db8b18e-ffd6-4cae-88fb-eb979e61218f"
-      (reference "R8") (unit 1) (value "680R") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R8") (unit 1) (value "680R") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/224c1eaf-d809-41e0-a4b6-ee35204c0906"
-      (reference "R9") (unit 1) (value "680R") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R9") (unit 1) (value "680R") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/4bffeb8a-dded-4d2c-9912-9edfc62e4800"
-      (reference "R10") (unit 1) (value "680R") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R10") (unit 1) (value "680R") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5c6db7c5-49fe-42f0-acb6-29470da129fa/797b0c04-15a0-4b38-b78c-27261194d216"
-      (reference "R11") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R11") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5c6db7c5-49fe-42f0-acb6-29470da129fa/72ad7180-a231-4785-8d8e-e6663730e500"
-      (reference "R12") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R12") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5c6db7c5-49fe-42f0-acb6-29470da129fa/8bd64a84-763e-442a-9e96-5f5bce825fe9"
-      (reference "R13") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R13") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5c6db7c5-49fe-42f0-acb6-29470da129fa/e0f976dc-da1d-4982-ab84-a15a2d044ec6"
-      (reference "R14") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R14") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5c6db7c5-49fe-42f0-acb6-29470da129fa/879075cb-4003-454a-9926-5cab074f6a1c"
-      (reference "R15") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R15") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5c6db7c5-49fe-42f0-acb6-29470da129fa/0405b2da-f4a2-49cf-bf80-6709adc7a69a"
-      (reference "R16") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R16") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5c6db7c5-49fe-42f0-acb6-29470da129fa/b9b1ef6a-a80b-4077-9282-9cefe6d7e81c"
-      (reference "R17") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R17") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5c6db7c5-49fe-42f0-acb6-29470da129fa/a6855cea-86ec-4106-8759-7df181fb3d77"
-      (reference "R18") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R18") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/adb51899-d0b2-4c87-b2f6-bf39438ae559/797b0c04-15a0-4b38-b78c-27261194d216"
-      (reference "R19") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R19") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/adb51899-d0b2-4c87-b2f6-bf39438ae559/72ad7180-a231-4785-8d8e-e6663730e500"
-      (reference "R20") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R20") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/adb51899-d0b2-4c87-b2f6-bf39438ae559/8bd64a84-763e-442a-9e96-5f5bce825fe9"
-      (reference "R21") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R21") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/adb51899-d0b2-4c87-b2f6-bf39438ae559/e0f976dc-da1d-4982-ab84-a15a2d044ec6"
-      (reference "R22") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R22") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/adb51899-d0b2-4c87-b2f6-bf39438ae559/879075cb-4003-454a-9926-5cab074f6a1c"
-      (reference "R23") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R23") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/adb51899-d0b2-4c87-b2f6-bf39438ae559/0405b2da-f4a2-49cf-bf80-6709adc7a69a"
-      (reference "R24") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R24") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/adb51899-d0b2-4c87-b2f6-bf39438ae559/b9b1ef6a-a80b-4077-9282-9cefe6d7e81c"
-      (reference "R25") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R25") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/adb51899-d0b2-4c87-b2f6-bf39438ae559/a6855cea-86ec-4106-8759-7df181fb3d77"
-      (reference "R26") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R26") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/797b0c04-15a0-4b38-b78c-27261194d216"
-      (reference "R27") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R27") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/72ad7180-a231-4785-8d8e-e6663730e500"
-      (reference "R28") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R28") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/8bd64a84-763e-442a-9e96-5f5bce825fe9"
-      (reference "R29") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R29") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/e0f976dc-da1d-4982-ab84-a15a2d044ec6"
-      (reference "R30") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R30") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/879075cb-4003-454a-9926-5cab074f6a1c"
-      (reference "R31") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R31") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/0405b2da-f4a2-49cf-bf80-6709adc7a69a"
-      (reference "R32") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R32") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/b9b1ef6a-a80b-4077-9282-9cefe6d7e81c"
-      (reference "R33") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R33") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/a6855cea-86ec-4106-8759-7df181fb3d77"
-      (reference "R34") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R34") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/d150d751-9f42-4d59-9753-9c5245d407f0/797b0c04-15a0-4b38-b78c-27261194d216"
-      (reference "R35") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R35") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/d150d751-9f42-4d59-9753-9c5245d407f0/72ad7180-a231-4785-8d8e-e6663730e500"
-      (reference "R36") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R36") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/d150d751-9f42-4d59-9753-9c5245d407f0/8bd64a84-763e-442a-9e96-5f5bce825fe9"
-      (reference "R37") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R37") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/d150d751-9f42-4d59-9753-9c5245d407f0/e0f976dc-da1d-4982-ab84-a15a2d044ec6"
-      (reference "R38") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R38") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/d150d751-9f42-4d59-9753-9c5245d407f0/879075cb-4003-454a-9926-5cab074f6a1c"
-      (reference "R39") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R39") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/d150d751-9f42-4d59-9753-9c5245d407f0/0405b2da-f4a2-49cf-bf80-6709adc7a69a"
-      (reference "R40") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R40") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/d150d751-9f42-4d59-9753-9c5245d407f0/b9b1ef6a-a80b-4077-9282-9cefe6d7e81c"
-      (reference "R41") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R41") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/d150d751-9f42-4d59-9753-9c5245d407f0/a6855cea-86ec-4106-8759-7df181fb3d77"
-      (reference "R42") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R42") (unit 1) (value "10K") (footprint "polymodcustom:R_0805_2012Metric")
     )
     (path "/abd8f63e-8fbf-4ad4-a216-38dee4937522/d0e45ecd-d0fc-4ca6-bb34-d3d8054d3503"
-      (reference "RV1") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV1") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/abd8f63e-8fbf-4ad4-a216-38dee4937522/2f9739d7-ad2d-4f21-8a8a-79d353315bb0"
-      (reference "RV2") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV2") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/abd8f63e-8fbf-4ad4-a216-38dee4937522/47d7f46f-e5bf-4139-add6-2336c4a217de"
-      (reference "RV3") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV3") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/abd8f63e-8fbf-4ad4-a216-38dee4937522/f94f876a-4218-43ae-804b-81913b700fea"
-      (reference "RV4") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV4") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/abd8f63e-8fbf-4ad4-a216-38dee4937522/89e5cb74-f7a1-4df6-8857-85e4824d6a03"
-      (reference "RV5") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV5") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/abd8f63e-8fbf-4ad4-a216-38dee4937522/050c1a20-0975-46b3-b2bc-d22f73e086ff"
-      (reference "RV6") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV6") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/abd8f63e-8fbf-4ad4-a216-38dee4937522/e08e4279-166c-480d-a272-dcf127e65052"
-      (reference "RV7") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV7") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/abd8f63e-8fbf-4ad4-a216-38dee4937522/28f56ae5-b6d5-4699-9a41-b02e9263b543"
-      (reference "RV8") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV8") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/d0e45ecd-d0fc-4ca6-bb34-d3d8054d3503"
-      (reference "RV9") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV9") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/2f9739d7-ad2d-4f21-8a8a-79d353315bb0"
-      (reference "RV10") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV10") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/47d7f46f-e5bf-4139-add6-2336c4a217de"
-      (reference "RV11") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV11") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/f94f876a-4218-43ae-804b-81913b700fea"
-      (reference "RV12") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV12") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/89e5cb74-f7a1-4df6-8857-85e4824d6a03"
-      (reference "RV13") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV13") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/050c1a20-0975-46b3-b2bc-d22f73e086ff"
-      (reference "RV14") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV14") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/e08e4279-166c-480d-a272-dcf127e65052"
-      (reference "RV15") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV15") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/28f56ae5-b6d5-4699-9a41-b02e9263b543"
-      (reference "RV16") (unit 1) (value "R_Potentiometer") (footprint "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical")
+      (reference "RV16") (unit 1) (value "R_Potentiometer") (footprint "polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical")
     )
     (path "/123ac495-e102-4edd-890c-78c90b0ec933"
-      (reference "SW1") (unit 1) (value "SW_Push") (footprint "Button_Switch_THT:SW_PUSH-12mm")
+      (reference "SW1") (unit 1) (value "SW_Push") (footprint "polymodcustom:SW_PUSH-12mm")
     )
     (path "/9bc41547-6985-4d3c-9d8b-dfdbd22dbd1f"
-      (reference "SW2") (unit 1) (value "SW_Push") (footprint "Button_Switch_THT:SW_PUSH-12mm")
+      (reference "SW2") (unit 1) (value "SW_Push") (footprint "polymodcustom:SW_PUSH-12mm")
     )
     (path "/e1d1089f-3ea5-4cef-806b-fc2eac2ddca9"
-      (reference "SW3") (unit 1) (value "SW_Push") (footprint "Button_Switch_THT:SW_PUSH-12mm")
+      (reference "SW3") (unit 1) (value "SW_Push") (footprint "polymodcustom:SW_PUSH-12mm")
     )
     (path "/0c90dcf4-2c21-4258-844c-d4730064716d"
-      (reference "SW4") (unit 1) (value "SW_Push") (footprint "Button_Switch_THT:SW_PUSH-12mm")
+      (reference "SW4") (unit 1) (value "SW_Push") (footprint "polymodcustom:SW_PUSH-12mm")
     )
     (path "/e9ffe691-9731-424f-ac18-3df8d4dc7459"
       (reference "U1") (unit 1) (value "6N138") (footprint "Package_DIP:DIP-8_W7.62mm_Socket")

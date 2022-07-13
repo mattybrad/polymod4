@@ -1,0 +1,2790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>D:\projects\polymod4\schematics\polymod_proto_1\polymod_proto_1\polymod_proto_1.kicad_sch</source>
+    <date>13/07/2022 15:39:07</date>
+    <tool>Eeschema (6.0.1)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>polymod_proto_1.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Pot group 1/" tstamps="/abd8f63e-8fbf-4ad4-a216-38dee4937522/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>potgroup.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>outputgroup.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>inputgroup.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/Pot group 2/" tstamps="/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>potgroup.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>outputgroup.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="7" name="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>outputgroup.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="8" name="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>outputgroup.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="9" name="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>inputgroup.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="10" name="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>inputgroup.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="11" name="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>inputgroup.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="A1">
+      <value>Device_Audio_Electrosmith_Daisy_Seed_Rev4</value>
+      <footprint>Device_Audio_Electrosmith_Daisy_Seed:Device_Audio_Electrosmith_Daisy_Seed</footprint>
+      <datasheet>https://github.com/electro-smith/DaisyWiki/wiki</datasheet>
+      <libsource lib="Device_Audio_Electrosmith_Daisy_Seed" part="Device_Audio_Electrosmith_Daisy_Seed_Rev4" description="An embedded platform for music"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8c2db38c-e2f8-4434-9a08-97aaa33d0a6f</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>470uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</footprint>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7c6a8910-16ec-46b4-8426-2a008187bba3</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>1N4148</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dcdc090a-cfd1-4969-a56c-28eaf8a84058</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d768c9c7-6390-408c-8277-831fd43ea1dd</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6158234a-7c6b-42e4-a7ef-7c1a7f6598cd</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ece699e9-dccd-4a9d-bac2-4907c4d25a1f</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5dca34a6-15df-470e-96b4-503721a48f72</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3c422927-2160-4cac-b187-2ed198bca7ad</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>19a8083b-0c70-435a-82b6-4ba8f0169f6a</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>10edf393-782f-4fa1-adc4-67cb150036db</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>53bcf6ac-65eb-4d6c-9282-b2f2b1604585</tstamps>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a9d649f4-5be6-4f70-9671-5d525f411a75</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x02_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e37eb717-7500-4617-993d-5d04fd17bd8b</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x03_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x03_Male" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9e1614c8-eb22-4896-8c91-06c0aada958b</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x02_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c37e75f-9a41-40e0-882a-db148e4de570</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>Barrel_Jack</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Barrel_Jack" description="DC Barrel Jack"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e87e5716-8f22-4154-814e-6d102bc4645c</tstamps>
+    </comp>
+    <comp ref="J14">
+      <value>Conn_01x03_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x03_Male" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7037204c-c472-4955-a395-1b1360c408cd</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>Jumper_2_Open</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Jumper" part="Jumper_2_Open" description="Jumper, 2-pole, open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>57fbed25-6dba-42f1-84f1-002a8e5e6d1c</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>220</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>82f089e7-3305-4d9a-aab2-bf992b3ce5fb</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>28ffef65-dd62-43cd-b3fb-88a98acbe302</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>470</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f8f07dbe-5699-428e-b637-ddfac9877bdb</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>220</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e2b0ba72-f753-4e53-ae19-0185a708287d</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>220</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fde2bcb1-b71e-45c6-8aa8-9fe01c6f4e27</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>680R</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d4d23c5a-843e-4082-b26f-f1e32febb302</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>680R</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>53215322-1fde-4084-997d-259c5342c83f</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>680R</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6db8b18e-ffd6-4cae-88fb-eb979e61218f</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>680R</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>224c1eaf-d809-41e0-a4b6-ee35204c0906</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>680R</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4bffeb8a-dded-4d2c-9912-9edfc62e4800</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_Push</value>
+      <footprint>polymodcustom:SW_PUSH-12mm</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>123ac495-e102-4edd-890c-78c90b0ec933</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>SW_Push</value>
+      <footprint>polymodcustom:SW_PUSH-12mm</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9bc41547-6985-4d3c-9d8b-dfdbd22dbd1f</tstamps>
+    </comp>
+    <comp ref="SW3">
+      <value>SW_Push</value>
+      <footprint>polymodcustom:SW_PUSH-12mm</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e1d1089f-3ea5-4cef-806b-fc2eac2ddca9</tstamps>
+    </comp>
+    <comp ref="SW4">
+      <value>SW_Push</value>
+      <footprint>polymodcustom:SW_PUSH-12mm</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0c90dcf4-2c21-4258-844c-d4730064716d</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>6N138</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm_Socket</footprint>
+      <datasheet>http://www.onsemi.com/pub/Collateral/HCPL2731-D.pdf</datasheet>
+      <libsource lib="Isolator" part="6N138" description="Low Input Current high Gain Split Darlington Optocouplers, -0.5V to 7V VDD, DIP-8"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9ffe691-9731-424f-ac18-3df8d4dc7459</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>74HC595</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74hc595.pdf</datasheet>
+      <libsource lib="74xx" part="74HC595" description="8-bit serial in/out Shift Register 3-State Outputs"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0773ac70-bf86-40d8-9f69-b9ed5d8164df</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>74LS165</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS165</datasheet>
+      <libsource lib="74xx" part="74LS165" description="Shift Register 8-bit, parallel load"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="polymod_proto_1.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c513b4eb-70bb-4a18-aa6d-9ba50c5a253f</tstamps>
+    </comp>
+    <comp ref="RV1">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 1"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 1/" tstamps="/abd8f63e-8fbf-4ad4-a216-38dee4937522/"/>
+      <tstamps>d0e45ecd-d0fc-4ca6-bb34-d3d8054d3503</tstamps>
+    </comp>
+    <comp ref="RV2">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 1"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 1/" tstamps="/abd8f63e-8fbf-4ad4-a216-38dee4937522/"/>
+      <tstamps>2f9739d7-ad2d-4f21-8a8a-79d353315bb0</tstamps>
+    </comp>
+    <comp ref="RV3">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 1"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 1/" tstamps="/abd8f63e-8fbf-4ad4-a216-38dee4937522/"/>
+      <tstamps>47d7f46f-e5bf-4139-add6-2336c4a217de</tstamps>
+    </comp>
+    <comp ref="RV4">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 1"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 1/" tstamps="/abd8f63e-8fbf-4ad4-a216-38dee4937522/"/>
+      <tstamps>f94f876a-4218-43ae-804b-81913b700fea</tstamps>
+    </comp>
+    <comp ref="RV5">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 1"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 1/" tstamps="/abd8f63e-8fbf-4ad4-a216-38dee4937522/"/>
+      <tstamps>89e5cb74-f7a1-4df6-8857-85e4824d6a03</tstamps>
+    </comp>
+    <comp ref="RV6">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 1"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 1/" tstamps="/abd8f63e-8fbf-4ad4-a216-38dee4937522/"/>
+      <tstamps>050c1a20-0975-46b3-b2bc-d22f73e086ff</tstamps>
+    </comp>
+    <comp ref="RV7">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 1"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 1/" tstamps="/abd8f63e-8fbf-4ad4-a216-38dee4937522/"/>
+      <tstamps>e08e4279-166c-480d-a272-dcf127e65052</tstamps>
+    </comp>
+    <comp ref="RV8">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 1"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 1/" tstamps="/abd8f63e-8fbf-4ad4-a216-38dee4937522/"/>
+      <tstamps>28f56ae5-b6d5-4699-9a41-b02e9263b543</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>4051</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf</datasheet>
+      <libsource lib="4xxx" part="4051" description="Analog Multiplexer 8 to 1 lins"/>
+      <property name="Sheetname" value="Pot group 1"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 1/" tstamps="/abd8f63e-8fbf-4ad4-a216-38dee4937522/"/>
+      <tstamps>eb1da96f-319a-418e-9623-525445e49dbe</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 1"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/"/>
+      <tstamps>a6a53b82-d335-4d74-92a2-0537c3204661</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 1"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/"/>
+      <tstamps>6aca4e3d-1d02-4c98-8f09-19fc7c0943ca</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 1"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/"/>
+      <tstamps>222664ca-d151-4aa4-a5f7-d347ff7a74c8</tstamps>
+    </comp>
+    <comp ref="D10">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 1"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/"/>
+      <tstamps>6dec5546-536e-460a-978b-69ada296f03e</tstamps>
+    </comp>
+    <comp ref="D11">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 1"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/"/>
+      <tstamps>13fc4901-a0a7-4d5a-baa0-699080a964bd</tstamps>
+    </comp>
+    <comp ref="D12">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 1"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/"/>
+      <tstamps>1082e9fa-dcd6-4836-8a15-fd6a626e98f9</tstamps>
+    </comp>
+    <comp ref="D13">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 1"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/"/>
+      <tstamps>f6bf1b5d-8d7a-49db-a4c8-98d663d96274</tstamps>
+    </comp>
+    <comp ref="D14">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 1"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/"/>
+      <tstamps>3ee38f86-d853-443a-9436-8502621f5746</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>Conn_01x08_Male</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x08_Male" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Output group 1"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/"/>
+      <tstamps>4e73cd1c-cc94-46f6-8246-5c52d980182a</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>74HC595</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74hc595.pdf</datasheet>
+      <libsource lib="74xx" part="74HC595" description="8-bit serial in/out Shift Register 3-State Outputs"/>
+      <property name="Sheetname" value="Output group 1"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 1/" tstamps="/667335cd-45fc-48b8-8dd3-faf8c21120ea/"/>
+      <tstamps>4ee1132e-5b93-4ede-9489-eb12e18426bd</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>Conn_01x08_Male</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x08_Male" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input group 1"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/"/>
+      <tstamps>49cd0f98-110e-4c41-a1d6-c88dee9f5d35</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 1"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/"/>
+      <tstamps>797b0c04-15a0-4b38-b78c-27261194d216</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 1"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/"/>
+      <tstamps>72ad7180-a231-4785-8d8e-e6663730e500</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 1"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/"/>
+      <tstamps>8bd64a84-763e-442a-9e96-5f5bce825fe9</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 1"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/"/>
+      <tstamps>e0f976dc-da1d-4982-ab84-a15a2d044ec6</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 1"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/"/>
+      <tstamps>879075cb-4003-454a-9926-5cab074f6a1c</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 1"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/"/>
+      <tstamps>0405b2da-f4a2-49cf-bf80-6709adc7a69a</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 1"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/"/>
+      <tstamps>b9b1ef6a-a80b-4077-9282-9cefe6d7e81c</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 1"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/"/>
+      <tstamps>a6855cea-86ec-4106-8759-7df181fb3d77</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>74LS165</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS165</datasheet>
+      <libsource lib="74xx" part="74LS165" description="Shift Register 8-bit, parallel load"/>
+      <property name="Sheetname" value="Input group 1"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 1/" tstamps="/5c6db7c5-49fe-42f0-acb6-29470da129fa/"/>
+      <tstamps>08ee42a8-62c8-40f3-9e8c-42c54abf88d6</tstamps>
+    </comp>
+    <comp ref="RV9">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 2"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 2/" tstamps="/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/"/>
+      <tstamps>d0e45ecd-d0fc-4ca6-bb34-d3d8054d3503</tstamps>
+    </comp>
+    <comp ref="RV10">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 2"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 2/" tstamps="/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/"/>
+      <tstamps>2f9739d7-ad2d-4f21-8a8a-79d353315bb0</tstamps>
+    </comp>
+    <comp ref="RV11">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 2"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 2/" tstamps="/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/"/>
+      <tstamps>47d7f46f-e5bf-4139-add6-2336c4a217de</tstamps>
+    </comp>
+    <comp ref="RV12">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 2"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 2/" tstamps="/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/"/>
+      <tstamps>f94f876a-4218-43ae-804b-81913b700fea</tstamps>
+    </comp>
+    <comp ref="RV13">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 2"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 2/" tstamps="/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/"/>
+      <tstamps>89e5cb74-f7a1-4df6-8857-85e4824d6a03</tstamps>
+    </comp>
+    <comp ref="RV14">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 2"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 2/" tstamps="/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/"/>
+      <tstamps>050c1a20-0975-46b3-b2bc-d22f73e086ff</tstamps>
+    </comp>
+    <comp ref="RV15">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 2"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 2/" tstamps="/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/"/>
+      <tstamps>e08e4279-166c-480d-a272-dcf127e65052</tstamps>
+    </comp>
+    <comp ref="RV16">
+      <value>R_Potentiometer</value>
+      <footprint>polymodcustom:Potentiometer_Alps_RK09K_Single_Vertical</footprint>
+      <libsource lib="Device" part="R_Potentiometer" description="Potentiometer"/>
+      <property name="Sheetname" value="Pot group 2"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 2/" tstamps="/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/"/>
+      <tstamps>28f56ae5-b6d5-4699-9a41-b02e9263b543</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>4051</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf</datasheet>
+      <libsource lib="4xxx" part="4051" description="Analog Multiplexer 8 to 1 lins"/>
+      <property name="Sheetname" value="Pot group 2"/>
+      <property name="Sheetfile" value="potgroup.kicad_sch"/>
+      <sheetpath names="/Pot group 2/" tstamps="/0c4f230b-f5e6-413e-a6eb-f32ef4d9b49f/"/>
+      <tstamps>eb1da96f-319a-418e-9623-525445e49dbe</tstamps>
+    </comp>
+    <comp ref="D15">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 2"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/"/>
+      <tstamps>a6a53b82-d335-4d74-92a2-0537c3204661</tstamps>
+    </comp>
+    <comp ref="D16">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 2"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/"/>
+      <tstamps>6aca4e3d-1d02-4c98-8f09-19fc7c0943ca</tstamps>
+    </comp>
+    <comp ref="D17">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 2"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/"/>
+      <tstamps>222664ca-d151-4aa4-a5f7-d347ff7a74c8</tstamps>
+    </comp>
+    <comp ref="D18">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 2"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/"/>
+      <tstamps>6dec5546-536e-460a-978b-69ada296f03e</tstamps>
+    </comp>
+    <comp ref="D19">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 2"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/"/>
+      <tstamps>13fc4901-a0a7-4d5a-baa0-699080a964bd</tstamps>
+    </comp>
+    <comp ref="D20">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 2"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/"/>
+      <tstamps>1082e9fa-dcd6-4836-8a15-fd6a626e98f9</tstamps>
+    </comp>
+    <comp ref="D21">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 2"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/"/>
+      <tstamps>f6bf1b5d-8d7a-49db-a4c8-98d663d96274</tstamps>
+    </comp>
+    <comp ref="D22">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 2"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/"/>
+      <tstamps>3ee38f86-d853-443a-9436-8502621f5746</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>Conn_01x08_Male</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x08_Male" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Output group 2"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/"/>
+      <tstamps>4e73cd1c-cc94-46f6-8246-5c52d980182a</tstamps>
+    </comp>
+    <comp ref="U8">
+      <value>74HC595</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74hc595.pdf</datasheet>
+      <libsource lib="74xx" part="74HC595" description="8-bit serial in/out Shift Register 3-State Outputs"/>
+      <property name="Sheetname" value="Output group 2"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 2/" tstamps="/87586c87-91f1-4deb-a72b-b32fa07112f2/"/>
+      <tstamps>4ee1132e-5b93-4ede-9489-eb12e18426bd</tstamps>
+    </comp>
+    <comp ref="D23">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 3"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/"/>
+      <tstamps>a6a53b82-d335-4d74-92a2-0537c3204661</tstamps>
+    </comp>
+    <comp ref="D24">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 3"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/"/>
+      <tstamps>6aca4e3d-1d02-4c98-8f09-19fc7c0943ca</tstamps>
+    </comp>
+    <comp ref="D25">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 3"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/"/>
+      <tstamps>222664ca-d151-4aa4-a5f7-d347ff7a74c8</tstamps>
+    </comp>
+    <comp ref="D26">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 3"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/"/>
+      <tstamps>6dec5546-536e-460a-978b-69ada296f03e</tstamps>
+    </comp>
+    <comp ref="D27">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 3"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/"/>
+      <tstamps>13fc4901-a0a7-4d5a-baa0-699080a964bd</tstamps>
+    </comp>
+    <comp ref="D28">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 3"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/"/>
+      <tstamps>1082e9fa-dcd6-4836-8a15-fd6a626e98f9</tstamps>
+    </comp>
+    <comp ref="D29">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 3"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/"/>
+      <tstamps>f6bf1b5d-8d7a-49db-a4c8-98d663d96274</tstamps>
+    </comp>
+    <comp ref="D30">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 3"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/"/>
+      <tstamps>3ee38f86-d853-443a-9436-8502621f5746</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>Conn_01x08_Male</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x08_Male" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Output group 3"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/"/>
+      <tstamps>4e73cd1c-cc94-46f6-8246-5c52d980182a</tstamps>
+    </comp>
+    <comp ref="U9">
+      <value>74HC595</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74hc595.pdf</datasheet>
+      <libsource lib="74xx" part="74HC595" description="8-bit serial in/out Shift Register 3-State Outputs"/>
+      <property name="Sheetname" value="Output group 3"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 3/" tstamps="/2e428e76-2b29-4a13-aac8-c5ac3a80dda9/"/>
+      <tstamps>4ee1132e-5b93-4ede-9489-eb12e18426bd</tstamps>
+    </comp>
+    <comp ref="D31">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 4"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/"/>
+      <tstamps>a6a53b82-d335-4d74-92a2-0537c3204661</tstamps>
+    </comp>
+    <comp ref="D32">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 4"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/"/>
+      <tstamps>6aca4e3d-1d02-4c98-8f09-19fc7c0943ca</tstamps>
+    </comp>
+    <comp ref="D33">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 4"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/"/>
+      <tstamps>222664ca-d151-4aa4-a5f7-d347ff7a74c8</tstamps>
+    </comp>
+    <comp ref="D34">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 4"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/"/>
+      <tstamps>6dec5546-536e-460a-978b-69ada296f03e</tstamps>
+    </comp>
+    <comp ref="D35">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 4"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/"/>
+      <tstamps>13fc4901-a0a7-4d5a-baa0-699080a964bd</tstamps>
+    </comp>
+    <comp ref="D36">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 4"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/"/>
+      <tstamps>1082e9fa-dcd6-4836-8a15-fd6a626e98f9</tstamps>
+    </comp>
+    <comp ref="D37">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 4"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/"/>
+      <tstamps>f6bf1b5d-8d7a-49db-a4c8-98d663d96274</tstamps>
+    </comp>
+    <comp ref="D38">
+      <value>1N4148</value>
+      <footprint>polymodcustom:Nexperia_CFP3_SOD-123W</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148" description="100V 0.15A standard switching diode, DO-35"/>
+      <property name="Sheetname" value="Output group 4"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/"/>
+      <tstamps>3ee38f86-d853-443a-9436-8502621f5746</tstamps>
+    </comp>
+    <comp ref="J10">
+      <value>Conn_01x08_Male</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x08_Male" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Output group 4"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/"/>
+      <tstamps>4e73cd1c-cc94-46f6-8246-5c52d980182a</tstamps>
+    </comp>
+    <comp ref="U10">
+      <value>74HC595</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/sn74hc595.pdf</datasheet>
+      <libsource lib="74xx" part="74HC595" description="8-bit serial in/out Shift Register 3-State Outputs"/>
+      <property name="Sheetname" value="Output group 4"/>
+      <property name="Sheetfile" value="outputgroup.kicad_sch"/>
+      <sheetpath names="/Output group 4/" tstamps="/d241e2cb-4885-4463-bfe8-23ee06649587/"/>
+      <tstamps>4ee1132e-5b93-4ede-9489-eb12e18426bd</tstamps>
+    </comp>
+    <comp ref="J11">
+      <value>Conn_01x08_Male</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x08_Male" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input group 2"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/"/>
+      <tstamps>49cd0f98-110e-4c41-a1d6-c88dee9f5d35</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 2"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/"/>
+      <tstamps>797b0c04-15a0-4b38-b78c-27261194d216</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 2"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/"/>
+      <tstamps>72ad7180-a231-4785-8d8e-e6663730e500</tstamps>
+    </comp>
+    <comp ref="R21">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 2"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/"/>
+      <tstamps>8bd64a84-763e-442a-9e96-5f5bce825fe9</tstamps>
+    </comp>
+    <comp ref="R22">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 2"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/"/>
+      <tstamps>e0f976dc-da1d-4982-ab84-a15a2d044ec6</tstamps>
+    </comp>
+    <comp ref="R23">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 2"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/"/>
+      <tstamps>879075cb-4003-454a-9926-5cab074f6a1c</tstamps>
+    </comp>
+    <comp ref="R24">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 2"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/"/>
+      <tstamps>0405b2da-f4a2-49cf-bf80-6709adc7a69a</tstamps>
+    </comp>
+    <comp ref="R25">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 2"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/"/>
+      <tstamps>b9b1ef6a-a80b-4077-9282-9cefe6d7e81c</tstamps>
+    </comp>
+    <comp ref="R26">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 2"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/"/>
+      <tstamps>a6855cea-86ec-4106-8759-7df181fb3d77</tstamps>
+    </comp>
+    <comp ref="U11">
+      <value>74LS165</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS165</datasheet>
+      <libsource lib="74xx" part="74LS165" description="Shift Register 8-bit, parallel load"/>
+      <property name="Sheetname" value="Input group 2"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 2/" tstamps="/adb51899-d0b2-4c87-b2f6-bf39438ae559/"/>
+      <tstamps>08ee42a8-62c8-40f3-9e8c-42c54abf88d6</tstamps>
+    </comp>
+    <comp ref="J12">
+      <value>Conn_01x08_Male</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x08_Male" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input group 3"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/"/>
+      <tstamps>49cd0f98-110e-4c41-a1d6-c88dee9f5d35</tstamps>
+    </comp>
+    <comp ref="R27">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 3"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/"/>
+      <tstamps>797b0c04-15a0-4b38-b78c-27261194d216</tstamps>
+    </comp>
+    <comp ref="R28">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 3"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/"/>
+      <tstamps>72ad7180-a231-4785-8d8e-e6663730e500</tstamps>
+    </comp>
+    <comp ref="R29">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 3"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/"/>
+      <tstamps>8bd64a84-763e-442a-9e96-5f5bce825fe9</tstamps>
+    </comp>
+    <comp ref="R30">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 3"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/"/>
+      <tstamps>e0f976dc-da1d-4982-ab84-a15a2d044ec6</tstamps>
+    </comp>
+    <comp ref="R31">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 3"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/"/>
+      <tstamps>879075cb-4003-454a-9926-5cab074f6a1c</tstamps>
+    </comp>
+    <comp ref="R32">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 3"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/"/>
+      <tstamps>0405b2da-f4a2-49cf-bf80-6709adc7a69a</tstamps>
+    </comp>
+    <comp ref="R33">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 3"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/"/>
+      <tstamps>b9b1ef6a-a80b-4077-9282-9cefe6d7e81c</tstamps>
+    </comp>
+    <comp ref="R34">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 3"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/"/>
+      <tstamps>a6855cea-86ec-4106-8759-7df181fb3d77</tstamps>
+    </comp>
+    <comp ref="U12">
+      <value>74LS165</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS165</datasheet>
+      <libsource lib="74xx" part="74LS165" description="Shift Register 8-bit, parallel load"/>
+      <property name="Sheetname" value="Input group 3"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 3/" tstamps="/5f8cbbea-5457-48d3-a77a-e8ebe461c52f/"/>
+      <tstamps>08ee42a8-62c8-40f3-9e8c-42c54abf88d6</tstamps>
+    </comp>
+    <comp ref="J13">
+      <value>Conn_01x08_Male</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x08_Male" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Input group 4"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/"/>
+      <tstamps>49cd0f98-110e-4c41-a1d6-c88dee9f5d35</tstamps>
+    </comp>
+    <comp ref="R35">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 4"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/"/>
+      <tstamps>797b0c04-15a0-4b38-b78c-27261194d216</tstamps>
+    </comp>
+    <comp ref="R36">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 4"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/"/>
+      <tstamps>72ad7180-a231-4785-8d8e-e6663730e500</tstamps>
+    </comp>
+    <comp ref="R37">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 4"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/"/>
+      <tstamps>8bd64a84-763e-442a-9e96-5f5bce825fe9</tstamps>
+    </comp>
+    <comp ref="R38">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 4"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/"/>
+      <tstamps>e0f976dc-da1d-4982-ab84-a15a2d044ec6</tstamps>
+    </comp>
+    <comp ref="R39">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 4"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/"/>
+      <tstamps>879075cb-4003-454a-9926-5cab074f6a1c</tstamps>
+    </comp>
+    <comp ref="R40">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 4"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/"/>
+      <tstamps>0405b2da-f4a2-49cf-bf80-6709adc7a69a</tstamps>
+    </comp>
+    <comp ref="R41">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 4"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/"/>
+      <tstamps>b9b1ef6a-a80b-4077-9282-9cefe6d7e81c</tstamps>
+    </comp>
+    <comp ref="R42">
+      <value>10K</value>
+      <footprint>polymodcustom:R_0805_2012Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Input group 4"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/"/>
+      <tstamps>a6855cea-86ec-4106-8759-7df181fb3d77</tstamps>
+    </comp>
+    <comp ref="U13">
+      <value>74LS165</value>
+      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS165</datasheet>
+      <libsource lib="74xx" part="74LS165" description="Shift Register 8-bit, parallel load"/>
+      <property name="Sheetname" value="Input group 4"/>
+      <property name="Sheetfile" value="inputgroup.kicad_sch"/>
+      <sheetpath names="/Input group 4/" tstamps="/d150d751-9f42-4d59-9753-9c5245d407f0/"/>
+      <tstamps>08ee42a8-62c8-40f3-9e8c-42c54abf88d6</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="4xxx" part="4051">
+      <description>Analog Multiplexer 8 to 1 lins</description>
+      <docs>http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf</docs>
+      <footprints>
+        <fp>DIP?16*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4051</field>
+        <field name="Datasheet">http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="X4" type="passive"/>
+        <pin num="2" name="X6" type="passive"/>
+        <pin num="3" name="X" type="passive"/>
+        <pin num="4" name="X7" type="passive"/>
+        <pin num="5" name="X5" type="passive"/>
+        <pin num="6" name="Inh" type="input"/>
+        <pin num="7" name="VEE" type="power_in"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="C" type="input"/>
+        <pin num="10" name="B" type="input"/>
+        <pin num="11" name="A" type="input"/>
+        <pin num="12" name="X3" type="passive"/>
+        <pin num="13" name="X0" type="passive"/>
+        <pin num="14" name="X1" type="passive"/>
+        <pin num="15" name="X2" type="passive"/>
+        <pin num="16" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74HC595">
+      <description>8-bit serial in/out Shift Register 3-State Outputs</description>
+      <docs>http://www.ti.com/lit/ds/symlink/sn74hc595.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SOIC*3.9x9.9mm*P1.27mm*</fp>
+        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
+        <fp>SOIC*5.3x10.2mm*P1.27mm*</fp>
+        <fp>SOIC*7.5x10.3mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74HC595</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/sn74hc595.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="QB" type="tri_state"/>
+        <pin num="2" name="QC" type="tri_state"/>
+        <pin num="3" name="QD" type="tri_state"/>
+        <pin num="4" name="QE" type="tri_state"/>
+        <pin num="5" name="QF" type="tri_state"/>
+        <pin num="6" name="QG" type="tri_state"/>
+        <pin num="7" name="QH" type="tri_state"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="QH'" type="output"/>
+        <pin num="10" name="~{SRCLR}" type="input"/>
+        <pin num="11" name="SRCLK" type="input"/>
+        <pin num="12" name="RCLK" type="input"/>
+        <pin num="13" name="~{OE}" type="input"/>
+        <pin num="14" name="SER" type="input"/>
+        <pin num="15" name="QA" type="tri_state"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xx" part="74LS165">
+      <description>Shift Register 8-bit, parallel load</description>
+      <docs>https://www.ti.com/lit/ds/symlink/sn74ls165a.pdf</docs>
+      <footprints>
+        <fp>DIP?16*</fp>
+        <fp>SO*16*3.9x9.9mm*P1.27mm*</fp>
+        <fp>SSOP*16*5.3x6.2mm*P0.65mm*</fp>
+        <fp>TSSOP*16*4.4x5mm*P0.65*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS165</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74ls165a.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{PL}" type="input"/>
+        <pin num="2" name="CP" type="input"/>
+        <pin num="3" name="D4" type="input"/>
+        <pin num="4" name="D5" type="input"/>
+        <pin num="5" name="D6" type="input"/>
+        <pin num="6" name="D7" type="input"/>
+        <pin num="7" name="~{Q7}" type="output"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="Q7" type="output"/>
+        <pin num="10" name="DS" type="input"/>
+        <pin num="11" name="D0" type="input"/>
+        <pin num="12" name="D1" type="input"/>
+        <pin num="13" name="D2" type="input"/>
+        <pin num="14" name="D3" type="input"/>
+        <pin num="15" name="~{CE}" type="input"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Barrel_Jack">
+      <description>DC Barrel Jack</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>BarrelJack*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Barrel_Jack</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x02_Male">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02_Male</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x03_Male">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03_Male</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x08_Male">
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x08_Male</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Potentiometer">
+      <description>Potentiometer</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">R_Potentiometer</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device_Audio_Electrosmith_Daisy_Seed" part="Device_Audio_Electrosmith_Daisy_Seed_Rev4">
+      <description>An embedded platform for music</description>
+      <docs>https://github.com/electro-smith/DaisyWiki/wiki</docs>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">Device_Audio_Electrosmith_Daisy_Seed_Rev4</field>
+        <field name="Footprint">daisy-seed:Device_Audio_Electrosmith_Daisy_Seed</field>
+        <field name="Datasheet">https://github.com/electro-smith/DaisyWiki/wiki</field>
+      </fields>
+      <pins>
+        <pin num="1" name="USB_HS_ID" type="bidirectional"/>
+        <pin num="2" name="SDMMC1_D3" type="bidirectional"/>
+        <pin num="3" name="SDMMC1_D2" type="bidirectional"/>
+        <pin num="4" name="SDMMC1_D1" type="bidirectional"/>
+        <pin num="5" name="SDMMC1_D0" type="bidirectional"/>
+        <pin num="6" name="SDMMC1_CMD" type="bidirectional"/>
+        <pin num="7" name="SDMMC1_CK" type="bidirectional"/>
+        <pin num="8" name="SPI1_NSS" type="bidirectional"/>
+        <pin num="9" name="SPI1_SCK" type="bidirectional"/>
+        <pin num="10" name="SPI1_MISO" type="bidirectional"/>
+        <pin num="11" name="SPI1_MOSI" type="bidirectional"/>
+        <pin num="12" name="I2C1_SCL" type="bidirectional"/>
+        <pin num="13" name="I2C1_SDA" type="bidirectional"/>
+        <pin num="14" name="USART1_TX" type="bidirectional"/>
+        <pin num="15" name="USART1_RX" type="bidirectional"/>
+        <pin num="16" name="AUDIO_IN_L" type="input"/>
+        <pin num="17" name="AUDIO_IN_R" type="input"/>
+        <pin num="18" name="AUDIO_OUT_L" type="output"/>
+        <pin num="19" name="AUDIO_OUT_R" type="output"/>
+        <pin num="20" name="AGND" type="passive"/>
+        <pin num="21" name="3V3_A" type="power_out"/>
+        <pin num="22" name="ADC_INP10" type="bidirectional"/>
+        <pin num="23" name="ADC_INP15" type="bidirectional"/>
+        <pin num="24" name="ADC_INP5" type="bidirectional"/>
+        <pin num="25" name="ADC_INP7" type="bidirectional"/>
+        <pin num="26" name="ADC_INP3" type="bidirectional"/>
+        <pin num="27" name="ADC_INP11" type="bidirectional"/>
+        <pin num="28" name="ADC1_INP4" type="bidirectional"/>
+        <pin num="29" name="DAC1_OUT2" type="bidirectional"/>
+        <pin num="30" name="DAC1_OUT1" type="bidirectional"/>
+        <pin num="31" name="SAI2_MCLK_B" type="bidirectional"/>
+        <pin num="32" name="SAI2_SD_B" type="bidirectional"/>
+        <pin num="33" name="SAI2_SD_A" type="bidirectional"/>
+        <pin num="34" name="SAI2_FS_B" type="bidirectional"/>
+        <pin num="35" name="SAI2_SCK_B" type="bidirectional"/>
+        <pin num="36" name="USB_HS_D_-" type="bidirectional"/>
+        <pin num="37" name="USB_HS_D_+" type="bidirectional"/>
+        <pin num="38" name="3V3_D" type="power_out"/>
+        <pin num="39" name="VIN" type="power_in"/>
+        <pin num="40" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="1N4148">
+      <description>100V 0.15A standard switching diode, DO-35</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</docs>
+      <footprints>
+        <fp>D*DO?35*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4148</field>
+        <field name="Footprint">Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal</field>
+        <field name="Datasheet">https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Isolator" part="6N138">
+      <description>Low Input Current high Gain Split Darlington Optocouplers, -0.5V to 7V VDD, DIP-8</description>
+      <docs>http://www.onsemi.com/pub/Collateral/HCPL2731-D.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SMDIP*W9.53mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">6N138</field>
+        <field name="Datasheet">http://www.onsemi.com/pub/Collateral/HCPL2731-D.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect"/>
+        <pin num="2" name="C1" type="passive"/>
+        <pin num="3" name="C2" type="passive"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="VO2" type="passive"/>
+        <pin num="7" name="VO1" type="passive"/>
+        <pin num="8" name="VCC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="Jumper_2_Open">
+      <description>Jumper, 2-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*2Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_2_Open</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="4xxx">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/4xxx.kicad_sym</uri>
+    </library>
+    <library logical="74xx">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/74xx.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Device_Audio_Electrosmith_Daisy_Seed">
+      <uri>D:\projects\polymod4\schematics\polymod_proto_1\polymod_proto_1/daisy/Device_Audio_Electrosmith_Daisy_Seed.lib</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Diode.kicad_sym</uri>
+    </library>
+    <library logical="Isolator">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Isolator.kicad_sym</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Jumper.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/4051_1">
+      <node ref="A1" pin="22" pinfunction="ADC_INP10" pintype="bidirectional"/>
+      <node ref="U4" pin="3" pinfunction="X" pintype="passive"/>
+    </net>
+    <net code="2" name="/4051_2">
+      <node ref="A1" pin="23" pinfunction="ADC_INP15" pintype="bidirectional"/>
+      <node ref="U7" pin="3" pinfunction="X" pintype="passive"/>
+    </net>
+    <net code="3" name="/Input group 1/OUTPUT">
+      <node ref="U11" pin="10" pinfunction="DS" pintype="input"/>
+      <node ref="U6" pin="9" pinfunction="Q7" pintype="output"/>
+    </net>
+    <net code="4" name="/Input group 2/OUTPUT">
+      <node ref="U11" pin="9" pinfunction="Q7" pintype="output"/>
+      <node ref="U12" pin="10" pinfunction="DS" pintype="input"/>
+    </net>
+    <net code="5" name="/Input group 3/OUTPUT">
+      <node ref="U12" pin="9" pinfunction="Q7" pintype="output"/>
+      <node ref="U13" pin="10" pinfunction="DS" pintype="input"/>
+    </net>
+    <net code="6" name="/MIDI_IN">
+      <node ref="A1" pin="15" pinfunction="USART1_RX" pintype="bidirectional"/>
+      <node ref="JP1" pin="2" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="7" name="/MIDI_OUT">
+      <node ref="A1" pin="14" pinfunction="USART1_TX" pintype="bidirectional"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="8" name="/Output group 1/OUTPUT">
+      <node ref="U5" pin="9" pinfunction="QH'" pintype="output"/>
+      <node ref="U8" pin="14" pinfunction="SER" pintype="input"/>
+    </net>
+    <net code="9" name="/Output group 2/OUTPUT">
+      <node ref="U8" pin="9" pinfunction="QH'" pintype="output"/>
+      <node ref="U9" pin="14" pinfunction="SER" pintype="input"/>
+    </net>
+    <net code="10" name="/Output group 3/OUTPUT">
+      <node ref="U10" pin="14" pinfunction="SER" pintype="input"/>
+      <node ref="U9" pin="9" pinfunction="QH'" pintype="output"/>
+    </net>
+    <net code="11" name="/PATCHING_IN_DATA">
+      <node ref="A1" pin="4" pinfunction="SDMMC1_D1" pintype="bidirectional"/>
+      <node ref="U13" pin="9" pinfunction="Q7" pintype="output"/>
+    </net>
+    <net code="12" name="/PATCHING_OUT_DATA">
+      <node ref="A1" pin="8" pinfunction="SPI1_NSS" pintype="bidirectional"/>
+      <node ref="U5" pin="14" pinfunction="SER" pintype="input"/>
+    </net>
+    <net code="13" name="/UTIL_165">
+      <node ref="U3" pin="9" pinfunction="Q7" pintype="output"/>
+      <node ref="U6" pin="10" pinfunction="DS" pintype="input"/>
+    </net>
+    <net code="14" name="/UTIL_595">
+      <node ref="U10" pin="9" pinfunction="QH'" pintype="output"/>
+      <node ref="U2" pin="14" pinfunction="SER" pintype="input"/>
+    </net>
+    <net code="15" name="/audio_in_tip">
+      <node ref="A1" pin="16" pinfunction="AUDIO_IN_L" pintype="input"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="16" name="/audio_out_tip">
+      <node ref="A1" pin="18" pinfunction="AUDIO_OUT_L" pintype="output"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="17" name="/midi_in_ring">
+      <node ref="J14" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="18" name="/midi_in_tip">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J14" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="C2" pintype="passive"/>
+    </net>
+    <net code="19" name="/midi_out_ring">
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="/midi_out_tip">
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+    </net>
+    <net code="21" name="4051_ADDRESS_A">
+      <node ref="U2" pin="15" pinfunction="QA" pintype="tri_state"/>
+      <node ref="U4" pin="11" pinfunction="A" pintype="input"/>
+      <node ref="U7" pin="11" pinfunction="A" pintype="input"/>
+    </net>
+    <net code="22" name="4051_ADDRESS_B">
+      <node ref="U2" pin="1" pinfunction="QB" pintype="tri_state"/>
+      <node ref="U4" pin="10" pinfunction="B" pintype="input"/>
+      <node ref="U7" pin="10" pinfunction="B" pintype="input"/>
+    </net>
+    <net code="23" name="4051_ADDRESS_C">
+      <node ref="U2" pin="2" pinfunction="QC" pintype="tri_state"/>
+      <node ref="U4" pin="9" pinfunction="C" pintype="input"/>
+      <node ref="U7" pin="9" pinfunction="C" pintype="input"/>
+    </net>
+    <net code="24" name="GND">
+      <node ref="A1" pin="40" pinfunction="GND" pintype="passive+no_connect"/>
+      <node ref="C1" pin="2" pintype="passive+no_connect"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive+no_connect"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive+no_connect"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive+no_connect"/>
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive+no_connect"/>
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive+no_connect"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive+no_connect"/>
+      <node ref="J4" pin="1" pintype="passive+no_connect"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive+no_connect"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+      <node ref="R24" pin="2" pintype="passive"/>
+      <node ref="R25" pin="2" pintype="passive"/>
+      <node ref="R26" pin="2" pintype="passive"/>
+      <node ref="R27" pin="2" pintype="passive"/>
+      <node ref="R28" pin="2" pintype="passive"/>
+      <node ref="R29" pin="2" pintype="passive"/>
+      <node ref="R30" pin="2" pintype="passive"/>
+      <node ref="R31" pin="2" pintype="passive"/>
+      <node ref="R32" pin="2" pintype="passive"/>
+      <node ref="R33" pin="2" pintype="passive"/>
+      <node ref="R34" pin="2" pintype="passive"/>
+      <node ref="R35" pin="2" pintype="passive"/>
+      <node ref="R36" pin="2" pintype="passive"/>
+      <node ref="R37" pin="2" pintype="passive"/>
+      <node ref="R38" pin="2" pintype="passive"/>
+      <node ref="R39" pin="2" pintype="passive"/>
+      <node ref="R40" pin="2" pintype="passive"/>
+      <node ref="R41" pin="2" pintype="passive"/>
+      <node ref="R42" pin="2" pintype="passive"/>
+      <node ref="RV1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV10" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV11" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV12" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV13" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV14" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV15" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV16" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV2" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV3" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV4" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV5" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV6" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV7" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV8" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="RV9" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+      <node ref="SW2" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+      <node ref="SW3" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+      <node ref="SW4" pin="1" pinfunction="1" pintype="passive+no_connect"/>
+      <node ref="U1" pin="5" pinfunction="GND" pintype="passive+no_connect"/>
+      <node ref="U10" pin="13" pinfunction="~{OE}" pintype="input"/>
+      <node ref="U10" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U11" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U12" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U13" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="13" pinfunction="~{OE}" pintype="input+no_connect"/>
+      <node ref="U2" pin="8" pinfunction="GND" pintype="power_in+no_connect"/>
+      <node ref="U3" pin="8" pinfunction="GND" pintype="power_in+no_connect"/>
+      <node ref="U4" pin="6" pinfunction="Inh" pintype="input"/>
+      <node ref="U4" pin="7" pinfunction="VEE" pintype="power_in"/>
+      <node ref="U4" pin="8" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U5" pin="13" pinfunction="~{OE}" pintype="input"/>
+      <node ref="U5" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U6" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="6" pinfunction="Inh" pintype="input"/>
+      <node ref="U7" pin="7" pinfunction="VEE" pintype="power_in"/>
+      <node ref="U7" pin="8" pinfunction="VSS" pintype="power_in"/>
+      <node ref="U8" pin="13" pinfunction="~{OE}" pintype="input"/>
+      <node ref="U8" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U9" pin="13" pinfunction="~{OE}" pintype="input"/>
+      <node ref="U9" pin="8" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="25" name="GNDA">
+      <node ref="A1" pin="20" pinfunction="AGND" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(A1-Pad39)">
+      <node ref="A1" pin="39" pinfunction="VIN" pintype="power_in"/>
+      <node ref="J4" pin="2" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="C1" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(D5-Pad2)">
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(D6-Pad2)">
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(D7-Pad1)">
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="34" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="15" pinfunction="QA" pintype="tri_state"/>
+    </net>
+    <net code="35" name="Net-(D8-Pad1)">
+      <node ref="D8" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="36" name="Net-(D8-Pad2)">
+      <node ref="D8" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="1" pinfunction="QB" pintype="tri_state"/>
+    </net>
+    <net code="37" name="Net-(D9-Pad1)">
+      <node ref="D9" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J6" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="38" name="Net-(D9-Pad2)">
+      <node ref="D9" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="2" pinfunction="QC" pintype="tri_state"/>
+    </net>
+    <net code="39" name="Net-(D10-Pad1)">
+      <node ref="D10" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J6" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="40" name="Net-(D10-Pad2)">
+      <node ref="D10" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="QD" pintype="tri_state"/>
+    </net>
+    <net code="41" name="Net-(D11-Pad1)">
+      <node ref="D11" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J6" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    </net>
+    <net code="42" name="Net-(D11-Pad2)">
+      <node ref="D11" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="4" pinfunction="QE" pintype="tri_state"/>
+    </net>
+    <net code="43" name="Net-(D12-Pad1)">
+      <node ref="D12" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J6" pin="6" pinfunction="Pin_6" pintype="passive"/>
+    </net>
+    <net code="44" name="Net-(D12-Pad2)">
+      <node ref="D12" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="5" pinfunction="QF" pintype="tri_state"/>
+    </net>
+    <net code="45" name="Net-(D13-Pad1)">
+      <node ref="D13" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J6" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="46" name="Net-(D13-Pad2)">
+      <node ref="D13" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="6" pinfunction="QG" pintype="tri_state"/>
+    </net>
+    <net code="47" name="Net-(D14-Pad1)">
+      <node ref="D14" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J6" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="48" name="Net-(D14-Pad2)">
+      <node ref="D14" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U5" pin="7" pinfunction="QH" pintype="tri_state"/>
+    </net>
+    <net code="49" name="Net-(D15-Pad1)">
+      <node ref="D15" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="50" name="Net-(D15-Pad2)">
+      <node ref="D15" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U8" pin="15" pinfunction="QA" pintype="tri_state"/>
+    </net>
+    <net code="51" name="Net-(D16-Pad1)">
+      <node ref="D16" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="52" name="Net-(D16-Pad2)">
+      <node ref="D16" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U8" pin="1" pinfunction="QB" pintype="tri_state"/>
+    </net>
+    <net code="53" name="Net-(D17-Pad1)">
+      <node ref="D17" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="54" name="Net-(D17-Pad2)">
+      <node ref="D17" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U8" pin="2" pinfunction="QC" pintype="tri_state"/>
+    </net>
+    <net code="55" name="Net-(D18-Pad1)">
+      <node ref="D18" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="56" name="Net-(D18-Pad2)">
+      <node ref="D18" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U8" pin="3" pinfunction="QD" pintype="tri_state"/>
+    </net>
+    <net code="57" name="Net-(D19-Pad1)">
+      <node ref="D19" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    </net>
+    <net code="58" name="Net-(D19-Pad2)">
+      <node ref="D19" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U8" pin="4" pinfunction="QE" pintype="tri_state"/>
+    </net>
+    <net code="59" name="Net-(D20-Pad1)">
+      <node ref="D20" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="6" pinfunction="Pin_6" pintype="passive"/>
+    </net>
+    <net code="60" name="Net-(D20-Pad2)">
+      <node ref="D20" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U8" pin="5" pinfunction="QF" pintype="tri_state"/>
+    </net>
+    <net code="61" name="Net-(D21-Pad1)">
+      <node ref="D21" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="62" name="Net-(D21-Pad2)">
+      <node ref="D21" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U8" pin="6" pinfunction="QG" pintype="tri_state"/>
+    </net>
+    <net code="63" name="Net-(D22-Pad1)">
+      <node ref="D22" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="64" name="Net-(D22-Pad2)">
+      <node ref="D22" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U8" pin="7" pinfunction="QH" pintype="tri_state"/>
+    </net>
+    <net code="65" name="Net-(D23-Pad1)">
+      <node ref="D23" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="66" name="Net-(D23-Pad2)">
+      <node ref="D23" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U9" pin="15" pinfunction="QA" pintype="tri_state"/>
+    </net>
+    <net code="67" name="Net-(D24-Pad1)">
+      <node ref="D24" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J9" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="68" name="Net-(D24-Pad2)">
+      <node ref="D24" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U9" pin="1" pinfunction="QB" pintype="tri_state"/>
+    </net>
+    <net code="69" name="Net-(D25-Pad1)">
+      <node ref="D25" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J9" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="70" name="Net-(D25-Pad2)">
+      <node ref="D25" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U9" pin="2" pinfunction="QC" pintype="tri_state"/>
+    </net>
+    <net code="71" name="Net-(D26-Pad1)">
+      <node ref="D26" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J9" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="72" name="Net-(D26-Pad2)">
+      <node ref="D26" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U9" pin="3" pinfunction="QD" pintype="tri_state"/>
+    </net>
+    <net code="73" name="Net-(D27-Pad1)">
+      <node ref="D27" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J9" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    </net>
+    <net code="74" name="Net-(D27-Pad2)">
+      <node ref="D27" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U9" pin="4" pinfunction="QE" pintype="tri_state"/>
+    </net>
+    <net code="75" name="Net-(D28-Pad1)">
+      <node ref="D28" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J9" pin="6" pinfunction="Pin_6" pintype="passive"/>
+    </net>
+    <net code="76" name="Net-(D28-Pad2)">
+      <node ref="D28" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U9" pin="5" pinfunction="QF" pintype="tri_state"/>
+    </net>
+    <net code="77" name="Net-(D29-Pad1)">
+      <node ref="D29" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J9" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="78" name="Net-(D29-Pad2)">
+      <node ref="D29" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U9" pin="6" pinfunction="QG" pintype="tri_state"/>
+    </net>
+    <net code="79" name="Net-(D30-Pad1)">
+      <node ref="D30" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J9" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="80" name="Net-(D30-Pad2)">
+      <node ref="D30" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U9" pin="7" pinfunction="QH" pintype="tri_state"/>
+    </net>
+    <net code="81" name="Net-(D31-Pad1)">
+      <node ref="D31" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J10" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="82" name="Net-(D31-Pad2)">
+      <node ref="D31" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="15" pinfunction="QA" pintype="tri_state"/>
+    </net>
+    <net code="83" name="Net-(D32-Pad1)">
+      <node ref="D32" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J10" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="84" name="Net-(D32-Pad2)">
+      <node ref="D32" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="1" pinfunction="QB" pintype="tri_state"/>
+    </net>
+    <net code="85" name="Net-(D33-Pad1)">
+      <node ref="D33" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J10" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="86" name="Net-(D33-Pad2)">
+      <node ref="D33" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="2" pinfunction="QC" pintype="tri_state"/>
+    </net>
+    <net code="87" name="Net-(D34-Pad1)">
+      <node ref="D34" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J10" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="88" name="Net-(D34-Pad2)">
+      <node ref="D34" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="3" pinfunction="QD" pintype="tri_state"/>
+    </net>
+    <net code="89" name="Net-(D35-Pad1)">
+      <node ref="D35" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J10" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    </net>
+    <net code="90" name="Net-(D35-Pad2)">
+      <node ref="D35" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="4" pinfunction="QE" pintype="tri_state"/>
+    </net>
+    <net code="91" name="Net-(D36-Pad1)">
+      <node ref="D36" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J10" pin="6" pinfunction="Pin_6" pintype="passive"/>
+    </net>
+    <net code="92" name="Net-(D36-Pad2)">
+      <node ref="D36" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="5" pinfunction="QF" pintype="tri_state"/>
+    </net>
+    <net code="93" name="Net-(D37-Pad1)">
+      <node ref="D37" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J10" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="94" name="Net-(D37-Pad2)">
+      <node ref="D37" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="6" pinfunction="QG" pintype="tri_state"/>
+    </net>
+    <net code="95" name="Net-(D38-Pad1)">
+      <node ref="D38" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J10" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="96" name="Net-(D38-Pad2)">
+      <node ref="D38" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="U10" pin="7" pinfunction="QH" pintype="tri_state"/>
+    </net>
+    <net code="97" name="Net-(J7-Pad1)">
+      <node ref="J7" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="U6" pin="11" pinfunction="D0" pintype="input"/>
+    </net>
+    <net code="98" name="Net-(J7-Pad2)">
+      <node ref="J7" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="U6" pin="12" pinfunction="D1" pintype="input"/>
+    </net>
+    <net code="99" name="Net-(J7-Pad3)">
+      <node ref="J7" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="U6" pin="13" pinfunction="D2" pintype="input"/>
+    </net>
+    <net code="100" name="Net-(J7-Pad4)">
+      <node ref="J7" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U6" pin="14" pinfunction="D3" pintype="input"/>
+    </net>
+    <net code="101" name="Net-(J7-Pad5)">
+      <node ref="J7" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="U6" pin="3" pinfunction="D4" pintype="input"/>
+    </net>
+    <net code="102" name="Net-(J7-Pad6)">
+      <node ref="J7" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="U6" pin="4" pinfunction="D5" pintype="input"/>
+    </net>
+    <net code="103" name="Net-(J7-Pad7)">
+      <node ref="J7" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="U6" pin="5" pinfunction="D6" pintype="input"/>
+    </net>
+    <net code="104" name="Net-(J7-Pad8)">
+      <node ref="J7" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U6" pin="6" pinfunction="D7" pintype="input"/>
+    </net>
+    <net code="105" name="Net-(J11-Pad1)">
+      <node ref="J11" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R25" pin="1" pintype="passive"/>
+      <node ref="U11" pin="11" pinfunction="D0" pintype="input"/>
+    </net>
+    <net code="106" name="Net-(J11-Pad2)">
+      <node ref="J11" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R23" pin="1" pintype="passive"/>
+      <node ref="U11" pin="12" pinfunction="D1" pintype="input"/>
+    </net>
+    <net code="107" name="Net-(J11-Pad3)">
+      <node ref="J11" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+      <node ref="U11" pin="13" pinfunction="D2" pintype="input"/>
+    </net>
+    <net code="108" name="Net-(J11-Pad4)">
+      <node ref="J11" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="U11" pin="14" pinfunction="D3" pintype="input"/>
+    </net>
+    <net code="109" name="Net-(J11-Pad5)">
+      <node ref="J11" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R26" pin="1" pintype="passive"/>
+      <node ref="U11" pin="3" pinfunction="D4" pintype="input"/>
+    </net>
+    <net code="110" name="Net-(J11-Pad6)">
+      <node ref="J11" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="R24" pin="1" pintype="passive"/>
+      <node ref="U11" pin="4" pinfunction="D5" pintype="input"/>
+    </net>
+    <net code="111" name="Net-(J11-Pad7)">
+      <node ref="J11" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="R22" pin="1" pintype="passive"/>
+      <node ref="U11" pin="5" pinfunction="D6" pintype="input"/>
+    </net>
+    <net code="112" name="Net-(J11-Pad8)">
+      <node ref="J11" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="U11" pin="6" pinfunction="D7" pintype="input"/>
+    </net>
+    <net code="113" name="Net-(J12-Pad1)">
+      <node ref="J12" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R33" pin="1" pintype="passive"/>
+      <node ref="U12" pin="11" pinfunction="D0" pintype="input"/>
+    </net>
+    <net code="114" name="Net-(J12-Pad2)">
+      <node ref="J12" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R31" pin="1" pintype="passive"/>
+      <node ref="U12" pin="12" pinfunction="D1" pintype="input"/>
+    </net>
+    <net code="115" name="Net-(J12-Pad3)">
+      <node ref="J12" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R29" pin="1" pintype="passive"/>
+      <node ref="U12" pin="13" pinfunction="D2" pintype="input"/>
+    </net>
+    <net code="116" name="Net-(J12-Pad4)">
+      <node ref="J12" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R27" pin="1" pintype="passive"/>
+      <node ref="U12" pin="14" pinfunction="D3" pintype="input"/>
+    </net>
+    <net code="117" name="Net-(J12-Pad5)">
+      <node ref="J12" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R34" pin="1" pintype="passive"/>
+      <node ref="U12" pin="3" pinfunction="D4" pintype="input"/>
+    </net>
+    <net code="118" name="Net-(J12-Pad6)">
+      <node ref="J12" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="R32" pin="1" pintype="passive"/>
+      <node ref="U12" pin="4" pinfunction="D5" pintype="input"/>
+    </net>
+    <net code="119" name="Net-(J12-Pad7)">
+      <node ref="J12" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="R30" pin="1" pintype="passive"/>
+      <node ref="U12" pin="5" pinfunction="D6" pintype="input"/>
+    </net>
+    <net code="120" name="Net-(J12-Pad8)">
+      <node ref="J12" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="R28" pin="1" pintype="passive"/>
+      <node ref="U12" pin="6" pinfunction="D7" pintype="input"/>
+    </net>
+    <net code="121" name="Net-(J13-Pad1)">
+      <node ref="J13" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R41" pin="1" pintype="passive"/>
+      <node ref="U13" pin="11" pinfunction="D0" pintype="input"/>
+    </net>
+    <net code="122" name="Net-(J13-Pad2)">
+      <node ref="J13" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R39" pin="1" pintype="passive"/>
+      <node ref="U13" pin="12" pinfunction="D1" pintype="input"/>
+    </net>
+    <net code="123" name="Net-(J13-Pad3)">
+      <node ref="J13" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R37" pin="1" pintype="passive"/>
+      <node ref="U13" pin="13" pinfunction="D2" pintype="input"/>
+    </net>
+    <net code="124" name="Net-(J13-Pad4)">
+      <node ref="J13" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R35" pin="1" pintype="passive"/>
+      <node ref="U13" pin="14" pinfunction="D3" pintype="input"/>
+    </net>
+    <net code="125" name="Net-(J13-Pad5)">
+      <node ref="J13" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R42" pin="1" pintype="passive"/>
+      <node ref="U13" pin="3" pinfunction="D4" pintype="input"/>
+    </net>
+    <net code="126" name="Net-(J13-Pad6)">
+      <node ref="J13" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="R40" pin="1" pintype="passive"/>
+      <node ref="U13" pin="4" pinfunction="D5" pintype="input"/>
+    </net>
+    <net code="127" name="Net-(J13-Pad7)">
+      <node ref="J13" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="R38" pin="1" pintype="passive"/>
+      <node ref="U13" pin="5" pinfunction="D6" pintype="input"/>
+    </net>
+    <net code="128" name="Net-(J13-Pad8)">
+      <node ref="J13" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="R36" pin="1" pintype="passive"/>
+      <node ref="U13" pin="6" pinfunction="D7" pintype="input"/>
+    </net>
+    <net code="129" name="Net-(JP1-Pad1)">
+      <node ref="JP1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="VO2" pintype="passive"/>
+    </net>
+    <net code="130" name="Net-(R2-Pad2)">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="VO1" pintype="passive"/>
+    </net>
+    <net code="131" name="Net-(R6-Pad1)">
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="QH" pintype="tri_state"/>
+    </net>
+    <net code="132" name="Net-(R7-Pad1)">
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="QG" pintype="tri_state"/>
+    </net>
+    <net code="133" name="Net-(R8-Pad1)">
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="QF" pintype="tri_state"/>
+    </net>
+    <net code="134" name="Net-(R9-Pad1)">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="QE" pintype="tri_state"/>
+    </net>
+    <net code="135" name="Net-(R10-Pad1)">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="QD" pintype="tri_state"/>
+    </net>
+    <net code="136" name="Net-(RV1-Pad2)">
+      <node ref="RV1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U4" pin="13" pinfunction="X0" pintype="passive"/>
+    </net>
+    <net code="137" name="Net-(RV2-Pad2)">
+      <node ref="RV2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U4" pin="14" pinfunction="X1" pintype="passive"/>
+    </net>
+    <net code="138" name="Net-(RV3-Pad2)">
+      <node ref="RV3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U4" pin="15" pinfunction="X2" pintype="passive"/>
+    </net>
+    <net code="139" name="Net-(RV4-Pad2)">
+      <node ref="RV4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U4" pin="12" pinfunction="X3" pintype="passive"/>
+    </net>
+    <net code="140" name="Net-(RV5-Pad2)">
+      <node ref="RV5" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="X4" pintype="passive"/>
+    </net>
+    <net code="141" name="Net-(RV6-Pad2)">
+      <node ref="RV6" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U4" pin="5" pinfunction="X5" pintype="passive"/>
+    </net>
+    <net code="142" name="Net-(RV7-Pad2)">
+      <node ref="RV7" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="X6" pintype="passive"/>
+    </net>
+    <net code="143" name="Net-(RV8-Pad2)">
+      <node ref="RV8" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U4" pin="4" pinfunction="X7" pintype="passive"/>
+    </net>
+    <net code="144" name="Net-(RV9-Pad2)">
+      <node ref="RV9" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U7" pin="13" pinfunction="X0" pintype="passive"/>
+    </net>
+    <net code="145" name="Net-(RV10-Pad2)">
+      <node ref="RV10" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U7" pin="14" pinfunction="X1" pintype="passive"/>
+    </net>
+    <net code="146" name="Net-(RV11-Pad2)">
+      <node ref="RV11" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U7" pin="15" pinfunction="X2" pintype="passive"/>
+    </net>
+    <net code="147" name="Net-(RV12-Pad2)">
+      <node ref="RV12" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U7" pin="12" pinfunction="X3" pintype="passive"/>
+    </net>
+    <net code="148" name="Net-(RV13-Pad2)">
+      <node ref="RV13" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U7" pin="1" pinfunction="X4" pintype="passive"/>
+    </net>
+    <net code="149" name="Net-(RV14-Pad2)">
+      <node ref="RV14" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U7" pin="5" pinfunction="X5" pintype="passive"/>
+    </net>
+    <net code="150" name="Net-(RV15-Pad2)">
+      <node ref="RV15" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U7" pin="2" pinfunction="X6" pintype="passive"/>
+    </net>
+    <net code="151" name="Net-(RV16-Pad2)">
+      <node ref="RV16" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U7" pin="4" pinfunction="X7" pintype="passive"/>
+    </net>
+    <net code="152" name="Net-(SW1-Pad2)">
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U3" pin="11" pinfunction="D0" pintype="input"/>
+    </net>
+    <net code="153" name="Net-(SW2-Pad2)">
+      <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U3" pin="12" pinfunction="D1" pintype="input"/>
+    </net>
+    <net code="154" name="Net-(SW3-Pad2)">
+      <node ref="SW3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U3" pin="13" pinfunction="D2" pintype="input"/>
+    </net>
+    <net code="155" name="Net-(SW4-Pad2)">
+      <node ref="SW4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U3" pin="14" pinfunction="D3" pintype="input"/>
+    </net>
+    <net code="156" name="PATCHING_IN_CE">
+      <node ref="A1" pin="5" pinfunction="SDMMC1_D0" pintype="bidirectional"/>
+      <node ref="U11" pin="15" pinfunction="~{CE}" pintype="input"/>
+      <node ref="U12" pin="15" pinfunction="~{CE}" pintype="input"/>
+      <node ref="U13" pin="15" pinfunction="~{CE}" pintype="input"/>
+      <node ref="U3" pin="15" pinfunction="~{CE}" pintype="input"/>
+      <node ref="U6" pin="15" pinfunction="~{CE}" pintype="input"/>
+    </net>
+    <net code="157" name="PATCHING_IN_CLOCK">
+      <node ref="A1" pin="6" pinfunction="SDMMC1_CMD" pintype="bidirectional"/>
+      <node ref="U11" pin="2" pinfunction="CP" pintype="input"/>
+      <node ref="U12" pin="2" pinfunction="CP" pintype="input"/>
+      <node ref="U13" pin="2" pinfunction="CP" pintype="input"/>
+      <node ref="U3" pin="2" pinfunction="CP" pintype="input"/>
+      <node ref="U6" pin="2" pinfunction="CP" pintype="input"/>
+    </net>
+    <net code="158" name="PATCHING_IN_LOAD">
+      <node ref="A1" pin="7" pinfunction="SDMMC1_CK" pintype="bidirectional"/>
+      <node ref="U11" pin="1" pinfunction="~{PL}" pintype="input"/>
+      <node ref="U12" pin="1" pinfunction="~{PL}" pintype="input"/>
+      <node ref="U13" pin="1" pinfunction="~{PL}" pintype="input"/>
+      <node ref="U3" pin="1" pinfunction="~{PL}" pintype="input"/>
+      <node ref="U6" pin="1" pinfunction="~{PL}" pintype="input"/>
+    </net>
+    <net code="159" name="PATCHING_OUT_CLOCK">
+      <node ref="A1" pin="3" pinfunction="SDMMC1_D2" pintype="bidirectional"/>
+      <node ref="U10" pin="11" pinfunction="SRCLK" pintype="input"/>
+      <node ref="U2" pin="11" pinfunction="SRCLK" pintype="input"/>
+      <node ref="U5" pin="11" pinfunction="SRCLK" pintype="input"/>
+      <node ref="U8" pin="11" pinfunction="SRCLK" pintype="input"/>
+      <node ref="U9" pin="11" pinfunction="SRCLK" pintype="input"/>
+    </net>
+    <net code="160" name="PATCHING_OUT_LATCH">
+      <node ref="A1" pin="2" pinfunction="SDMMC1_D3" pintype="bidirectional"/>
+      <node ref="U10" pin="12" pinfunction="RCLK" pintype="input"/>
+      <node ref="U2" pin="12" pinfunction="RCLK" pintype="input"/>
+      <node ref="U5" pin="12" pinfunction="RCLK" pintype="input"/>
+      <node ref="U8" pin="12" pinfunction="RCLK" pintype="input"/>
+      <node ref="U9" pin="12" pinfunction="RCLK" pintype="input"/>
+    </net>
+    <net code="161" name="VCC">
+      <node ref="A1" pin="38" pinfunction="3V3_D" pintype="power_out"/>
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV11" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV12" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV13" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV14" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV15" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV16" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV8" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="RV9" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="VCC" pintype="passive"/>
+      <node ref="U10" pin="10" pinfunction="~{SRCLR}" pintype="input"/>
+      <node ref="U10" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U11" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U12" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U13" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U2" pin="10" pinfunction="~{SRCLR}" pintype="input"/>
+      <node ref="U2" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U3" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U4" pin="16" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U5" pin="10" pinfunction="~{SRCLR}" pintype="input"/>
+      <node ref="U5" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U6" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U7" pin="16" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U8" pin="10" pinfunction="~{SRCLR}" pintype="input"/>
+      <node ref="U8" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U9" pin="10" pinfunction="~{SRCLR}" pintype="input"/>
+      <node ref="U9" pin="16" pinfunction="VCC" pintype="power_in"/>
+    </net>
+    <net code="162" name="unconnected-(A1-Pad1)">
+      <node ref="A1" pin="1" pinfunction="USB_HS_ID" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="163" name="unconnected-(A1-Pad9)">
+      <node ref="A1" pin="9" pinfunction="SPI1_SCK" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="164" name="unconnected-(A1-Pad10)">
+      <node ref="A1" pin="10" pinfunction="SPI1_MISO" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="165" name="unconnected-(A1-Pad11)">
+      <node ref="A1" pin="11" pinfunction="SPI1_MOSI" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="166" name="unconnected-(A1-Pad12)">
+      <node ref="A1" pin="12" pinfunction="I2C1_SCL" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="167" name="unconnected-(A1-Pad13)">
+      <node ref="A1" pin="13" pinfunction="I2C1_SDA" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="168" name="unconnected-(A1-Pad17)">
+      <node ref="A1" pin="17" pinfunction="AUDIO_IN_R" pintype="input+no_connect"/>
+    </net>
+    <net code="169" name="unconnected-(A1-Pad19)">
+      <node ref="A1" pin="19" pinfunction="AUDIO_OUT_R" pintype="output+no_connect"/>
+    </net>
+    <net code="170" name="unconnected-(A1-Pad21)">
+      <node ref="A1" pin="21" pinfunction="3V3_A" pintype="power_out+no_connect"/>
+    </net>
+    <net code="171" name="unconnected-(A1-Pad24)">
+      <node ref="A1" pin="24" pinfunction="ADC_INP5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="172" name="unconnected-(A1-Pad25)">
+      <node ref="A1" pin="25" pinfunction="ADC_INP7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="173" name="unconnected-(A1-Pad26)">
+      <node ref="A1" pin="26" pinfunction="ADC_INP3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="174" name="unconnected-(A1-Pad27)">
+      <node ref="A1" pin="27" pinfunction="ADC_INP11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="175" name="unconnected-(A1-Pad28)">
+      <node ref="A1" pin="28" pinfunction="ADC1_INP4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="176" name="unconnected-(A1-Pad29)">
+      <node ref="A1" pin="29" pinfunction="DAC1_OUT2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="177" name="unconnected-(A1-Pad30)">
+      <node ref="A1" pin="30" pinfunction="DAC1_OUT1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="178" name="unconnected-(A1-Pad31)">
+      <node ref="A1" pin="31" pinfunction="SAI2_MCLK_B" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="179" name="unconnected-(A1-Pad32)">
+      <node ref="A1" pin="32" pinfunction="SAI2_SD_B" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="180" name="unconnected-(A1-Pad33)">
+      <node ref="A1" pin="33" pinfunction="SAI2_SD_A" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="181" name="unconnected-(A1-Pad34)">
+      <node ref="A1" pin="34" pinfunction="SAI2_FS_B" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="182" name="unconnected-(A1-Pad35)">
+      <node ref="A1" pin="35" pinfunction="SAI2_SCK_B" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="183" name="unconnected-(A1-Pad36)">
+      <node ref="A1" pin="36" pinfunction="USB_HS_D_-" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="184" name="unconnected-(A1-Pad37)">
+      <node ref="A1" pin="37" pinfunction="USB_HS_D_+" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="185" name="unconnected-(J14-Pad1)">
+      <node ref="J14" pin="1" pinfunction="Pin_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="186" name="unconnected-(U1-Pad1)">
+      <node ref="U1" pin="1" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="187" name="unconnected-(U1-Pad4)">
+      <node ref="U1" pin="4" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="188" name="unconnected-(U2-Pad9)">
+      <node ref="U2" pin="9" pinfunction="QH'" pintype="output+no_connect"/>
+    </net>
+    <net code="189" name="unconnected-(U3-Pad3)">
+      <node ref="U3" pin="3" pinfunction="D4" pintype="input+no_connect"/>
+    </net>
+    <net code="190" name="unconnected-(U3-Pad4)">
+      <node ref="U3" pin="4" pinfunction="D5" pintype="input+no_connect"/>
+    </net>
+    <net code="191" name="unconnected-(U3-Pad5)">
+      <node ref="U3" pin="5" pinfunction="D6" pintype="input+no_connect"/>
+    </net>
+    <net code="192" name="unconnected-(U3-Pad6)">
+      <node ref="U3" pin="6" pinfunction="D7" pintype="input+no_connect"/>
+    </net>
+    <net code="193" name="unconnected-(U3-Pad7)">
+      <node ref="U3" pin="7" pinfunction="~{Q7}" pintype="output+no_connect"/>
+    </net>
+    <net code="194" name="unconnected-(U3-Pad10)">
+      <node ref="U3" pin="10" pinfunction="DS" pintype="input+no_connect"/>
+    </net>
+    <net code="195" name="unconnected-(U6-Pad7)">
+      <node ref="U6" pin="7" pinfunction="~{Q7}" pintype="output+no_connect"/>
+    </net>
+    <net code="196" name="unconnected-(U11-Pad7)">
+      <node ref="U11" pin="7" pinfunction="~{Q7}" pintype="output+no_connect"/>
+    </net>
+    <net code="197" name="unconnected-(U12-Pad7)">
+      <node ref="U12" pin="7" pinfunction="~{Q7}" pintype="output+no_connect"/>
+    </net>
+    <net code="198" name="unconnected-(U13-Pad7)">
+      <node ref="U13" pin="7" pinfunction="~{Q7}" pintype="output+no_connect"/>
+    </net>
+  </nets>
+</export>
