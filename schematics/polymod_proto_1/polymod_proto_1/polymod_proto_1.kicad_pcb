@@ -7063,6 +7063,21 @@
     )
   )
 
+  (gr_line (start 142.7 43) (end 142.7 47) (layer "F.SilkS") (width 0.2) (tstamp 07b6b924-5cba-4166-99b0-badd2a0b44e1))
+  (gr_circle (center 149.1 43) (end 151.1 43) (layer "F.SilkS") (width 0.2) (fill none) (tstamp 10f3dfcf-9db2-4e9a-a434-d2de041151c4))
+  (gr_line (start 151.9 41) (end 153.9 45) (layer "F.SilkS") (width 0.2) (tstamp 1943da9f-d525-468f-bf0c-d83f83174a13))
+  (gr_circle (center 165.5 43) (end 167.5 43) (layer "F.SilkS") (width 0.2) (fill none) (tstamp 36514ea4-2c19-46c7-8a61-27202f0e011c))
+  (gr_line (start 153.9 45) (end 155.9 41) (layer "F.SilkS") (width 0.2) (tstamp 3809de13-4a90-4b1b-938c-120c43780965))
+  (gr_line (start 153.9 45) (end 152.9 47) (layer "F.SilkS") (width 0.2) (tstamp 38efeb53-4219-4d99-b1d1-0a3856681a78))
+  (gr_line (start 153.9 45) (end 153.9 45) (layer "F.SilkS") (width 0.2) (tstamp 538e4811-133d-4ccd-a738-a0d0cd4d1d5e))
+  (gr_circle (center 161.1 43) (end 163.1 43) (layer "F.SilkS") (width 0.2) (fill none) (tstamp 64205efa-47da-42bd-bff0-4d8c92a912cf))
+  (gr_line (start 167.5 43) (end 167.5 39) (layer "F.SilkS") (width 0.2) (tstamp 6d03d44b-d1b0-4f64-aef9-17f862c08336))
+  (gr_line (start 154.7 45) (end 156.7 41) (layer "F.SilkS") (width 0.2) (tstamp 89003258-54a3-4ec2-adbc-e25c47830bcf))
+  (gr_line (start 151.5 45) (end 151.5 39) (layer "F.SilkS") (width 0.2) (tstamp 8f84be1c-2e8a-427d-8482-a9872a7e37ff))
+  (gr_circle (center 144.7 43) (end 146.7 43) (layer "F.SilkS") (width 0.2) (fill none) (tstamp 953f9b16-b3a3-4d81-a150-48a8154877a9))
+  (gr_line (start 158.7 41) (end 158.7 45) (layer "F.SilkS") (width 0.2) (tstamp b59ee653-ae13-4c29-bde1-52150c1f47b0))
+  (gr_line (start 156.7 45) (end 158.7 41) (layer "F.SilkS") (width 0.2) (tstamp c727d1ef-a313-482f-8d94-00f89ce488af))
+  (gr_line (start 156.7 41) (end 156.7 45) (layer "F.SilkS") (width 0.2) (tstamp fb4c815c-f261-421d-9723-e6ffdb5464e1))
   (gr_circle (center 164 43) (end 171 43) (layer "Dwgs.User") (width 0.2) (fill none) (tstamp 345feea4-dfe0-4014-8fc7-6e19cb829648))
   (gr_rect (start 77.5 32) (end 222.5 153) (layer "Dwgs.User") (width 0.15) (fill none) (tstamp 72b0b4c1-40a0-450b-aadd-564720c0d7a0))
   (gr_circle (center 149 43) (end 156 43) (layer "Dwgs.User") (width 0.2) (fill none) (tstamp 8c4654a1-3070-44e2-bf7a-748ae477d20c))
@@ -7087,6 +7102,9 @@
   )
   (gr_text "MIDI out" (at 129.4 40.8) (layer "F.SilkS") (tstamp 3e7efa6a-334c-43eb-bbb7-c953278c26f8)
     (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (gr_text "Polyphonic semi-modular synthesizer\nBradshaw Instruments (prototype)\nFor 1590XX case\nJuly 2022" (at 170.3 42) (layer "F.SilkS") (tstamp 4b5c7ac3-16d7-4416-8e1b-c06ef9cd09b5)
+    (effects (font (size 1 1) (thickness 0.2)) (justify left))
   )
   (gr_text "Power in" (at 163.8 51) (layer "F.SilkS") (tstamp 68186616-b268-47d6-9e88-0b3326efea65)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -57867,6 +57885,25 @@
         (xy 81 140)
         (xy 91 140)
       )
+    )
+  )
+  (group "" (id 67c5ed30-e4cc-4dcb-a867-ba0e95af4677)
+    (members
+      07b6b924-5cba-4166-99b0-badd2a0b44e1
+      10f3dfcf-9db2-4e9a-a434-d2de041151c4
+      1943da9f-d525-468f-bf0c-d83f83174a13
+      36514ea4-2c19-46c7-8a61-27202f0e011c
+      3809de13-4a90-4b1b-938c-120c43780965
+      38efeb53-4219-4d99-b1d1-0a3856681a78
+      538e4811-133d-4ccd-a738-a0d0cd4d1d5e
+      64205efa-47da-42bd-bff0-4d8c92a912cf
+      6d03d44b-d1b0-4f64-aef9-17f862c08336
+      89003258-54a3-4ec2-adbc-e25c47830bcf
+      8f84be1c-2e8a-427d-8482-a9872a7e37ff
+      953f9b16-b3a3-4d81-a150-48a8154877a9
+      b59ee653-ae13-4c29-bde1-52150c1f47b0
+      c727d1ef-a313-482f-8d94-00f89ce488af
+      fb4c815c-f261-421d-9723-e6ffdb5464e1
     )
   )
 )
