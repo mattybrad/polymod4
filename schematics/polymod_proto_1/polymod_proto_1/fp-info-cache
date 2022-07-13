@@ -1,4 +1,4 @@
-19824955241701536
+19826612950457306
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -84496,6 +84496,13 @@ CFP3 SOD-123W
 0
 2
 2
+polymodcustom
+Potentiometer_Alps_RK09K_Single_Vertical
+Potentiometer, vertical, Alps RK09K Single, http://www.alps.com/prod/info/E/HTML/Potentiometer/RotaryPotentiometers/RK09K/RK09K_list.html
+Potentiometer vertical Alps RK09K Single
+0
+3
+3
 polymodcustom
 R_0805_2012Metric
 Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
