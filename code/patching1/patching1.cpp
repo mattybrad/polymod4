@@ -12,9 +12,14 @@ using namespace daisy::seed;
 #define bitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit))
 
 // include polymod classes
-#include "patchbay.h"
+#include "Patchbay.h"
+#include "SocketInput.h"
+#include "SocketOutput.h"
+#include "modules/Module.h"
+#include "modules/VCO.h"
+#include "modules/Output.h"
 
-// define polymod things
+// define polymod things (todo: don't hardcode sizes/lengths of things)
 Patchbay patchbay;
 uint8_t patchingInputValues[32];
 bool ledStates[5];
@@ -24,6 +29,11 @@ ShiftRegister595 outputChain;
 dsy_gpio_pin outputChainPins[3] = {D1,D2,D7};
 AdcChannelConfig analogInputs[2];
 float potValues[16];
+//Module modules[16];
+VCO vco1;
+Output output;
+SocketOutput socketOutputs[32];
+SocketInput socketInputs[32];
 
 DaisySeed hw;
 
@@ -47,7 +57,13 @@ int main(void)
 	analogInputs[1].InitSingle(A1);
 	hw.adc.Init(analogInputs, 2);
 
+	// define sockets
+	//socketOutputs[0] = vco1.squareOut;
+	//socketInputs[0] = output.mainOutput;
+
 	while(true) {
+		vco1.update();
+
 		for(int i=0; i<8; i++) {
 			// send i-th bit to all 595s
 			for(int j=0; j<numOutputRegisters; j++) {
@@ -85,6 +101,9 @@ int main(void)
 			patchbay.updateInputChannel(i, patchingInputValues[i]);
 		}
 		patchbay.update();
+
+		vco1.update();
+		output.update();
 	}
 	
 }

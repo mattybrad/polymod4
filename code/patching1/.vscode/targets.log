@@ -7,10 +7,12 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Mon Jul 18 13:06:30 2022
+# Make data base, printed on Mon Jul 18 20:16:57 2022
 
 # Variables
 
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # makefile (from '../DaisyExamples/libDaisy//core/Makefile', line 18)
@@ -60,7 +62,9 @@ CPP_SOURCES = patching1.cpp
 # makefile (from '../DaisyExamples/libDaisy//core/Makefile', line 113)
 C_DEFS = -DUSE_HAL_DRIVER -DSTM32H750xx -DHSE_VALUE=16000000  -DCORE_CM7 -DSTM32H750IB -DARM_MATH_CM7 -DUSE_FULL_LL_DRIVER
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17264_PTPGHBVMIPRNROIE
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_3500_HSLZCSWPASCDVVUO
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -126,7 +130,7 @@ ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffuncti
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 17264
+VSCODE_PID = 3500
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # makefile (from '../DaisyExamples/libDaisy//core/Makefile', line 125)
@@ -217,8 +221,7 @@ USERDOMAIN = MATTLAPTOP2020
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
-# makefile (from '../DaisyExamples/li 
-bDaisy//core/Makefile', line 200)
+# makefile (from '../DaisyExamples/libDaisy//core/Makefile', line 200)
 QSPI_ADDRESS = 0x90040000
 # makefile (from '../DaisyExamples/libDaisy//core/Makefile', line 29)
 OPT = -O2
@@ -290,7 +293,8 @@ PROCESSOR_REVISION = 8e0c
 CXX = $(PREFIX)g++ 
 # makefile (from '../DaisyExamples/libDaisy//core/Makefile', line 76)
 CC = $(PREFIX)gcc
-# makefile (from 'Makefile', line 12)
+# makefile (from 'Makefile',  
+line 12)
 SYSTEM_FILES_DIR = $(LIBDAISY_DIR)/core
 # makefile (from 'Makefile', line 9)
 DAISYSP_DIR = ../DaisyExamples/DaisySP/
@@ -299,7 +303,7 @@ INTERNAL_ADDRESS = 0x08000000
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
 # variable set hash-table stats:
-# Load=143/1024=14%, Rehash=0, Collisions=17/271=6%
+# Load=145/1024=14%, Rehash=0, Collisions=18/273=7%
 
 # Pattern-specific Variable Values
 
@@ -308,10 +312,10 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
 # Directories
 
 # build: could not be stat'd.
-# . (key c:/projects/polymod4/code/patching1, mtime 1658145951): 6 files, no impossibilities.
+# . (key c:/projects/polymod4/code/patching1, mtime 1658146658): 8 files, no impossibilities.
 # ../DaisyExamples/libDaisy//core (key c:/projects/polymod4/code/DaisyExamples/libDaisy/core, mtime 1658144807): 5 files, no impossibilities so far.
 
-# 11 files, no impossibilities in 3 directories.
+# 13 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -482,7 +486,8 @@ build/startup_stm32h750xx.o: ../DaisyExamples/libDaisy//core/startup_stm32h750xx
 
 # Not a target:
 ../DaisyExamples/libDaisy//core/Makefile:
-#  Implicit rule search has been done.
+#  Implicit rule search has been don 
+e.
 #  Last modified 2022-07-18 12:46:47
 #  File has been updated.
 #  Successfully updated.
@@ -515,12 +520,12 @@ vpath %.c ../DaisyExamples/libDaisy//core
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 500 B / avg = 14 B
-# current buf: size = 8174 B / used = 500 B / count = 35 / avg = 14 B
+# strcache buffers: 1 (0) / strings = 37 / storage = 524 B / avg = 14 B
+# current buf: size = 8174 B / used = 524 B / count = 37 / avg = 14 B
 
-# strcache performance: lookups = 78 / hit rate = 55%
+# strcache performance: lookups = 80 / hit rate = 53%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=0/78=0%
-# Finished Make data base on Mon Jul 18 13:06:30 2022
+# Load=37/8192=0%, Rehash=0, Collisions=0/80=0%
+# Finished Make data base on Mon Jul 18 20:16:57 2022
 
  
