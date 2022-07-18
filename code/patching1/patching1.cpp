@@ -15,6 +15,8 @@ using namespace daisy::seed;
 #include "patchbay.h"
 
 // define polymod things
+Patchbay patchbay;
+uint8_t patchingInputValues[32];
 bool ledStates[5];
 int numOutputRegisters = 4;
 int numInputRegisters = 4;
@@ -79,6 +81,10 @@ int main(void)
 			// read button values from util 165
 
 		}
+		for(int i=0; i<32; i++) {
+			patchbay.updateInputChannel(i, patchingInputValues[i]);
+		}
+		patchbay.update();
 	}
 	
 }

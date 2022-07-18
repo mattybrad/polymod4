@@ -4,8 +4,3 @@ Patchbay::Patchbay()
 {
   
 }
-
-void Patchbay::begin()
-{
-  
-}

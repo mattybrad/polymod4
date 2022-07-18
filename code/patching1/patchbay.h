@@ -5,7 +5,8 @@ class Patchbay
 {
   public:
     Patchbay();
-    void begin();
+    void updateInputChannel(int inputChannelNum, int value);
+    void update();
   private:
     
 };
