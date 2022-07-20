@@ -30,8 +30,8 @@ dsy_gpio_pin outputChainPins[3] = {D1,D2,D7};
 AdcChannelConfig analogInputs[2];
 float potValues[16];
 //Module modules[16];
-VCO vco1;
-Output output;
+//VCO vco1;
+//Output output;
 SocketOutput socketOutputs[32];
 SocketInput socketInputs[32];
 
@@ -62,13 +62,13 @@ int main(void)
 	//socketInputs[0] = output.mainOutput;
 
 	while(true) {
-		vco1.update();
+		//vco1.update();
 
 		for(int i=0; i<8; i++) {
 			// send i-th bit to all 595s
 			for(int j=0; j<numOutputRegisters; j++) {
 				for(int k=0; k<8; k++) {
-					uint channelNumber = j*8 + k;
+					uint8_t channelNumber = j*8 + k;
 					bool outputBit = bitRead(channelNumber, i);
 					outputChain.Set(channelNumber, outputBit);
 				}
@@ -98,12 +98,9 @@ int main(void)
 
 		}
 		for(int i=0; i<32; i++) {
-			patchbay.updateInputChannel(i, patchingInputValues[i]);
+			//patchbay.updateInputChannel(i, patchingInputValues[i]);
 		}
-		patchbay.update();
-
-		vco1.update();
-		output.update();
+		//patchbay.update();
 	}
 	
 }
