@@ -1,3 +1,9 @@
+// took these from Arduino source code, need to check this works okay!
+#define bitRead(value, bit) (((value) >> (bit)) & 0x01)
+#define bitSet(value, bit) ((value) |= (1UL << (bit)))
+#define bitClear(value, bit) ((value) &= ~(1UL << (bit)))
+#define bitWrite(value, bit, bitvalue) (bitvalue ? bitSet(value, bit) : bitClear(value, bit))
+
 #include "daisy_seed.h"
 #include "daisysp.h"
 #include "sr_165.h"
@@ -20,6 +26,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 
 int main(void)
 {
+	hw.Configure();
 	hw.Init();
 	hw.SetAudioBlockSize(4); // number of samples handled per callback
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
@@ -37,6 +44,11 @@ int main(void)
 	GPIO inputChainClockEnable;
 	inputChainClockEnable.Init(D4, GPIO::Mode::OUTPUT);
 	inputChainClockEnable.Write(false);
+	AdcChannelConfig analogInputs[2];
+	analogInputs[0].InitSingle(A0);
+	analogInputs[1].InitSingle(A1);
+	hw.adc.Init(analogInputs, 2);
+	hw.adc.Start();
 
 	bool led_state = false;
 
@@ -44,15 +56,24 @@ int main(void)
     hw.StartLog(true);
 	hw.PrintLine("STARTED");
     // Print "Hello World" to the Serial Monitor
+	int analogChannel = 0;
 
 	while(1) {
 		hw.SetLed(led_state);
 		hw.DelayMs(200);
 		//led_state = !led_state;
 		for(int i=0; i<40; i++) {
-			if(i<37) outputChain.Set(i,true);
-			else outputChain.Set(i,led_state);
+			//if(i<37) outputChain.Set(i,true);
+			//else outputChain.Set(i,led_state);
 		}
+		outputChain.Set(32,bitRead(analogChannel,0));
+		outputChain.Set(33,bitRead(analogChannel,1));
+		outputChain.Set(34,bitRead(analogChannel,2));
+		outputChain.Set(35,bitRead(analogChannel,0));
+		outputChain.Set(36,bitRead(analogChannel,1));
+		outputChain.Set(37,bitRead(analogChannel,2));
+		outputChain.Set(38,true);
+		outputChain.Set(39,true);
 		outputChain.Write();
 		inputChain.Update();
 		bool anyHigh = false;
@@ -61,7 +82,24 @@ int main(void)
 			//hw.Print("\t");
 			hw.Print(inputChain.State(i)?"1":"0");
 		}
+		hw.Print("\n");
+		float analogReading1 = hw.adc.GetFloat(0);
+		float analogReading2 = hw.adc.GetFloat(1);
+		FixedCapStr<16> str1("");
+		str1.AppendFloat(analogReading1);
+		FixedCapStr<16> str2("");
+		str2.AppendFloat(analogReading2);
+		hw.Print("%d ",analogChannel);
+		hw.Print(str1);
+		hw.Print(" ");
+		hw.PrintLine(str2);
+		/*int ana1 = hw.adc.Get(0);
+		int ana2 = hw.adc.Get(1);
+		hw.Print("%d %d %d\n", analogChannel, ana1, ana2);*/
+		
 		led_state = anyHigh;
+		analogChannel ++;
+		if(analogChannel == 8) analogChannel = 0;
 		hw.DelayMs(500);
 	}
 }
