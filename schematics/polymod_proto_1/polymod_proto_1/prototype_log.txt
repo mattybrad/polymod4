@@ -1,0 +1,5 @@
+Issues found with PCB/case so far:
+- Didn't leave enough room for 3.5mm/PSU jacks (has to remove part of PCB with drill/cutters)
+- Forgot to add pull-up resistors to buttons
+- Pots too close together for most knobs
+- Top panel screws (to secure panel to PCB) are wrong size (much too big)

@@ -1,8 +1,11 @@
 #include "daisy_seed.h"
 #include "daisysp.h"
+#include "sr_165.h"
 
 using namespace daisy;
 using namespace daisy::seed;
+
+using My165Chain = ShiftRegister165<5>;
 
 DaisySeed hw;
 
@@ -23,20 +26,42 @@ int main(void)
 	hw.StartAudio(AudioCallback);
 
 	ShiftRegister595 outputChain;
+	My165Chain inputChain;
+	My165Chain::Config inputChainConfig;
+	inputChainConfig.clk = D5;
+	inputChainConfig.latch = D6;
+	inputChainConfig.data[0] = D3;
+	inputChain.Init(inputChainConfig);
 	dsy_gpio_pin outputChainPins[3] = {D1,D2,D7};
 	outputChain.Init(outputChainPins, 5);
+	GPIO inputChainClockEnable;
+	inputChainClockEnable.Init(D4, GPIO::Mode::OUTPUT);
+	inputChainClockEnable.Write(false);
 
-	bool led_state = true;
-	int counter = 0;
-	int ledPins[] = {39,38,37,36,35};
+	bool led_state = false;
+
+	// Start the log, and wait for connection
+    hw.StartLog(true);
+	hw.PrintLine("STARTED");
+    // Print "Hello World" to the Serial Monitor
+
 	while(1) {
 		hw.SetLed(led_state);
 		hw.DelayMs(200);
-		led_state = !led_state;
-		for(int i=0; i<5; i++) {
-			outputChain.Set(ledPins[i],(counter%5)==i);
+		//led_state = !led_state;
+		for(int i=0; i<40; i++) {
+			if(i<37) outputChain.Set(i,true);
+			else outputChain.Set(i,led_state);
 		}
 		outputChain.Write();
-		counter ++;
+		inputChain.Update();
+		bool anyHigh = false;
+		hw.PrintLine("Input readings:");
+		for(int i=0; i<40; i++) {
+			//hw.Print("\t");
+			hw.Print(inputChain.State(i)?"1":"0");
+		}
+		led_state = anyHigh;
+		hw.DelayMs(500);
 	}
 }

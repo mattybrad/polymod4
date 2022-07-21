@@ -244,7 +244,7 @@ build/test1.o: test1.cpp \
  ../DaisyExamples/DaisySP//Source/Utility/metro.h \
  ../DaisyExamples/DaisySP//Source/Utility/port.h \
  ../DaisyExamples/DaisySP//Source/Utility/samplehold.h \
- ../DaisyExamples/DaisySP//Source/Utility/smooth_random.h
+ ../DaisyExamples/DaisySP//Source/Utility/smooth_random.h sr_165.h
 ../DaisyExamples/libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../DaisyExamples/libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../DaisyExamples/libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -491,3 +491,4 @@ build/test1.o: test1.cpp \
 ../DaisyExamples/DaisySP//Source/Utility/port.h:
 ../DaisyExamples/DaisySP//Source/Utility/samplehold.h:
 ../DaisyExamples/DaisySP//Source/Utility/smooth_random.h:
+sr_165.h:
