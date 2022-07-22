@@ -4,3 +4,4 @@ Issues found with PCB/case so far:
 - Pots too close together for most knobs
 - Top panel screws (to secure panel to PCB) are wrong size (much too big)
 - Should have used AGND/3V3_A for pots
+- Don't need CE pin for input shift registers (74HC165)
