@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   34              		@ link register save eliminated.
   35              	.LBB190:
   36              	.LBI190:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 2
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 2
 
 
   37              		.file 2 "../DaisyExamples/libDaisy//src/sys/system.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   54:../DaisyExamples/libDaisy//src/sys/system.h **** 
   55:../DaisyExamples/libDaisy//src/sys/system.h ****         SysClkFreq cpu_freq;
   56:../DaisyExamples/libDaisy//src/sys/system.h ****         bool       use_dcache;
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 3
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 3
 
 
   57:../DaisyExamples/libDaisy//src/sys/system.h ****         bool       use_icache;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   27:../DaisyExamples/libDaisy//src/hid/usb.h **** 
   28:../DaisyExamples/libDaisy//src/hid/usb.h ****     /** Specified which of the two USB Peripherals to initialize. */
   29:../DaisyExamples/libDaisy//src/hid/usb.h ****     enum UsbPeriph
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 4
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 4
 
 
   30:../DaisyExamples/libDaisy//src/hid/usb.h ****     {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   36:../DaisyExamples/libDaisy//src/per/adc.h ****         MUX_SEL_0,    /**< & */
   37:../DaisyExamples/libDaisy//src/per/adc.h ****         MUX_SEL_1,    /**< & */
   38:../DaisyExamples/libDaisy//src/per/adc.h ****         MUX_SEL_2,    /**< & */
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 5
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 5
 
 
   39:../DaisyExamples/libDaisy//src/per/adc.h ****         MUX_SEL_LAST, /**< & */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   93:../DaisyExamples/libDaisy//src/per/adc.h ****     ~AdcHandle() {}
   50              		.loc 4 93 5 is_stmt 1 view .LVU5
   51              		.loc 4 93 5 is_stmt 0 view .LVU6
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 6
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 6
 
 
   52              	.LBE192:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   51:../DaisyExamples/libDaisy//src/hid/audio.h ****     };
   52:../DaisyExamples/libDaisy//src/hid/audio.h **** 
   53:../DaisyExamples/libDaisy//src/hid/audio.h ****     enum class Result
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 7
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 7
 
 
   54:../DaisyExamples/libDaisy//src/hid/audio.h ****     {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   68              		.p2align 2,,3
   69              		.global	_Z13AudioCallbackPKPKfPPfj
   70              		.syntax unified
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 8
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 8
 
 
   71              		.thumb
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  103              		.loc 6 22 3 is_stmt 1 discriminator 2 view .LVU15
  104              		.loc 6 22 22 is_stmt 0 discriminator 2 view .LVU16
  105 0010 53F8042B 		ldr	r2, [r3], #4	@ float
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 9
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 9
 
 
  106              		.loc 6 22 13 discriminator 2 view .LVU17
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  151              	.LC7:
  152 0028 2000     		.ascii	" \000"
  153              		.section	.text.startup.main,"ax",%progbits
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 10
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 10
 
 
  154              		.align	1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   19:sr_165.h      ****  ** When dealing with multiple parallel/daisy-chained devices the 
   20:sr_165.h      ****  ** states of all inputs will be filled in the following order (example uses two chained and two pa
   21:sr_165.h      ****  ** data[chain0,parallel0], data[chain1,parallel0], data[chain0,parallel1], data[chain1,parallel1];
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 11
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 11
 
 
   22:sr_165.h      ****  ** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   30:test1.cpp     **** 	hw.Init();
  209              		.loc 6 30 2 is_stmt 1 view .LVU37
  210              		.loc 6 30 9 is_stmt 0 view .LVU38
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 12
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 12
 
 
  211 0020 0021     		movs	r1, #0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   24:../DaisyExamples/libDaisy//src/dev/sr_595.h ****     /** The following pins correspond to the hardware connections
   25:../DaisyExamples/libDaisy//src/dev/sr_595.h ****     to the 595. 
   26:../DaisyExamples/libDaisy//src/dev/sr_595.h ****   */
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 13
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 13
 
 
   27:../DaisyExamples/libDaisy//src/dev/sr_595.h ****     enum Pins
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   30:../DaisyExamples/libDaisy//src/daisy_core.h **** */
   31:../DaisyExamples/libDaisy//src/daisy_core.h **** #define DTCM_MEM_SECTION __attribute__((section(".dtcmram_bss")))
   32:../DaisyExamples/libDaisy//src/daisy_core.h **** 
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 14
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 14
 
 
   33:../DaisyExamples/libDaisy//src/daisy_core.h **** #define FBIPMAX 0.999985f             /**< close to 1.0f-LSB at 16 bit */
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   87:../DaisyExamples/libDaisy//src/daisy_core.h **** FORCE_INLINE uint8_t f2u8(float x)
   88:../DaisyExamples/libDaisy//src/daisy_core.h **** {
   89:../DaisyExamples/libDaisy//src/daisy_core.h ****     x = x <= FBIPMIN ? FBIPMIN : x;
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 15
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 15
 
 
   90:../DaisyExamples/libDaisy//src/daisy_core.h ****     x = x >= FBIPMAX ? FBIPMAX : x;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  144:../DaisyExamples/libDaisy//src/daisy_core.h ****     Converts float to Signed 24-bit
  145:../DaisyExamples/libDaisy//src/daisy_core.h ****  */
  146:../DaisyExamples/libDaisy//src/daisy_core.h **** FORCE_INLINE int32_t f2s24(float x)
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 16
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 16
 
 
  147:../DaisyExamples/libDaisy//src/daisy_core.h **** {
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  201:../DaisyExamples/libDaisy//src/daisy_core.h ****  * 
  202:../DaisyExamples/libDaisy//src/daisy_core.h ****  *  Please use Pin struct instead.
  203:../DaisyExamples/libDaisy//src/daisy_core.h ****  */
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 17
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 17
 
 
  204:../DaisyExamples/libDaisy//src/daisy_core.h **** typedef struct
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  258:../DaisyExamples/libDaisy//src/daisy_core.h **** 
  259:../DaisyExamples/libDaisy//src/daisy_core.h **** /** @brief representation of hardware port/pin combination */
  260:../DaisyExamples/libDaisy//src/daisy_core.h **** struct Pin
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 18
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 18
 
 
  261:../DaisyExamples/libDaisy//src/daisy_core.h **** {
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  222:../DaisyExamples/libDaisy//src/daisy_core.h **** }
  259              		.loc 9 222 5 view .LVU63
   40:test1.cpp     **** 	inputChainConfig.data[0] = D3;
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 19
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 19
 
 
  260              		.loc 6 40 2 view .LVU64
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  295 0074 8DF8E940 		strb	r4, [sp, #233]
   53:sr_165.h      ****         dsy_gpio_init(&latch_);
  296              		.loc 7 53 9 view .LVU82
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 20
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 20
 
 
  297 0078 8DF8E650 		strb	r5, [sp, #230]
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  322              		.loc 7 59 13 view .LVU91
  323 009a 8DF8EA50 		strb	r5, [sp, #234]
  324              		.loc 7 60 26 view .LVU92
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 21
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 21
 
 
  325 009e FFF7FEFF 		bl	dsy_gpio_init
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  361 00c0 8DF81450 		strb	r5, [sp, #20]
  362 00c4 8DF81530 		strb	r3, [sp, #21]
  363              	.LVL14:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 22
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 22
 
 
  364              		.loc 9 296 9 is_stmt 1 view .LVU110
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   21:../DaisyExamples/libDaisy//src/per/gpio.h **** class GPIO
   22:../DaisyExamples/libDaisy//src/per/gpio.h **** {
   23:../DaisyExamples/libDaisy//src/per/gpio.h ****   public:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 23
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 23
 
 
   24:../DaisyExamples/libDaisy//src/per/gpio.h ****     /** @brief Mode of operation for the specified GPIO */
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  389              	.LBI415:
   68:../DaisyExamples/libDaisy//src/per/gpio.h ****         : pin(), mode(Mode::INPUT), pull(Pull::NOPULL), speed(Speed::LOW)
  390              		.loc 10 68 9 view .LVU125
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 24
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 24
 
 
  391              	.LBB416:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  437              	.LBB427:
  438              	.LBB424:
  439              	.LBB422:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 25
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 25
 
 
  440              	.LBB420:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  480 0104 0399     		ldr	r1, [sp, #12]
  481 0106 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleE12dsy_gpio_pin
  482              	.LVL21:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 26
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 26
 
 
   49:test1.cpp     **** 	hw.adc.Init(analogInputs, 2);
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  523              		.loc 6 53 2 is_stmt 1 view .LVU165
   56:test1.cpp     **** 	hw.PrintLine("STARTED");
  524              		.loc 6 56 5 view .LVU166
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 27
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 27
 
 
  525              	.LBB437:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   75:../DaisyExamples/libDaisy//src/daisy_seed.h ****      */
   76:../DaisyExamples/libDaisy//src/daisy_seed.h ****     void ChangeAudioCallback(AudioHandle::AudioCallback cb);
   77:../DaisyExamples/libDaisy//src/daisy_seed.h **** 
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 28
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 28
 
 
   78:../DaisyExamples/libDaisy//src/daisy_seed.h ****     /** Stops the audio if it is running. */
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  530              		.loc 1 128 22 is_stmt 0 view .LVU169
  531 0132 3846     		mov	r0, r7
  532 0134 FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE8StartLogEb
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 29
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 29
 
 
  533              	.LVL26:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  575              	.LBE442:
   65:test1.cpp     **** 		}
   66:test1.cpp     **** 		outputChain.Set(32,bitRead(analogChannel,0));
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 30
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 30
 
 
  576              		.loc 6 66 3 view .LVU186
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  621 018e 3A46     		mov	r2, r7
  622 0190 2521     		movs	r1, #37
  623 0192 0CA8     		add	r0, sp, #48
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 31
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 31
 
 
  624 0194 FFF7FEFF 		bl	_ZN16ShiftRegister5953SetEhb
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  665              	.LBB445:
   75:sr_165.h      ****         uint32_t idx;
   76:sr_165.h      ****         for(size_t i = 0; i < 8 * num_daisychained; i++)
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 32
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 32
 
 
  666              		.loc 7 76 29 is_stmt 1 view .LVU213
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   76:sr_165.h      ****         {
  706              		.loc 7 76 9 is_stmt 1 view .LVU224
   76:sr_165.h      ****         {
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 33
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 33
 
 
  707              		.loc 7 76 29 view .LVU225
@@ -1952,10 +1952,10 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   82:test1.cpp     **** 			}
   83:test1.cpp     **** 			hw.Print("\n");
   84:test1.cpp     **** 		}
-  85:test1.cpp     **** 		hw.DelayMs(1);
+  85:test1.cpp     **** 		hw.DelayMs(2); // seems to be required for 4051s to function properly
  727              		.loc 6 85 3 view .LVU230
  728              		.loc 6 85 13 is_stmt 0 view .LVU231
- 729 021c 0121     		movs	r1, #1
+ 729 021c 0221     		movs	r1, #2
  730 021e 3848     		ldr	r0, .L103
  731 0220 FFF7FEFF 		bl	_ZN5daisy9DaisySeed7DelayMsEj
  732              	.LVL51:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  747              	.LBB459:
  748              	.LBB460:
  749              	.LBB461:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 34
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 34
 
 
  750              		.file 11 "../DaisyExamples/libDaisy//src/util/FixedCapStr.h"
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   54:../DaisyExamples/libDaisy//src/util/FixedCapStr.h **** 
   55:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     constexpr void Clear() noexcept
   56:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     {
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 35
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 35
 
 
   57:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         size_      = 0;
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  111:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         {
  112:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             if(alwaysIncludeSign)
  113:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****                 Append('+');
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 36
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 36
 
 
  114:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             Append("0");
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  168:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             1.0f,
  169:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             10.0f,
  170:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             100.0f,
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 37
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 37
 
 
  171:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             1000.0f,
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  225:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             Append('0');
  226:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         else
  227:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         {
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 38
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 38
 
 
  228:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             while(beforeDecPt != 0)
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  282:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     {
  283:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         const CharType* ptr           = &buffer_[size_ - 1];
  284:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         const auto      patternLength = strlen(pattern);
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 39
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 39
 
 
  285:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         const CharType* patternPtr    = pattern + patternLength - 1;
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  339:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         return !(*this == rhs);
  340:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     }
  341:../DaisyExamples/libDaisy//src/util/FixedCapStr.h **** 
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 40
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 40
 
 
  342:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     constexpr bool operator<(const CharType* other) const
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  396:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     }
  397:../DaisyExamples/libDaisy//src/util/FixedCapStr.h **** 
  398:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     constexpr void
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 41
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 41
 
 
  399:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     ResetAt_(const CharType* str, std::size_t strLen, std::size_t writePosition)
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  453:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             case 'l': return 'L';
  454:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             case 'm': return 'M';
  455:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             case 'n': return 'N';
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 42
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 42
 
 
  456:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             case 'o': return 'O';
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  510:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     }
  511:../DaisyExamples/libDaisy//src/util/FixedCapStr.h **** 
  512:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     constexpr FixedCapStr(const CharType* str) noexcept
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 43
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 43
 
 
  513:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     : FixedCapStrBase<CharType>(buffer_, capacity)
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
    5:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** // This file is part of the GNU ISO C++ Library.  This library is free
    6:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** // software; you can redistribute it and/or modify it under the
    7:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** // terms of the GNU General Public License as published by the
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 44
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 44
 
 
    8:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** // Free Software Foundation; either version 3, or (at your option)
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   62:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** #include <ext/type_traits.h>
   63:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** #include <ext/numeric_traits.h>
   64:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** #include <bits/stl_pair.h>
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 45
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 45
 
 
   65:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** #include <bits/stl_iterator_base_types.h>
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  119:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** 	  typedef typename iterator_traits<_ForwardIterator1>::value_type
  120:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** 	    _ValueType1;
  121:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** 	  _ValueType1 __tmp = *__a;
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 46
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 46
 
 
  122:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** 	  *__a = *__b;
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  176:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** 	&& __are_same<_ValueType1&, _ReferenceType1>::__value
  177:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** 	&& __are_same<_ValueType2&, _ReferenceType2>::__value>::
  178:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** 	iter_swap(__a, __b);
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 47
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 47
 
 
  179:c:\users\matth\documents\daisytoolchain-0.3.3\daisytoolchain-0.3.3\windows\arm-none-eabi\include\c++\10.2.1\bits\stl_algobase.h **** #else
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  797              	.LBE468:
  514:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     {
  515:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         this->size_ = std::min(this->strlen(str), capacity);
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 48
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 48
 
 
  798              		.loc 11 515 21 view .LVU245
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  142:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         {
  843              		.loc 11 142 9 view .LVU254
  844 0254 00F03C81 		beq	.L97
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 49
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 49
 
 
  845              	.LBE524:
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  885              	.L31:
  212:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         {
  886              		.loc 11 212 9 view .LVU269
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 50
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 50
 
 
  887              	.LBB528:
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  930              		.loc 11 89 32 view .LVU280
  931 02b0 169F     		ldr	r7, [sp, #88]
  932              	.LBE533:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 51
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 51
 
 
  933              	.LBE539:
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   85:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     {
  979              		.loc 11 85 20 is_stmt 1 view .LVU289
  980              	.LBB546:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 52
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 52
 
 
   87:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         {
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1026 0304 00000000 		.word	_Z13AudioCallbackPKPKfPPfj
  1027 0308 00000000 		.word	.LANCHOR1
  1028 030c 18000000 		.word	.LANCHOR0+24
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 53
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 53
 
 
  1029 0310 08000000 		.word	.LC3
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1073              	.LBE565:
  230:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****                 beforeDecPt    = beforeDecPt / 10;
  1074              		.loc 11 230 28 view .LVU309
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 54
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 54
 
 
  1075 033c A1EB4701 		sub	r1, r1, r7, lsl #1
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1119              	.LBE554:
  1120              	.LBE572:
  235:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         ReverseSection(firstDigit, lastDigit);
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 55
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 55
 
 
  1121              		.loc 11 235 20 view .LVU320
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1163 037c F5D3     		bcc	.L40
  1164              	.LVL80:
  1165              	.L24:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 56
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 56
 
 
  313:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         {
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  384:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     {
  1211              		.loc 11 384 34 is_stmt 0 view .LVU342
  1212              	.LBE611:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 57
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 57
 
 
  1213              	.LBE615:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1260              	.LBB746:
  1261              	.LBB622:
  1262              	.LBB618:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 58
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 58
 
 
  1263              	.LBB614:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  208:../DaisyExamples/libDaisy//src/util/FixedCapStr.h **** 
  1306              		.loc 11 208 13 view .LVU364
  1307 03bc 4FF01009 		mov	r9, #16
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 59
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 59
 
 
  208:../DaisyExamples/libDaisy//src/util/FixedCapStr.h **** 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1349              		.loc 11 85 20 is_stmt 1 view .LVU377
   85:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****     {
  1350              		.loc 11 85 20 is_stmt 0 view .LVU378
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 60
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 60
 
 
  1351              	.LBE683:
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1396              		.loc 11 91 13 view .LVU387
  1397 040c 0133     		adds	r3, r3, #1
  1398 040e 1C93     		str	r3, [sp, #112]
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 61
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 61
 
 
  1399              	.L51:
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1443              	.LBE697:
  1444              	.LBE696:
  1445              	.LBB717:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 62
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 62
 
 
  1446              	.LBB693:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1490              	.LBE710:
  230:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****                 beforeDecPt    = beforeDecPt / 10;
  1491              		.loc 11 230 28 is_stmt 0 view .LVU408
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 63
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 63
 
 
  1492 0458 02EB8207 		add	r7, r2, r2, lsl #2
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1535 0478 1046     		mov	r0, r2
  1536              	.LBE708:
  1537              	.LBE714:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 64
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 64
 
 
  1538              	.LBE715:
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1580 0496 1E99     		ldr	r1, [sp, #120]
  1581 0498 8854     		strb	r0, [r1, r2]
  318:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             lastIdx--;
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 65
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 65
 
 
  1582              		.loc 11 318 13 view .LVU432
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  113:../DaisyExamples/libDaisy//src/daisy_seed.h ****     }
  1624              		.loc 1 113 19 view .LVU445
  1625              	.LBE752:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 66
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 66
 
 
  1626              	.LBE751:
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1662              		.loc 6 101 3 view .LVU458
  102:test1.cpp     **** 		if(analogChannel == 8) {
  1663              		.loc 6 102 3 view .LVU459
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 67
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 67
 
 
  1664 04bc 082E     		cmp	r6, #8
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1706              	.LBE576:
  1707              	.LBE589:
  1708              	.LBE759:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 68
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 68
 
 
  1709              	.LBE779:
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1756              	.LBE503:
  1757              	.LBB504:
  1758              	.LBB492:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 69
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 69
 
 
  1759              	.LBB490:
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1804              		.loc 11 387 25 view .LVU489
  1805              	.LBB783:
  1806              	.LBB763:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 70
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 70
 
 
  1807              	.LBB593:
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1851              	.L23:
  416:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         {
  1852              		.loc 11 416 19 view .LVU500
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 71
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 71
 
 
  1853 0502 9F42     		cmp	r7, r3
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1895              	.LBB519:
  1896              	.LBB517:
  1897              	.LBB515:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 72
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 72
 
 
  408:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         size_ += to_copy;
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1942              	.LBE764:
  1943              	.LBE784:
  387:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             result++;
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 73
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 73
 
 
  1944              		.loc 11 387 25 is_stmt 1 view .LVU523
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  1992              	.LBB638:
  1993              	.LBB636:
  1994              	.LBB634:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 74
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 74
 
 
  1995              	.LBB632:
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2040              	.LBB768:
  2041              	.LBB738:
  2042              	.LBB726:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 75
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 75
 
 
  2043              	.LBB668:
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2086              		.loc 11 416 19 view .LVU549
  2087 055e 9F42     		cmp	r7, r3
  418:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****             src++;
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 76
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 76
 
 
  2088              		.loc 11 418 19 view .LVU550
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2131              	.LBB661:
  408:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         size_ += to_copy;
  2132              		.loc 11 408 35 is_stmt 0 view .LVU562
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 77
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 77
 
 
  2133 057a 1E99     		ldr	r1, [sp, #120]
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2176              	.LVL140:
  2177              	.L101:
   93:../DaisyExamples/libDaisy//src/util/FixedCapStr.h **** 
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 78
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 78
 
 
  2178              		.loc 11 93 5 view .LVU574
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   87:../DaisyExamples/libDaisy//src/util/FixedCapStr.h ****         {
  2222              		.loc 11 87 9 is_stmt 0 view .LVU585
  2223 05aa 9945     		cmp	r9, r3
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 79
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 79
 
 
  2224 05ac 7FF6D6AE 		bls	.L36
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2269 05de 1C92     		str	r2, [sp, #112]
  2270 05e0 4EE7     		b	.L58
  2271              	.LVL144:
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 80
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 80
 
 
  2272              	.L54:
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2319 061a FFF7FEFF 		bl	_ZN5daisy6LoggerILNS_17LoggerDestinationE1EE9PrintLineEPKcz
  2320              	.LVL147:
  121:../DaisyExamples/libDaisy//src/daisy_seed.h ****     }
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 81
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 81
 
 
  2321              		.loc 1 121 23 view .LVU602
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   79:test1.cpp     **** 				//hw.Print("\t");
  2357              		.loc 6 79 4 is_stmt 1 view .LVU614
   79:test1.cpp     **** 				//hw.Print("\t");
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 82
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 82
 
 
  2358              		.loc 6 79 18 view .LVU615
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2408              	.LFB5375:
  107:test1.cpp     **** }
  2409              		.loc 6 107 1 is_stmt 1 view -0
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 83
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 83
 
 
  2410              		.cfi_startproc
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   38:../DaisyExamples/libDaisy//src/per/qspi.h **** 
   39:../DaisyExamples/libDaisy//src/per/qspi.h ****     /** Indicates the current status of the module. 
   40:../DaisyExamples/libDaisy//src/per/qspi.h ****          *  Warnings are indicated by a leading W.
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 84
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 84
 
 
   41:../DaisyExamples/libDaisy//src/per/qspi.h ****          *  Errors are indicated by a leading E and cause an immediate exit.
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   95:../DaisyExamples/libDaisy//src/per/qspi.h **** 
   96:../DaisyExamples/libDaisy//src/per/qspi.h ****     /** 
   97:../DaisyExamples/libDaisy//src/per/qspi.h ****         Initializes QSPI peripheral, and Resets, and prepares memory for access.
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 85
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 85
 
 
   98:../DaisyExamples/libDaisy//src/per/qspi.h ****         \param config should be populated with the mode, device and pin_config before calling this 
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  152:../DaisyExamples/libDaisy//src/per/qspi.h ****     /** Returns the current class status. Useful for debugging.
  153:../DaisyExamples/libDaisy//src/per/qspi.h ****      *  \returns Status
  154:../DaisyExamples/libDaisy//src/per/qspi.h ****      */
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 86
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 86
 
 
  155:../DaisyExamples/libDaisy//src/per/qspi.h ****     Status GetStatus();
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2464              	.LBB820:
  2465              	.LBI820:
   92:../DaisyExamples/libDaisy//src/per/adc.h ****     ~AdcHandle() {}
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 87
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 87
 
 
  2466              		.loc 4 92 5 is_stmt 1 view .LVU633
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
   48:../DaisyExamples/libDaisy//src/per/dac.h ****         POLLING,
   49:../DaisyExamples/libDaisy//src/per/dac.h ****         DMA,
   50:../DaisyExamples/libDaisy//src/per/dac.h ****     };
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 88
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 88
 
 
   51:../DaisyExamples/libDaisy//src/per/dac.h **** 
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2489              		.loc 2 77 5 is_stmt 1 view .LVU640
   77:../DaisyExamples/libDaisy//src/sys/system.h ****     ~System() {}
  2490              		.loc 2 77 5 is_stmt 0 view .LVU641
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 89
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 89
 
 
  2491              	.LBE825:
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2545              		.file 31 "c:\\users\\matth\\documents\\daisytoolchain-0.3.3\\daisytoolchain-0.3.3\\windows\\arm-no
  2546              		.file 32 "c:\\users\\matth\\documents\\daisytoolchain-0.3.3\\daisytoolchain-0.3.3\\windows\\arm-no
  2547              		.file 33 "c:\\users\\matth\\documents\\daisytoolchain-0.3.3\\daisytoolchain-0.3.3\\windows\\arm-no
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 90
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 90
 
 
  2548              		.file 34 "c:\\users\\matth\\documents\\daisytoolchain-0.3.3\\daisytoolchain-0.3.3\\windows\\arm-no
@@ -5366,33 +5366,33 @@ ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 1
  2570              		.file 56 "c:\\users\\matth\\documents\\daisytoolchain-0.3.3\\daisytoolchain-0.3.3\\windows\\arm-no
  2571              		.file 57 "c:\\users\\matth\\documents\\daisytoolchain-0.3.3\\daisytoolchain-0.3.3\\windows\\arm-no
  2572              		.file 58 "<built-in>"
-ARM GAS  C:\Users\matth\AppData\Local\Temp\ccDSszIa.s 			page 91
+ARM GAS  C:\Users\matth\AppData\Local\Temp\ccdinIns.s 			page 91
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 test1.cpp
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:67     .text._Z13AudioCallbackPKPKfPPfj:00000000 $t
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:75     .text._Z13AudioCallbackPKPKfPPfj:00000000 _Z13AudioCallbackPKPKfPPfj
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:132    .rodata.main.str1.4:00000000 $d
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:136    .rodata.main.str1.4:00000004 .LC2
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:154    .text.startup.main:00000000 $t
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:162    .text.startup.main:00000000 main
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:1025   .text.startup.main:00000300 $d
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:1040   .text.startup.main:00000320 $t
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2295   .text.startup.main:000005f4 $d
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2316   .text.startup.main:00000610 $t
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2387   .text.startup.main:00000648 $d
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2400   .text.startup._GLOBAL__sub_I_hw:00000000 $t
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2407   .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2500   .text.startup._GLOBAL__sub_I_hw:00000014 $d
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2509   .init_array:00000000 $d
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2517   .bss.hw:00000000 hw
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2513   .bss.hw:00000000 $d
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2520   .rodata._ZN5daisy4seedL2D4E:00000000 $d
-C:\Users\matth\AppData\Local\Temp\ccDSszIa.s:2524   .rodata._ZN5daisy4seedL2D4E:00000000 _ZN5daisy4seedL2D4E
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:17     .text._ZN5daisy9DaisySeedD2Ev:00000000 $t
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD2Ev
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:26     .text._ZN5daisy9DaisySeedD2Ev:00000000 _ZN5daisy9DaisySeedD1Ev
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:67     .text._Z13AudioCallbackPKPKfPPfj:00000000 $t
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:75     .text._Z13AudioCallbackPKPKfPPfj:00000000 _Z13AudioCallbackPKPKfPPfj
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:132    .rodata.main.str1.4:00000000 $d
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:136    .rodata.main.str1.4:00000004 .LC2
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:154    .text.startup.main:00000000 $t
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:162    .text.startup.main:00000000 main
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:1025   .text.startup.main:00000300 $d
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:1040   .text.startup.main:00000320 $t
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2295   .text.startup.main:000005f4 $d
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2316   .text.startup.main:00000610 $t
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2387   .text.startup.main:00000648 $d
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2400   .text.startup._GLOBAL__sub_I_hw:00000000 $t
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2407   .text.startup._GLOBAL__sub_I_hw:00000000 _GLOBAL__sub_I_hw
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2500   .text.startup._GLOBAL__sub_I_hw:00000014 $d
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2509   .init_array:00000000 $d
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2517   .bss.hw:00000000 hw
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2513   .bss.hw:00000000 $d
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2520   .rodata._ZN5daisy4seedL2D4E:00000000 $d
+C:\Users\matth\AppData\Local\Temp\ccdinIns.s:2524   .rodata._ZN5daisy4seedL2D4E:00000000 _ZN5daisy4seedL2D4E
                            .group:00000000 _ZN5daisy9DaisySeedD5Ev
 
 UNDEFINED SYMBOLS
