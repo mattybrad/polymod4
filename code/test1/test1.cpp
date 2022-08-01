@@ -82,6 +82,7 @@ int main(void)
 			}
 			hw.Print("\n");
 		}
+		hw.DelayMs(1); // seems to be required for 4051s to function properly
 		float analogReading1 = hw.adc.GetFloat(0);
 		float analogReading2 = hw.adc.GetFloat(1);
 		FixedCapStr<16> str1("");
@@ -100,7 +101,7 @@ int main(void)
 		analogChannel ++;
 		if(analogChannel == 8) {
 			analogChannel = 0;
-			hw.DelayMs(20);
+			hw.DelayMs(500);
 		}
 	}
 }
