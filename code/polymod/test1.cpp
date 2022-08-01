@@ -53,7 +53,7 @@ int main(void)
 	bool led_state = false;
 
 	// Start the log, and wait for connection
-    hw.StartLog(true);
+    hw.StartLog(false);
 	hw.PrintLine("STARTED");
     // Print "Hello World" to the Serial Monitor
 	int analogChannel = 0;
