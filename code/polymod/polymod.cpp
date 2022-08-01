@@ -18,8 +18,10 @@ using My165Chain = ShiftRegister165<5>;
 DaisySeed hw;
 
 // some variables
-uint8_t inputReadings[32] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-uint8_t prevInputReadings[32] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+uint8_t inputReadings[32];
+uint8_t prevInputReadings[32];
+uint8_t stableCycles[32];
+uint8_t stableInputReadings[32];
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
@@ -103,13 +105,19 @@ int main(void)
 			for(int i=0; i<32; i++) {
 				if(inputReadings[i] != prevInputReadings[i]) {
 					// change detected
+					stableCycles[i] = 0;
+				} else {
+					if(stableCycles[i]<3) stableCycles[i] ++;
+				}
+				if(stableCycles[i]==2) {
 					if(inputReadings[i]>0) {
 						// connection
 						hw.Print("%d--->%d\n", inputReadings[i]-1, i);
-					} else {
+					} else if(stableInputReadings[i]>0) {
 						// disconnection
-						hw.Print("%d-x->%d\n", prevInputReadings[i]-1, i);
+						hw.Print("%d-x->%d\n", stableInputReadings[i]-1, i);
 					}
+					stableInputReadings[i] = inputReadings[i];
 				}
 				prevInputReadings[i] = inputReadings[i];
 			}
