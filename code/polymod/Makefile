@@ -1,8 +1,8 @@
 # Project Name
-TARGET = test1
+TARGET = polymod
 
 # Sources
-CPP_SOURCES = test1.cpp
+CPP_SOURCES = polymod.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../DaisyExamples/libDaisy/

@@ -10,7 +10,7 @@
         "-d",
         "${workspaceRoot}"
       ],
-      "executable": "${workspaceRoot}/build/test1.elf",
+      "executable": "${workspaceRoot}/build/polymod.elf",
       "interface": "swd",
       "name": "Cortex Debug",
       "openOCDLaunchCommands": [
