@@ -59,12 +59,9 @@ int main(void)
 	int analogChannel = 0;
 
 	while(1) {
-		hw.SetLed(led_state);
-		hw.DelayMs(200);
 		//led_state = !led_state;
-		for(int i=0; i<40; i++) {
-			//if(i<37) outputChain.Set(i,true);
-			//else outputChain.Set(i,led_state);
+		for(int i=0; i<32; i++) {
+			outputChain.Set(i,true);
 		}
 		outputChain.Set(32,bitRead(analogChannel,0));
 		outputChain.Set(33,bitRead(analogChannel,1));
@@ -77,12 +74,14 @@ int main(void)
 		outputChain.Write();
 		inputChain.Update();
 		bool anyHigh = false;
-		hw.PrintLine("Input readings:");
-		for(int i=0; i<40; i++) {
-			//hw.Print("\t");
-			hw.Print(inputChain.State(i)?"1":"0");
+		if(analogChannel == 0) {
+			hw.PrintLine("Input readings:");
+			for(int i=0; i<40; i++) {
+				//hw.Print("\t");
+				hw.Print(inputChain.State(i)?"1":"0");
+			}
+			hw.Print("\n");
 		}
-		hw.Print("\n");
 		float analogReading1 = hw.adc.GetFloat(0);
 		float analogReading2 = hw.adc.GetFloat(1);
 		FixedCapStr<16> str1("");
@@ -99,7 +98,9 @@ int main(void)
 		
 		led_state = anyHigh;
 		analogChannel ++;
-		if(analogChannel == 8) analogChannel = 0;
-		hw.DelayMs(500);
+		if(analogChannel == 8) {
+			analogChannel = 0;
+			hw.DelayMs(20);
+		}
 	}
 }

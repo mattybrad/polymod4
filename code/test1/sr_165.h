@@ -71,12 +71,12 @@ class ShiftRegister165
     {
         dsy_gpio_write(&clk_, 1);
         dsy_gpio_write(&latch_, 1);
-        System::DelayTicks(500);
+        System::DelayTicks(1);
         uint32_t idx;
         for(size_t i = 0; i < 8 * num_daisychained; i++)
         {
             dsy_gpio_write(&clk_, 1);
-            System::DelayTicks(500);
+            System::DelayTicks(1);
             for(size_t j = 0; j < num_parallel; j++)
             {
                 idx = (8 * num_daisychained - 1) - i;
@@ -84,7 +84,7 @@ class ShiftRegister165
                 states_[idx] = dsy_gpio_read(&data_[j]);
             }
             dsy_gpio_write(&clk_, 0);
-            System::DelayTicks(500);
+            System::DelayTicks(1);
         }
         dsy_gpio_write(&latch_, 0);
     }
