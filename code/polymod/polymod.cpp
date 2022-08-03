@@ -12,21 +12,42 @@
 using namespace daisy;
 using namespace daisy::seed;
 
+#include "Connection.h"
+
+// include modules
+#include "VCO.h"
+//#include "modules/IO.h"
+
 // define chain of 5 74hc165 shift registers (read many digital inputs)
 using My165Chain = ShiftRegister165<5>;
 
 DaisySeed hw;
 
-// some variables
+// patching variables
 uint8_t inputReadings[32];
 uint8_t prevInputReadings[32];
 uint8_t stableCycles[32];
 uint8_t stableInputReadings[32];
 
+// analog variables
+float analogReadings[16];
+
+// misc variables (tidy up into groups later)
+const int MAX_CONNECTIONS = 32;
+Connection connections[MAX_CONNECTIONS];
+
+// declare modules
+VCO vco;
+
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
 	for (size_t i = 0; i < size; i++)
 	{
+		vco.process();
+		//VCF.process();
+		//IO.process();
+		//out[0][i] = IO.getOutput();
+		//out[1][i] = IO.getOutput();
 		out[0][i] = in[0][i];
 		out[1][i] = in[1][i];
 	}
@@ -59,13 +80,15 @@ int main(void)
 	hw.adc.Init(analogInputs, 2);
 	hw.adc.Start();
 
+	// set up modules
+	vco.mapOutput(0, 0);
+
 	// start serial log (wait for connection)
     hw.StartLog(true);
 	hw.PrintLine("STARTED");
 
 	int analogChannel = 0;
 	int bitNumber = 0;
-	bool flashToggle = false;
 
 	// main loop, everything happens in here
 	while(1) {
@@ -79,24 +102,13 @@ int main(void)
 		outputChain.Set(33,bitRead(analogChannel,1));
 		outputChain.Set(34,bitRead(analogChannel,2));
 
-		// set 5x LEDs
-		outputChain.Set(35,flashToggle);
-		outputChain.Set(36,!flashToggle);
-		outputChain.Set(37,flashToggle);
-		outputChain.Set(38,!flashToggle);
-		outputChain.Set(39,flashToggle);
+		// set LEDs
+		for(int i=0;i<5;i++) {
+			outputChain.Set(35+i, analogReadings[0] > ((float) i + 0.5) / 5.0);
+		}
 
 		outputChain.Write();
 		inputChain.Update();
-
-		// temp testing stuff
-		if(bitNumber == 0) {
-			//hw.PrintLine("Input readings:");
-			for(int i=0; i<40; i++) {
-				//hw.Print(inputChain.State(i)?"1":"0");
-			}
-			//hw.Print("\n");
-		}
 
 		for(int i=0; i<32; i++) {
 			bitWrite(inputReadings[i], bitNumber, inputChain.State(i+8));
@@ -124,23 +136,25 @@ int main(void)
 		}
 
 		hw.DelayMs(1); // seems to be required for 4051s to function properly
-		float analogReading1 = hw.adc.GetFloat(0);
-		float analogReading2 = hw.adc.GetFloat(1);
-		FixedCapStr<16> str1("");
+		//float analogReading1 = hw.adc.GetFloat(0);
+		//float analogReading2 = hw.adc.GetFloat(1);
+		analogReadings[analogChannel] = hw.adc.GetFloat(0);
+		analogReadings[analogChannel+8] = hw.adc.GetFloat(1);
+		/*FixedCapStr<16> str1("");
 		str1.AppendFloat(analogReading1);
 		FixedCapStr<16> str2("");
 		str2.AppendFloat(analogReading2);
-		//hw.Print("%d ",analogChannel);
-		//hw.Print(str1);
-		//hw.Print(" ");
-		//hw.PrintLine(str2);
+		hw.Print("%d ",analogChannel);
+		hw.Print(str1);
+		hw.Print(" ");
+		hw.PrintLine(str2);*/
 		
 		analogChannel ++; // probably merge analog channel and bitNumber, they're basically the same
 		bitNumber = (bitNumber + 1) % 8;
 		if(analogChannel == 8) {
 			analogChannel = 0;
 			//hw.DelayMs(500);
-			flashToggle = !flashToggle;
+			//flashToggle = !flashToggle;
 		}
 	}
 }
