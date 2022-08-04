@@ -11,6 +11,7 @@ class VCO : public Module {
     VCO();
     //virtual void prepare();
     virtual void process();
+    float tempFreq = 100.0f;
     //SocketOutput audioOut;
     //SocketInput freqModIn;
   private:

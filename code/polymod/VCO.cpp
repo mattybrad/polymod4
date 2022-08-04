@@ -8,5 +8,6 @@ VCO::VCO() {
 }
 
 void VCO::process() {
+  _osc.SetFreq(tempFreq);
   _sockets[0].outVal = _osc.Process();
 }

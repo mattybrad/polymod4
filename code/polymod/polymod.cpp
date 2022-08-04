@@ -40,7 +40,8 @@ std::vector<Socket*> outputSocketMappings(32);
 std::vector<Socket*> inputSocketMappings(32);
 
 // declare modules
-VCO vco;
+VCO vco1;
+VCO vco2;
 IO io;
 
 uint8_t findFreeConnectionSlot() {
@@ -58,9 +59,19 @@ uint8_t findFreeConnectionSlot() {
 void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum) {
 	uint8_t slotNum = findFreeConnectionSlot();
 	hw.PrintLine("Connection slot %d", slotNum);
-	connections[slotNum]._isConnected = true;
+	connections[slotNum]._isConnected = true; // temp
 	connections[slotNum].physicalOutputNum = physicalOutputNum;
 	connections[slotNum].physicalInputNum = physicalInputNum;
+}
+
+void removeConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum)
+{
+	for(uint8_t i=0; i<MAX_CONNECTIONS; i++) {
+		if(connections[i].isConnected() && connections[i].physicalOutputNum == physicalOutputNum && connections[i].physicalInputNum == physicalInputNum) {
+			connections[i]._isConnected = false; // temp
+			hw.PrintLine("Removed connection %d", i);
+		}
+	}
 }
 
 void processConnection(uint8_t connectionNum) {
@@ -76,7 +87,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		for(uint8_t j=0; j<MAX_CONNECTIONS; j++) {
 			processConnection(j);
 		}
-		vco.process();
+		vco1.process();
+		vco2.process();
 		//VCF.process();
 		io.process();
 		out[0][i] = io.getOutput();
@@ -115,8 +127,11 @@ int main(void)
 
 	// set up modules
 	//vco.mapOutput(0, 0);
-	outputSocketMappings[0] = &vco._sockets[0];
+	outputSocketMappings[0] = &vco1._sockets[0];
+	outputSocketMappings[23] = &vco2._sockets[0];
 	inputSocketMappings[0] = &io._sockets[0];
+	vco1.tempFreq = 80.0f;
+	vco2.tempFreq = 240.0f;
 
 	// start serial log (wait for connection)
     hw.StartLog(true);
@@ -164,6 +179,7 @@ int main(void)
 					} else if(stableInputReadings[i]>0) {
 						// disconnection
 						hw.Print("%d-x->%d\n", stableInputReadings[i]-1, i);
+						removeConnection(stableInputReadings[i] - 1, i);
 					}
 					stableInputReadings[i] = inputReadings[i];
 				}
