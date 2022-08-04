@@ -9,7 +9,6 @@ using namespace daisy;
 class VCF : public Module {
   public:
     VCF();
-    //virtual void prepare();
     virtual void process();
     float tempCutoff = 100.0f;
     float tempRes = 0.5f;

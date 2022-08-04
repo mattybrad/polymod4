@@ -51,56 +51,22 @@ VCO vco2;
 VCF vcf;
 IO io;
 
-uint8_t findFreeConnectionSlot() {
-	bool foundSlot = false;
-	uint8_t slotNum = 0;
-	for(uint8_t i=0; i<MAX_CONNECTIONS && !foundSlot; i++) {
-		if(!connections[i].isConnected()) {
-			slotNum = i;
-			foundSlot = true;
-		}
-	}
-	return slotNum; // should probably check all slots aren't full...
-}
-
-void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum) {
-	uint8_t slotNum = findFreeConnectionSlot();
-	if(useSerial) hw.PrintLine("Connection slot %d", slotNum);
-	connections[slotNum]._isConnected = true; // temp
-	connections[slotNum].physicalOutputNum = physicalOutputNum;
-	connections[slotNum].physicalInputNum = physicalInputNum;
-}
-
-void removeConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum)
-{
-	for(uint8_t i=0; i<MAX_CONNECTIONS; i++) {
-		if(connections[i].isConnected() && connections[i].physicalOutputNum == physicalOutputNum && connections[i].physicalInputNum == physicalInputNum) {
-			connections[i]._isConnected = false; // temp
-			if(useSerial) hw.PrintLine("Removed connection %d", i);
-		}
-	}
-}
-
-void processConnection(uint8_t connectionNum) {
-	if (connections[connectionNum].isConnected()) {
-		inputSocketMappings[connections[connectionNum].physicalInputNum]->inVal = outputSocketMappings[connections[connectionNum].physicalOutputNum]->outVal;
-	}
-}
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
 	for (size_t i = 0; i < size; i++)
 	{
+		// this is the old way of doing things...
 		for(uint8_t j=0; j<MAX_CONNECTIONS; j++) {
 			processConnection(j);
 		}
 		for(uint8_t j=0; j<16; j++) {
 			if(modules[i] != NULL) modules[i]->process();
 		}
-		/*vco1.process();
-		vco2.process();
-		vcf.process();
-		io.process();*/
+
+		// new way of doing things...
+
+		// set daisy seed output as final stage (IO module) output
 		out[0][i] = io.getOutput();
 		out[1][i] = io.getOutput();
 	}
@@ -226,5 +192,41 @@ int main(void)
 		if(analogChannel == 8) {
 			analogChannel = 0;
 		}
+	}
+}
+
+uint8_t findFreeConnectionSlot() {
+	bool foundSlot = false;
+	uint8_t slotNum = 0;
+	for(uint8_t i=0; i<MAX_CONNECTIONS && !foundSlot; i++) {
+		if(!connections[i].isConnected()) {
+			slotNum = i;
+			foundSlot = true;
+		}
+	}
+	return slotNum; // should probably check all slots aren't full...
+}
+
+void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum) {
+	uint8_t slotNum = findFreeConnectionSlot();
+	if(useSerial) hw.PrintLine("Connection slot %d", slotNum);
+	connections[slotNum]._isConnected = true; // temp
+	connections[slotNum].physicalOutputNum = physicalOutputNum;
+	connections[slotNum].physicalInputNum = physicalInputNum;
+}
+
+void removeConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum)
+{
+	for(uint8_t i=0; i<MAX_CONNECTIONS; i++) {
+		if(connections[i].isConnected() && connections[i].physicalOutputNum == physicalOutputNum && connections[i].physicalInputNum == physicalInputNum) {
+			connections[i]._isConnected = false; // temp
+			if(useSerial) hw.PrintLine("Removed connection %d", i);
+		}
+	}
+}
+
+void processConnection(uint8_t connectionNum) {
+	if (connections[connectionNum].isConnected()) {
+		inputSocketMappings[connections[connectionNum].physicalInputNum]->inVal = outputSocketMappings[connections[connectionNum].physicalOutputNum]->outVal;
 	}
 }

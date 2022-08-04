@@ -9,7 +9,7 @@ class Module {
     //void mapInput(uint8_t physicalInputNum, uint8_t virtualInputNum);
     //void mapOutput(uint8_t physicalOutputNum, uint8_t virtualOutputNum);
     //void mapPot(uint8_t physicalPotNum, uint8_t virtualPotNum);
-    virtual void prepare();
+    void prepare();
     virtual void process();
     Socket _sockets[8]; // protected eventually...?
 

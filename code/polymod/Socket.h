@@ -7,6 +7,7 @@ class Socket {
     Socket();
     float inVal;
     float outVal;
+    float newOutVal;
      
   private:
     
