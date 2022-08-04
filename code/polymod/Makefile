@@ -5,6 +5,7 @@ TARGET = polymod
 CPP_SOURCES = polymod.cpp \
 IO.cpp \
 VCO.cpp \
+VCF.cpp \
 Connection.cpp \
 Module.cpp \
 Socket.cpp
