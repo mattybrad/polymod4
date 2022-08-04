@@ -11,7 +11,8 @@ class VCF : public Module {
     VCF();
     //virtual void prepare();
     virtual void process();
-    float tempFreq = 100.0f;
+    float tempCutoff = 100.0f;
+    float tempRes = 0.5f;
   private:
     MoogLadder _filter;
 };

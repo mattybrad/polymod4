@@ -16,6 +16,7 @@ using namespace daisy::seed;
 #include "Socket.h"
 
 // include modules
+#include "Module.h"
 #include "VCO.h"
 #include "VCF.h"
 #include "IO.h"
@@ -44,6 +45,7 @@ std::vector<Socket*> outputSocketMappings(32);
 std::vector<Socket*> inputSocketMappings(32);
 
 // declare modules
+std::vector<Module *> modules(16);
 VCO vco1;
 VCO vco2;
 VCF vcf;
@@ -92,14 +94,15 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		for(uint8_t j=0; j<MAX_CONNECTIONS; j++) {
 			processConnection(j);
 		}
-		vco1.process();
+		for(uint8_t j=0; j<16; j++) {
+			if(modules[i] != NULL) modules[i]->process();
+		}
+		/*vco1.process();
 		vco2.process();
 		vcf.process();
-		io.process();
+		io.process();*/
 		out[0][i] = io.getOutput();
 		out[1][i] = io.getOutput();
-		//out[0][i] = in[0][i];
-		//out[1][i] = in[1][i];
 	}
 }
 
@@ -130,8 +133,17 @@ int main(void)
 	hw.adc.Init(analogInputs, 2);
 	hw.adc.Start();
 
+	// initialise vectors as null
+	for (uint8_t i = 0; i < 16; i++)
+	{
+		modules[i] = NULL;
+	}
+
 	// set up modules
-	//vco.mapOutput(0, 0);
+	modules[0] = &vco1;
+	modules[1] = &vco2;
+	modules[2] = &vcf;
+	modules[3] = &io;
 	outputSocketMappings[0] = &vco1._sockets[0];
 	outputSocketMappings[1] = &vco2._sockets[0];
 	outputSocketMappings[2] = &vcf._sockets[1];
@@ -166,6 +178,7 @@ int main(void)
 			outputChain.Set(35+i, analogReadings[0] > ((float) i + 0.5) / 5.0);
 		}
 
+		// read/write from/to shift registers
 		outputChain.Write();
 		inputChain.Update();
 
@@ -198,26 +211,20 @@ int main(void)
 			}
 		}
 
-		hw.DelayMs(1); // seems to be required for 4051s to function properly
-		//float analogReading1 = hw.adc.GetFloat(0);
-		//float analogReading2 = hw.adc.GetFloat(1);
+		hw.DelayMs(1); // seems to be required for 4051s to function properly - try reducing to microseconds to optimise patching speed
 		analogReadings[analogChannel] = hw.adc.GetFloat(0);
 		analogReadings[analogChannel+8] = hw.adc.GetFloat(1);
-		/*FixedCapStr<16> str1("");
-		str1.AppendFloat(analogReading1);
-		FixedCapStr<16> str2("");
-		str2.AppendFloat(analogReading2);
-		hw.Print("%d ",analogChannel);
-		hw.Print(str1);
-		hw.Print(" ");
-		hw.PrintLine(str2);*/
-		
+
+		// temp analog testing stuff
+		vco1.tempFreq = 25.0f + 1000.0f * analogReadings[0];
+		vco2.tempFreq = 25.0f + 1000.0f * analogReadings[1];
+		vcf.tempRes = analogReadings[2];
+		vcf.tempCutoff = 25.0f + 1000.0f * analogReadings[3];
+
 		analogChannel ++; // probably merge analog channel and bitNumber, they're basically the same
 		bitNumber = (bitNumber + 1) % 8;
 		if(analogChannel == 8) {
 			analogChannel = 0;
-			//hw.DelayMs(500);
-			//flashToggle = !flashToggle;
 		}
 	}
 }

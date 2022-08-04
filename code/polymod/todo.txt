@@ -1,0 +1,7 @@
+Make pin ordering logical (0 at top, 31 at bottom)
+Use pots
+Add all modules to central list
+Centralise sample rate, don't just hardcode 48000 each time
+Initialise vector members as null
+Smooth analog controls (sounds too "steppy")
+Optimise delays - system tick stuff is blocking? and delayMS is too coarse
