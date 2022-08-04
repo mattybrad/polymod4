@@ -13,10 +13,11 @@ using namespace daisy;
 using namespace daisy::seed;
 
 #include "Connection.h"
+#include "Socket.h"
 
 // include modules
 #include "VCO.h"
-//#include "modules/IO.h"
+#include "IO.h"
 
 // define chain of 5 74hc165 shift registers (read many digital inputs)
 using My165Chain = ShiftRegister165<5>;
@@ -35,21 +36,53 @@ float analogReadings[16];
 // misc variables (tidy up into groups later)
 const int MAX_CONNECTIONS = 32;
 Connection connections[MAX_CONNECTIONS];
+std::vector<Socket*> outputSocketMappings(32);
+std::vector<Socket*> inputSocketMappings(32);
 
 // declare modules
 VCO vco;
+IO io;
+
+uint8_t findFreeConnectionSlot() {
+	bool foundSlot = false;
+	uint8_t slotNum = 0;
+	for(uint8_t i=0; i<MAX_CONNECTIONS && !foundSlot; i++) {
+		if(!connections[i].isConnected()) {
+			slotNum = i;
+			foundSlot = true;
+		}
+	}
+	return slotNum; // should probably check all slots aren't full...
+}
+
+void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum) {
+	uint8_t slotNum = findFreeConnectionSlot();
+	hw.PrintLine("Connection slot %d", slotNum);
+	connections[slotNum]._isConnected = true;
+	connections[slotNum].physicalOutputNum = physicalOutputNum;
+	connections[slotNum].physicalInputNum = physicalInputNum;
+}
+
+void processConnection(uint8_t connectionNum) {
+	if (connections[connectionNum].isConnected()) {
+		inputSocketMappings[connections[connectionNum].physicalInputNum]->inVal = outputSocketMappings[connections[connectionNum].physicalOutputNum]->outVal;
+	}
+}
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
 	for (size_t i = 0; i < size; i++)
 	{
+		for(uint8_t j=0; j<MAX_CONNECTIONS; j++) {
+			processConnection(j);
+		}
 		vco.process();
 		//VCF.process();
-		//IO.process();
-		//out[0][i] = IO.getOutput();
-		//out[1][i] = IO.getOutput();
-		out[0][i] = in[0][i];
-		out[1][i] = in[1][i];
+		io.process();
+		out[0][i] = io.getOutput();
+		out[1][i] = io.getOutput();
+		//out[0][i] = in[0][i];
+		//out[1][i] = in[1][i];
 	}
 }
 
@@ -81,7 +114,9 @@ int main(void)
 	hw.adc.Start();
 
 	// set up modules
-	vco.mapOutput(0, 0);
+	//vco.mapOutput(0, 0);
+	outputSocketMappings[0] = &vco._sockets[0];
+	inputSocketMappings[0] = &io._sockets[0];
 
 	// start serial log (wait for connection)
     hw.StartLog(true);
@@ -125,6 +160,7 @@ int main(void)
 					if(inputReadings[i]>0) {
 						// connection
 						hw.Print("%d--->%d\n", inputReadings[i]-1, i);
+						addConnection(inputReadings[i]-1, i);
 					} else if(stableInputReadings[i]>0) {
 						// disconnection
 						hw.Print("%d-x->%d\n", stableInputReadings[i]-1, i);

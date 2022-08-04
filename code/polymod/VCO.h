@@ -9,12 +9,12 @@ using namespace daisy;
 class VCO : public Module {
   public:
     VCO();
-    virtual void prepare();
+    //virtual void prepare();
     virtual void process();
     //SocketOutput audioOut;
     //SocketInput freqModIn;
   private:
-    static Oscillator _osc;
+    Oscillator _osc;
     //static Oscillator _osc[4];
     //AnalogControl _freqControl;
     //AudioSynthWaveformModulated _osc[MAX_POLYPHONY];

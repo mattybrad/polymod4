@@ -1,13 +1,8 @@
 # Project Name
-TARGET = polymod
+TARGET = test1
 
 # Sources
-CPP_SOURCES = polymod.cpp \
-IO.cpp \
-VCO.cpp \
-Connection.cpp \
-Module.cpp \
-Socket.cpp
+CPP_SOURCES = test1.cpp TestLib.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../DaisyExamples/libDaisy/

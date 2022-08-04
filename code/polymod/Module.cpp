@@ -3,3 +3,11 @@
 Module::Module() {
   
 }
+
+void Module::prepare() {
+
+}
+
+void Module::process() {
+    
+}
