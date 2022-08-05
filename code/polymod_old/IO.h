@@ -5,6 +5,9 @@
 class IO : public Module {
   public:
     IO();
+    //virtual void prepare();
+    virtual void process();
+    float getOutput();
   private:
 };
 

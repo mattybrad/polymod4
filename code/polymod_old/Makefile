@@ -2,7 +2,13 @@
 TARGET = polymod
 
 # Sources
-CPP_SOURCES = polymod.cpp
+CPP_SOURCES = polymod.cpp \
+IO.cpp \
+VCO.cpp \
+VCF.cpp \
+Connection.cpp \
+Module.cpp \
+Socket.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../DaisyExamples/libDaisy/

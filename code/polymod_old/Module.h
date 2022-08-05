@@ -1,11 +1,12 @@
 #ifndef Module_h
 #define Module_h
 #include <stdint.h>
+#include "Socket.h"
 
 class Module {
   public:
     Module();
-    void addPseudoConnection(uint8_t sourceSocketNum, uint8_t destSocketNum);
+    Socket _sockets[8]; // protected eventually...?
 
   protected:
      
