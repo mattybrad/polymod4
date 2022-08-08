@@ -6,16 +6,19 @@
 class Socket {
   public:
     Socket();
+    int order = 999; // temp
+    bool orderSet = false;
     Module *module;
-    float (*processFunction)(Module module, float inVal) = NULL;
+    float (*processFunction)(Module module, float inVal) = nullptr;
     void process();
-    Socket* destSocket = NULL;
-    Socket* sourceSocket = NULL;
+    Socket* destSocket = nullptr;
+    Socket *sourceSocket = nullptr;
     float inVal;
     float outVal;
-    int socketType;
-    static const int INPUT = 0;
-    static const int OUTPUT = 1;
+    static const int UNUSED = 0;
+    static const int INPUT = 1;
+    static const int OUTPUT = 2;
+    int socketType = UNUSED;
      
   private:
     

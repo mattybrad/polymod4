@@ -44,6 +44,8 @@ Connection connections[MAX_CONNECTIONS];
 //std::vector<Socket *> inputSocketMappings(32);
 Socket outputSockets[32];
 Socket inputSockets[32];
+int outputSocketOrder[32];
+int inputSocketOrder[32];
 
 // declare modules
 std::vector<Module *> modules(16);
@@ -56,11 +58,21 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 {
 	for (size_t i = 0; i < size; i++)
 	{
-		
+		for(int j=0; j<32; j++) {
+			int outNum = outputSocketOrder[j];
+			if(outNum >=0) {
+				outputSockets[outNum].process();
+			}
+			int inNum = inputSocketOrder[j];
+			if (inNum >= 0)
+			{
+				inputSockets[inNum].process();
+			}
+		}
 
 		// set daisy seed output as final stage (IO module) output
-		//out[0][i] = io.getOutput();
-		//out[1][i] = io.getOutput();
+		out[0][i] = inputSockets[0].inVal;
+		out[1][i] = inputSockets[0].inVal;
 	}
 }
 
@@ -217,6 +229,8 @@ void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum)
 	connections[slotNum]._isConnected = true; // temp
 	connections[slotNum].physicalOutputNum = physicalOutputNum;
 	connections[slotNum].physicalInputNum = physicalInputNum;
+	outputSockets[physicalOutputNum].sourceSocket = &inputSockets[physicalInputNum];
+	inputSockets[physicalInputNum].destSocket = &outputSockets[physicalOutputNum];
 }
 
 void removeConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum)
@@ -240,7 +254,53 @@ void processConnection(uint8_t connectionNum)
 	}
 }
 
-void calculateProcessOrder() {
-	
+void setOrder(Socket socket, int order)
+{
+	if(!socket.orderSet) {
+		socket.order = 0;
+		socket.orderSet = true;
+		if(socket.socketType == Socket::INPUT) {
+			if(socket.sourceSocket != nullptr) {
+				setOrder(*socket.sourceSocket, order + 1);
+			}
+		}
+	}
 }
 
+void calculateProcessOrder() {
+	// start at IO output (input socket)
+	setOrder(inputSockets[0], 0); // recursive function, sets order number for all sockets
+
+	// reset socket order
+	for (int i = 0; i < 32; i++)
+	{
+		outputSocketOrder[i] = -1;
+		inputSocketOrder[i] = -1;
+	}
+
+	int orderIndex = 0;
+	
+	// start at 64, maximum possible order number (?)
+	for(int i=64; i>=0; i--) {
+		for(int j=0; j<32; j++) {
+			if(outputSockets[j].order == i) {
+				outputSocketOrder[orderIndex] = j;
+				orderIndex ++;
+			}
+		}
+	}
+
+	// do the same for inputs
+	orderIndex = 0;
+	for (int i = 64; i >= 0; i--)
+	{
+		for (int j = 0; j < 32; j++)
+		{
+			if (inputSockets[j].order == i)
+			{
+				inputSocketOrder[orderIndex] = j;
+				orderIndex++;
+			}
+		}
+	}
+}
