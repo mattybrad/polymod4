@@ -21,7 +21,7 @@ int main()
     module2.freq = 3.0f;
     
     socket.module = &module1;
-    socket.moduleFunction = &module1.processA;
+    socket.moduleFunction = &Module::processA;
     socket.process();
     std::cout << socket.outVal << std::endl;
 

@@ -9,8 +9,9 @@ using namespace daisy;
 class VCO : public Module {
   public:
     VCO();
-    void processSquareOut();
-    void processSawOut();
+    static float processSquareOut(Module module, float inVal);
+    static float processSawOut(Module module, float inVal);
+
   private:
     Oscillator _square;
     Oscillator _saw;

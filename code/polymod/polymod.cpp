@@ -99,9 +99,10 @@ int main(void)
 	}
 
 	// set up sockets
-	outputSockets[0].initOutput();
-	outputSockets[0].processFunction = vco1.processSquareOut;
-	inputSockets[0].initInput();
+	outputSockets[0].socketType = Socket::OUTPUT;
+	outputSockets[0].processFunction = VCO::processSquareOut;
+	
+	inputSockets[0].socketType = Socket::INPUT;
 
 	// start serial log (wait for connection)
 	if (useSerial)
