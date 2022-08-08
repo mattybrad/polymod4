@@ -9,7 +9,7 @@ class Socket {
     int order = 999; // temp
     bool orderSet = false;
     Module *module;
-    float (*processFunction)(Module module, float inVal) = nullptr;
+    int functionID = -1;
     void process();
     Socket* destSocket = nullptr;
     Socket *sourceSocket = nullptr;

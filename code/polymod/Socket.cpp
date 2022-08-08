@@ -6,7 +6,7 @@ Socket::Socket() {
 
 void Socket::process() {
     if(socketType == OUTPUT) {
-        outVal = processFunction(*module, inVal);
+        outVal = module->process(functionID);
     } else if(socketType == INPUT) {
         inVal = sourceSocket->outVal;
     }

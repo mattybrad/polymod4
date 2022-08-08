@@ -5,6 +5,8 @@
 class IO : public Module {
   public:
     IO();
+    virtual float process(int functionID);
+
   private:
 };
 

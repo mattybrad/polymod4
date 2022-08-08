@@ -15,22 +15,17 @@ VCO::VCO() {
   addPseudoConnection(0,1);
   addPseudoConnection(0,2);
 
-  _saw.Init(48000.0f);
-  _saw.SetWaveform(Oscillator::WAVE_POLYBLEP_SAW);
-  _saw.SetFreq(100);
-  _saw.SetAmp(0.25);
+  saw.Init(48000.0f);
+  saw.SetWaveform(Oscillator::WAVE_POLYBLEP_SAW);
+  saw.SetFreq(100);
+  saw.SetAmp(0.25);
 
-  _square.Init(48000.0f);
-  _square.SetWaveform(Oscillator::WAVE_POLYBLEP_SAW);
-  _square.SetFreq(100);
-  _square.SetAmp(0.25);
+  square.Init(48000.0f);
+  square.SetWaveform(Oscillator::WAVE_POLYBLEP_SAW);
+  square.SetFreq(100);
+  square.SetAmp(0.25);
 }
 
-void VCO::processSquareOut() {
-  //sockets[0].outVal = _square.Process();
-}
-
-void VCO::processSawOut()
-{
-  //sockets[1].outVal = _saw.Process();
+float VCO::process(int functionID) {
+  return square.Process();
 }

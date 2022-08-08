@@ -9,12 +9,13 @@ using namespace daisy;
 class VCO : public Module {
   public:
     VCO();
-    static float processSquareOut(Module module, float inVal);
-    static float processSawOut(Module module, float inVal);
+    virtual float process(int functionID);
+    Oscillator square;
+    Oscillator saw;
+    static const int SAW_OUT = 0;
+    static const int SQUARE_OUT = 1;
 
   private:
-    Oscillator _square;
-    Oscillator _saw;
 };
 
 #endif
