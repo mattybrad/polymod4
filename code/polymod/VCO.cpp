@@ -21,11 +21,20 @@ VCO::VCO() {
   saw.SetAmp(0.25);
 
   square.Init(48000.0f);
-  square.SetWaveform(Oscillator::WAVE_POLYBLEP_SAW);
+  square.SetWaveform(Oscillator::WAVE_POLYBLEP_SQUARE);
   square.SetFreq(100);
   square.SetAmp(0.25);
 }
 
 float VCO::process(int functionID) {
-  return square.Process();
+  float returnVal = 0.0f;
+  switch(functionID) {
+    case SQUARE_OUT:
+      returnVal = square.Process();
+      break;
+    case SAW_OUT:
+      returnVal = saw.Process();
+      break;
+  }
+  return returnVal;
 }

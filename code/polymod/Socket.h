@@ -13,6 +13,7 @@ class Socket {
     void process();
     Socket* destSocket = nullptr;
     Socket *sourceSocket = nullptr;
+    Socket *pseudoSourceTemp = nullptr;
     float inVal;
     float outVal;
     static const int UNUSED = 0;

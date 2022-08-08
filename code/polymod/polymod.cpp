@@ -18,6 +18,7 @@ using namespace daisy::seed;
 // include modules
 #include "Module.h"
 #include "VCO.h"
+#include "VCF.h"
 #include "IO.h"
 
 // debugging stuff
@@ -49,7 +50,7 @@ int inputSocketOrder[32];
 std::vector<Module *> modules(16);
 VCO vco1;
 VCO vco2;
-//VCF vcf;
+VCF vcf;
 IO io;
 
 void calculateProcessOrder();
@@ -76,8 +77,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		}
 
 		// set daisy seed output as final stage (IO module) output
-		out[0][i] = inputSockets[0].inVal;
-		out[1][i] = inputSockets[0].inVal;
+		out[0][i] = *io.mainIn;
+		out[1][i] = *io.mainIn;
 	}
 }
 
@@ -119,15 +120,27 @@ int main(void)
 	outputSockets[0].socketType = Socket::OUTPUT;
 	outputSockets[0].module = &vco1;
 	outputSockets[0].functionID = VCO::SAW_OUT;
-	
-	inputSockets[0].socketType = Socket::INPUT;
 
+	outputSockets[1].socketType = Socket::OUTPUT;
+	outputSockets[1].module = &vco1;
+	outputSockets[1].functionID = VCO::SQUARE_OUT;
+
+	outputSockets[2].socketType = Socket::OUTPUT;
+	outputSockets[2].module = &vcf;
+	outputSockets[2].functionID = VCF::FILTER_OUT;
+	outputSockets[2].pseudoSourceTemp = &inputSockets[1];
+
+	inputSockets[0].socketType = Socket::INPUT;
+	io.mainIn = &inputSockets[0].inVal;
+
+	inputSockets[1].socketType = Socket::INPUT;
+	vcf.filterIn = &inputSockets[1].inVal;
 
 	// start serial log (wait for connection)
 	if (useSerial)
 	{
 		hw.StartLog(true);
-		hw.PrintLine("STARTED");
+		hw.PrintLine("STARTED POLYMOD :)");
 	}
 
 	int analogChannel = 0;
@@ -238,11 +251,6 @@ void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum)
 	connections[slotNum].physicalInputNum = physicalInputNum;
 	outputSockets[physicalOutputNum].destSocket = &inputSockets[physicalInputNum];
 	inputSockets[physicalInputNum].sourceSocket = &outputSockets[physicalOutputNum];
-	if(useSerial) {
-		hw.PrintLine("Connected order %d to order %d", outputSockets[physicalOutputNum].order, inputSockets[physicalInputNum].order);
-		hw.PrintLine("Order %d source is %d", inputSockets[physicalInputNum].order, inputSockets[physicalInputNum].sourceSocket->order);
-		hw.PrintLine("Order %d dest is %d", outputSockets[physicalOutputNum].order, outputSockets[physicalOutputNum].destSocket->order);
-	}
 }
 
 void removeConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum)
@@ -270,20 +278,17 @@ void processConnection(uint8_t connectionNum)
 
 void setOrder(Socket *socket, int order)
 {
-	if(useSerial) hw.PrintLine("set order");
 	if(!socket->orderSet) {
-		hw.PrintLine("trying to change %d", socket->order);
 		socket->order = order;
-		hw.PrintLine("new value is %d", socket->order);
 		socket->orderSet = true;
 		if(socket->socketType == Socket::INPUT) {
-			if(useSerial) hw.PrintLine("FOUND AN INPUT");
 			if(socket->sourceSocket != nullptr) {
 				setOrder(socket->sourceSocket, order + 1);
 			}
 		} else if(socket->socketType == Socket::OUTPUT) {
-			if (useSerial)
-				hw.PrintLine("FOUND AN OUTPUT");
+			if(socket->pseudoSourceTemp != nullptr) {
+				setOrder(socket->pseudoSourceTemp, order + 1);
+			}
 		}
 	}
 }
@@ -299,9 +304,6 @@ void calculateProcessOrder() {
 
 	// start at IO output (input socket)
 	setOrder(&inputSockets[0], 0); // recursive function, sets order number for all sockets
-
-	hw.PrintLine("IO main socket num: %d", inputSockets[0].order);
-	hw.PrintLine("VCO out socket num: %d", outputSockets[0].order);
 
 	// reset socket order
 	for (int i = 0; i < 32; i++)
@@ -337,9 +339,10 @@ void calculateProcessOrder() {
 	}
 
 	if(useSerial) {
-		for (int i = 0; i < 32; i++)
+		for (int i = 0; i < 8; i++)
 		{
 			hw.Print("%d %d ", outputSocketOrder[i], inputSocketOrder[i]);
 		}
+		hw.PrintLine("...");
 	}
 }
