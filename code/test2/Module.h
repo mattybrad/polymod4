@@ -5,8 +5,10 @@ class Module
 {
 public:
     Module();
-    float process(float inVal);
-    
+    float freq;
+    static float processA(Module module, float inVal);
+    static float processB(Module module, float inVal);
+
 private:
 };
 

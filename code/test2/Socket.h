@@ -9,8 +9,9 @@ public:
     Socket();
     void process();
     Module *module;
-    float inVal = 0.0;
-    float outVal = 0.0;
+    float (*moduleFunction)(Module module, float inVal);
+    float inVal = 1.0;
+    float outVal = 1.0;
 
 private:
 };

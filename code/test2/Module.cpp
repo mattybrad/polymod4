@@ -4,7 +4,12 @@ Module::Module() {
   
 }
 
-float Module::process(float inVal)
+float Module::processA(Module module, float inVal)
 {
-    return inVal + 3.14159;
+    return inVal + module.freq;
+}
+
+float Module::processB(Module module, float inVal)
+{
+    return inVal * module.freq;
 }

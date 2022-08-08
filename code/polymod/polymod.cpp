@@ -97,11 +97,6 @@ int main(void)
 	{
 		modules[i] = NULL;
 	}
-	for (uint8_t i = 0; i < 32; i++)
-	{
-		//inputSocketMappings[i] = NULL;
-		//outputSocketMappings[i] = NULL;
-	}
 
 	// set up sockets
 	outputSockets[0].initOutput();

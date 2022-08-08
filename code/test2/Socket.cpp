@@ -6,5 +6,5 @@ Socket::Socket() {
 
 void Socket::process()
 {
-    outVal = module->process(inVal);
+    outVal = moduleFunction(*module, inVal);
 }
