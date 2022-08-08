@@ -22,7 +22,7 @@ using namespace daisy::seed;
 #include "IO.h"
 
 // debugging stuff
-bool useSerial = true;
+bool useSerial = false;
 
 // define chain of 5 74hc165 shift registers (read many digital inputs)
 using My165Chain = ShiftRegister165<5>;
@@ -47,7 +47,6 @@ int outputSocketOrder[32];
 int inputSocketOrder[32];
 
 // declare modules
-std::vector<Module *> modules(16);
 VCO vco1;
 VCO vco2;
 VCF vcf;
@@ -110,13 +109,9 @@ int main(void)
 	hw.adc.Init(analogInputs, 2);
 	hw.adc.Start();
 
-	// initialise vectors as null
-	for (uint8_t i = 0; i < 16; i++)
-	{
-		modules[i] = NULL;
-	}
-
 	// set up sockets
+	// this is currently not a very tidy/nice process - i want it to be slicker in future, to encourage tinkering (and to make things easier for me)
+	vco1.freq = 100.08;
 	outputSockets[0].socketType = Socket::OUTPUT;
 	outputSockets[0].module = &vco1;
 	outputSockets[0].functionID = VCO::SAW_OUT;
@@ -129,6 +124,15 @@ int main(void)
 	outputSockets[2].module = &vcf;
 	outputSockets[2].functionID = VCF::FILTER_OUT;
 	outputSockets[2].pseudoSourceTemp = &inputSockets[1];
+
+	vco2.freq = 150.03;
+	outputSockets[3].socketType = Socket::OUTPUT;
+	outputSockets[3].module = &vco2;
+	outputSockets[3].functionID = VCO::SAW_OUT;
+
+	outputSockets[4].socketType = Socket::OUTPUT;
+	outputSockets[4].module = &vco2;
+	outputSockets[4].functionID = VCO::SQUARE_OUT;
 
 	inputSockets[0].socketType = Socket::INPUT;
 	io.mainIn = &inputSockets[0].inVal;

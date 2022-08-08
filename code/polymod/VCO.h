@@ -10,6 +10,7 @@ class VCO : public Module {
   public:
     VCO();
     virtual float process(int functionID);
+    float freq = 300.0;
     Oscillator square;
     Oscillator saw;
     static const int SAW_OUT = 0;
