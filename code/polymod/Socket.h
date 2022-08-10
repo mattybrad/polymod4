@@ -9,11 +9,12 @@ class Socket {
     int order = 999; // temp
     bool orderSet = false;
     Module *module;
-    int functionID = -1;
+    int param = -1;
     void process();
     Socket* destSocket = nullptr;
     Socket *sourceSocket = nullptr;
     Socket *pseudoSourceTemp = nullptr;
+    Socket *pseudoSources[8]; // init to nullptr at some point
     float inVal;
     float outVal;
     static const int UNUSED = 0;

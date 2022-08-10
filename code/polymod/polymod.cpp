@@ -52,12 +52,15 @@ VCO vco2;
 VCF vcf;
 IO io;
 
+// declare functions
 void calculateProcessOrder();
 void setOrder(Socket socket, int order);
 void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum);
 void removeConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum);
 void processConnection(uint8_t connectionNum);
 uint8_t findFreeConnectionSlot();
+void initOutput(int socketNumber, Module *module, int param);
+void initInput(int socketNumber, Module *module, int param);
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
@@ -76,8 +79,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		}
 
 		// set daisy seed output as final stage (IO module) output
-		out[0][i] = *io.mainIn;
-		out[1][i] = *io.mainIn;
+		out[0][i] = *io.inputFloats[IO::MAIN_IN];
+		out[1][i] = *io.inputFloats[IO::MAIN_IN];
 	}
 }
 
@@ -109,36 +112,28 @@ int main(void)
 	hw.adc.Init(analogInputs, 2);
 	hw.adc.Start();
 
-	// set up sockets
-	// this is currently not a very tidy/nice process - i want it to be slicker in future, to encourage tinkering (and to make things easier for me)
 	vco1.freq = 100.08;
-	outputSockets[0].socketType = Socket::OUTPUT;
-	outputSockets[0].module = &vco1;
-	outputSockets[0].functionID = VCO::SAW_OUT;
-
-	outputSockets[1].socketType = Socket::OUTPUT;
-	outputSockets[1].module = &vco1;
-	outputSockets[1].functionID = VCO::SQUARE_OUT;
-
-	outputSockets[2].socketType = Socket::OUTPUT;
-	outputSockets[2].module = &vcf;
-	outputSockets[2].functionID = VCF::FILTER_OUT;
-	outputSockets[2].pseudoSourceTemp = &inputSockets[1];
-
 	vco2.freq = 150.03;
-	outputSockets[3].socketType = Socket::OUTPUT;
-	outputSockets[3].module = &vco2;
-	outputSockets[3].functionID = VCO::SAW_OUT;
 
-	outputSockets[4].socketType = Socket::OUTPUT;
-	outputSockets[4].module = &vco2;
-	outputSockets[4].functionID = VCO::SQUARE_OUT;
+	// set up sockets
+	initOutput(0, &vco1, VCO::SQUARE_OUT);
+	initOutput(1, &vco1, VCO::SAW_OUT);
+	initOutput(2, &vco2, VCO::SQUARE_OUT);
+	initOutput(3, &vco2, VCO::SAW_OUT);
+	initOutput(4, &vcf, VCF::FILTER_OUT);
 
-	inputSockets[0].socketType = Socket::INPUT;
-	io.mainIn = &inputSockets[0].inVal;
+	initInput(0, &io, IO::MAIN_IN);
+	initInput(1, &vcf, VCF::FILTER_IN);
 
-	inputSockets[1].socketType = Socket::INPUT;
-	vcf.filterIn = &inputSockets[1].inVal;
+	outputSockets[4].pseudoSourceTemp = &inputSockets[1];
+
+	vco1.tempSocket = &outputSockets[0];
+
+	// inputSockets[0].socketType = Socket::INPUT;
+	// io.mainIn = &inputSockets[0].inVal;
+
+	// inputSockets[1].socketType = Socket::INPUT;
+	// vcf.filterIn = &inputSockets[1].inVal;
 
 	// start serial log (wait for connection)
 	if (useSerial)
@@ -349,4 +344,16 @@ void calculateProcessOrder() {
 		}
 		hw.PrintLine("...");
 	}
+}
+
+void initOutput(int socketNumber, Module *module, int param) {
+	outputSockets[socketNumber].socketType = Socket::OUTPUT;
+	outputSockets[socketNumber].module = module;
+	outputSockets[socketNumber].param = param;
+}
+
+void initInput(int socketNumber, Module *module, int param)
+{
+	inputSockets[socketNumber].socketType = Socket::INPUT;
+	module->inputFloats[param] = &inputSockets[socketNumber].inVal;
 }

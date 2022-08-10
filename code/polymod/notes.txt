@@ -1,6 +1,7 @@
 Have now got a working system, in mono at least.
 A few next steps:
     Tidy up the source code, making it nicer to define sockets/modules
+    Better pseudo connection system
     Also make pot definitions part of same slickening process
     Centralise sample rate, don't just hardcode 48000 each time
     Add logical pin ordering (0 at top, 31 at bottom)

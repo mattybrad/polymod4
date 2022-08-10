@@ -13,7 +13,7 @@ float VCF::process(int functionID)
   switch (functionID)
   {
   case FILTER_OUT:
-    returnVal = filter.Process(*filterIn);
+    returnVal = filter.Process(*inputFloats[FILTER_IN]);
     break;
   }
   return returnVal;
