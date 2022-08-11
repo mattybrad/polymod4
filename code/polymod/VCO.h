@@ -13,8 +13,8 @@ class VCO : public Module {
     float freq = 300.0;
     Oscillator square;
     Oscillator saw;
-    static const int SAW_OUT = 0;
-    static const int SQUARE_OUT = 1;
+    Oscillator sine;
+    enum {SQUARE_OUT, SAW_OUT, SINE_OUT};
 
   private:
 };

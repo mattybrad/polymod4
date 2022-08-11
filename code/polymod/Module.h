@@ -7,7 +7,6 @@ class Socket;
 class Module {
   public:
     Module();
-    virtual void init();
     void addPseudoConnection(int sourceParam, int destParam);
     int pseudoSources[8]; // pseudoSources[destination] = source
     Socket *sockets[8]; // pointers to sockets
@@ -15,9 +14,9 @@ class Module {
     virtual float process(int functionID);
 
   protected:
+    float _sampleRate = 48000.0f;
      
   private:
-    
     
 };
 

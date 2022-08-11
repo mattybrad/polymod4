@@ -39,7 +39,6 @@ uint8_t stableInputReadings[32];
 float analogReadings[16];
 
 // misc variables (tidy up into groups later)
-SaiHandle::Config::SampleRate sampleRate = SaiHandle::Config::SampleRate::SAI_48KHZ;
 const int MAX_CONNECTIONS = 32;
 Connection connections[MAX_CONNECTIONS];
 Socket outputSockets[32];
@@ -50,6 +49,7 @@ int inputSocketOrder[32];
 // declare modules
 VCO vco1;
 VCO vco2;
+VCO tempLfo;
 VCF vcf;
 IO io;
 
@@ -80,8 +80,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		}
 
 		// set daisy seed output as final stage (IO module) output
-		out[0][i] = *io.inputFloats[IO::MAIN_IN];
-		out[1][i] = *io.inputFloats[IO::MAIN_IN];
+		out[0][i] = *io.inputFloats[IO::MAIN_OUTPUT_IN];
+		out[1][i] = *io.inputFloats[IO::MAIN_OUTPUT_IN];
 	}
 }
 
@@ -91,7 +91,7 @@ int main(void)
 	hw.Configure();
 	hw.Init();
 	hw.SetAudioBlockSize(4); // number of samples handled per callback
-	hw.SetAudioSampleRate(sampleRate);
+	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 	hw.StartAudio(AudioCallback);
 
 	// Polymod hardware config
@@ -115,28 +115,21 @@ int main(void)
 
 	vco1.freq = 100.08;
 	vco2.freq = 150.03;
+	tempLfo.freq = 0.2;
 
 	// set up sockets
 	initOutput(0, &vco1, VCO::SQUARE_OUT);
 	initOutput(1, &vco1, VCO::SAW_OUT);
-	initOutput(2, &vco2, VCO::SQUARE_OUT);
-	initOutput(3, &vco2, VCO::SAW_OUT);
-	initOutput(4, &vcf, VCF::FILTER_OUT);
+	initOutput(2, &vco1, VCO::SINE_OUT);
+	initOutput(3, &vco2, VCO::SQUARE_OUT);
+	initOutput(4, &vco2, VCO::SAW_OUT);
+	initOutput(5, &vco2, VCO::SINE_OUT);
+	initOutput(6, &tempLfo, VCO::SINE_OUT);
+	initOutput(7, &vcf, VCF::LPF_OUT);
 
-	initInput(0, &io, IO::MAIN_IN);
-	initInput(1, &vcf, VCF::FILTER_IN);
-
-	vcf.init();
-
-	//outputSockets[4].pseudoSourceTemp = &inputSockets[1];
-
-	//vco1.tempSocket = &outputSockets[0];
-
-	// inputSockets[0].socketType = Socket::INPUT;
-	// io.mainIn = &inputSockets[0].inVal;
-
-	// inputSockets[1].socketType = Socket::INPUT;
-	// vcf.filterIn = &inputSockets[1].inVal;
+	initInput(0, &io, IO::MAIN_OUTPUT_IN);
+	initInput(1, &vcf, VCF::AUDIO_IN);
+	initInput(2, &vcf, VCF::FREQ_IN);
 
 	// start serial log (wait for connection)
 	if (useSerial)
@@ -314,7 +307,7 @@ void calculateProcessOrder() {
 	}
 
 	// start at IO output (input socket)
-	setOrder(&inputSockets[0], 0); // recursive function, sets order number for all sockets
+	setOrder(io.sockets[IO::MAIN_OUTPUT_IN], 0); // recursive function, sets order number for all sockets
 
 	// reset socket order
 	for (int i = 0; i < 32; i++)
@@ -358,16 +351,24 @@ void calculateProcessOrder() {
 	}
 }
 
+// annoyingly, the patch sockets on the PCB are ordered 7,6,5,4,3,2,1,0,15,14,13...
+// so this function fixes that
+int getSystemPinNum(int userPinNum) {
+	return 8*(userPinNum/8) + 7 - (userPinNum%8);
+}
+
 void initOutput(int socketNumber, Module *module, int param) {
-	outputSockets[socketNumber].socketType = Socket::OUTPUT;
-	outputSockets[socketNumber].module = module;
-	outputSockets[socketNumber].param = param;
-	module->sockets[param] = &outputSockets[socketNumber];
+	int systemSocketNumber = getSystemPinNum(socketNumber); // remap
+	outputSockets[systemSocketNumber].socketType = Socket::OUTPUT;
+	outputSockets[systemSocketNumber].module = module;
+	outputSockets[systemSocketNumber].param = param;
+	module->sockets[param] = &outputSockets[systemSocketNumber];
 }
 
 void initInput(int socketNumber, Module *module, int param)
 {
-	inputSockets[socketNumber].socketType = Socket::INPUT;
-	module->inputFloats[param] = &inputSockets[socketNumber].inVal;
-	module->sockets[param] = &inputSockets[socketNumber];
+	int systemSocketNumber = getSystemPinNum(socketNumber); // remap
+	inputSockets[systemSocketNumber].socketType = Socket::INPUT;
+	module->inputFloats[param] = &inputSockets[systemSocketNumber].inVal;
+	module->sockets[param] = &inputSockets[systemSocketNumber];
 }

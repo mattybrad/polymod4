@@ -1,16 +1,11 @@
 #include "Module.h"
 
-Module::Module() {
-  for(int i=0; i<8; i++) {
-    inputFloats[i] = nullptr;
-    pseudoSources[i] = -1;
-  }
-}
-
-void Module::init()
+Module::Module()
 {
-    for(int i=0; i<8; i++) {
-
+    for (int i = 0; i < 8; i++)
+    {
+        inputFloats[i] = nullptr;
+        pseudoSources[i] = -1;
     }
 }
 

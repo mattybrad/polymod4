@@ -7,7 +7,7 @@ class IO : public Module {
     IO();
     virtual float process(int functionID);
     float *mainIn = nullptr;
-    static const int MAIN_IN = 0;
+    enum {MAIN_OUTPUT_IN, MAIN_INPUT_OUT};
 
   private:
 };

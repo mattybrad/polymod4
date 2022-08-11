@@ -8,13 +8,11 @@
 
 VCF::VCF()
 {
-  filter.Init(48000.0f);
+  filter.Init(_sampleRate);
   filter.SetRes(0.5);
   filter.SetFreq(500.0);
-}
-
-void VCF::init() {
-  addPseudoConnection(FILTER_IN, FILTER_OUT);
+  addPseudoConnection(AUDIO_IN, LPF_OUT);
+  addPseudoConnection(FREQ_IN, LPF_OUT);
 }
 
 float VCF::process(int functionID)
@@ -22,8 +20,8 @@ float VCF::process(int functionID)
   float returnVal = 0.0f;
   switch (functionID)
   {
-  case FILTER_OUT:
-    returnVal = filter.Process(*inputFloats[FILTER_IN]);
+  case LPF_OUT:
+    returnVal = filter.Process(*inputFloats[AUDIO_IN]);
     break;
   }
   return returnVal;
