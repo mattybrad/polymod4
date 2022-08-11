@@ -342,8 +342,8 @@ void calculateProcessOrder() {
 // so this function fixes that
 // (ACTUALLY IT DOESN'T! COME BACK TO THIS LATER)
 int getSystemPinNum(int userPinNum) {
-	//return 8*(userPinNum/8) + 7 - (userPinNum%8);
-	return userPinNum;
+	return 8*(userPinNum/8) + 7 - (userPinNum%8);
+	//return userPinNum;
 }
 
 void initOutput(int socketNumber, Module *module, int param) {
