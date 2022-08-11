@@ -6,7 +6,7 @@ A few next steps:
     InVal and OutVal might be unnecessary, could just use Val?
         Centralise sample rate, don't just hardcode 48000 each time
     Add some error catching stuff to prevent compilation of bad configurations
-    Add logical pin ordering (0 at top, 31 at bottom)
+        Add logical pin ordering (0 at top, 31 at bottom)
     Optimise delays - system tick stuff is blocking? and delayMS is too coarse (callback system?)
     Smooth analog controls (sounds too "steppy")
     Add LFO module to help test filters etc
@@ -14,3 +14,4 @@ A few next steps:
     Add RPS module
     Add CPU monitoring
     Stress-test the code
+    Fade in connections

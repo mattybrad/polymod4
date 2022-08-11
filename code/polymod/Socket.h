@@ -15,9 +15,7 @@ class Socket {
     Socket *sourceSocket = nullptr;
     float inVal;
     float outVal;
-    static const int UNUSED = 0;
-    static const int INPUT = 1;
-    static const int OUTPUT = 2;
+    enum {UNUSED,INPUT,OUTPUT};
     int socketType = UNUSED;
      
   private:

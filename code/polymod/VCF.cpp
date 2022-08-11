@@ -25,5 +25,5 @@ float VCF::process(int functionID)
     returnVal = filter.Process(*inputFloats[AUDIO_IN]);
     break;
   }
-  return returnVal;
+  return 2.0f * returnVal;
 }

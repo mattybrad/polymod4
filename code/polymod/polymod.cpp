@@ -7,6 +7,7 @@
 // include libraries
 #include "daisy_seed.h"
 #include "daisysp.h"
+#include "core_cm7.h"
 #include "sr_165.h"
 
 using namespace daisy;
@@ -22,7 +23,7 @@ using namespace daisy::seed;
 #include "IO.h"
 
 // debugging stuff
-bool useSerial = false;
+bool useSerial = true;
 
 // define chain of 5 74hc165 shift registers (read many digital inputs)
 using My165Chain = ShiftRegister165<5>;
@@ -45,6 +46,8 @@ Socket outputSockets[32];
 Socket inputSockets[32];
 int outputSocketOrder[32];
 int inputSocketOrder[32];
+int lastPerformanceNum = 0;
+int highestPerformanceNum = 0;
 
 // declare modules
 VCO vco1;
@@ -64,6 +67,9 @@ void initInput(int socketNumber, Module *module, int param);
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
+	// start performance measurments
+	DWT->CYCCNT = 0;
+
 	for (size_t i = 0; i < size; i++)
 	{
 		for(int j=0; j<32; j++) {
@@ -83,14 +89,23 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		out[0][i] = finalOutput;
 		out[1][i] = finalOutput;
 	}
+
+	lastPerformanceNum = DWT->CYCCNT;
+	if(lastPerformanceNum > highestPerformanceNum) highestPerformanceNum = lastPerformanceNum;
 }
 
 int main(void)
 {
+	// performance measurement stuff
+	CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+	DWT->LAR = 0xC5ACCE55;
+	DWT->CYCCNT = 0;
+	DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+
 	// Daisy Seed config
 	hw.Configure();
 	hw.Init();
-	hw.SetAudioBlockSize(4); // number of samples handled per callback
+	hw.SetAudioBlockSize(16); // can increase this if having performance issues
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 	hw.StartAudio(AudioCallback);
 
@@ -207,9 +222,11 @@ int main(void)
 			}
 		}
 
-		hw.DelayMs(1); // seems to be required for 4051s to function properly - try reducing to microseconds to optimise patching speed
+		System::DelayUs(250); // seems to be required for 4051s to work properly - ideally replace blocking delay with callback
 		analogReadings[analogChannel] = hw.adc.GetFloat(0);
 		analogReadings[analogChannel + 8] = hw.adc.GetFloat(1);
+
+		tempLfo.freq = 0.01 + 100.0f * analogReadings[0];
 
 		analogChannel++; // probably merge analog channel and bitNumber, they're basically the same
 		bitNumber = (bitNumber + 1) % 8;
@@ -238,8 +255,12 @@ uint8_t findFreeConnectionSlot()
 void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum)
 {
 	uint8_t slotNum = findFreeConnectionSlot();
-	if (useSerial)
+	if (useSerial) {
 		hw.PrintLine("Connection slot %d", slotNum);
+		int cpuPercent = (100 * lastPerformanceNum) / (8333 * 16); // 400,000,000 / 48,000 = 8333
+		int cpuPercentMax = (100 * highestPerformanceNum) / (8333 * 16);
+		hw.PrintLine("CPU usage: %d%% / %d%%", cpuPercent, cpuPercentMax);
+	}
 	connections[slotNum]._isConnected = true; // temp
 	connections[slotNum].physicalOutputNum = physicalOutputNum;
 	connections[slotNum].physicalInputNum = physicalInputNum;
