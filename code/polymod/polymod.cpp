@@ -39,6 +39,7 @@ uint8_t stableInputReadings[32];
 float analogReadings[16];
 
 // misc variables (tidy up into groups later)
+SaiHandle::Config::SampleRate sampleRate = SaiHandle::Config::SampleRate::SAI_48KHZ;
 const int MAX_CONNECTIONS = 32;
 Connection connections[MAX_CONNECTIONS];
 Socket outputSockets[32];
@@ -90,7 +91,7 @@ int main(void)
 	hw.Configure();
 	hw.Init();
 	hw.SetAudioBlockSize(4); // number of samples handled per callback
-	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
+	hw.SetAudioSampleRate(sampleRate);
 	hw.StartAudio(AudioCallback);
 
 	// Polymod hardware config
@@ -125,9 +126,11 @@ int main(void)
 	initInput(0, &io, IO::MAIN_IN);
 	initInput(1, &vcf, VCF::FILTER_IN);
 
-	outputSockets[4].pseudoSourceTemp = &inputSockets[1];
+	vcf.init();
 
-	vco1.tempSocket = &outputSockets[0];
+	//outputSockets[4].pseudoSourceTemp = &inputSockets[1];
+
+	//vco1.tempSocket = &outputSockets[0];
 
 	// inputSockets[0].socketType = Socket::INPUT;
 	// io.mainIn = &inputSockets[0].inVal;
@@ -285,8 +288,17 @@ void setOrder(Socket *socket, int order)
 				setOrder(socket->sourceSocket, order + 1);
 			}
 		} else if(socket->socketType == Socket::OUTPUT) {
-			if(socket->pseudoSourceTemp != nullptr) {
-				setOrder(socket->pseudoSourceTemp, order + 1);
+			// if(socket->pseudoSourceTemp != nullptr) {
+			// 	setOrder(socket->pseudoSourceTemp, order + 1);
+			// }
+			for(int i=0; i<8; i++) {
+				int pseudoConnNum = socket->module->pseudoSources[socket->param];
+				if(pseudoConnNum != -1) {
+					Socket *thisSocket = socket->module->sockets[pseudoConnNum];
+					if (thisSocket != nullptr) {
+						setOrder(thisSocket, order + 1);
+					}
+				}
 			}
 		}
 	}
@@ -350,10 +362,12 @@ void initOutput(int socketNumber, Module *module, int param) {
 	outputSockets[socketNumber].socketType = Socket::OUTPUT;
 	outputSockets[socketNumber].module = module;
 	outputSockets[socketNumber].param = param;
+	module->sockets[param] = &outputSockets[socketNumber];
 }
 
 void initInput(int socketNumber, Module *module, int param)
 {
 	inputSockets[socketNumber].socketType = Socket::INPUT;
 	module->inputFloats[param] = &inputSockets[socketNumber].inVal;
+	module->sockets[param] = &inputSockets[socketNumber];
 }

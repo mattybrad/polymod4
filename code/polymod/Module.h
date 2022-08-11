@@ -7,8 +7,10 @@ class Socket;
 class Module {
   public:
     Module();
-    Socket *tempSocket = nullptr;
-    void addPseudoConnection(uint8_t sourceSocketNum, uint8_t destSocketNum);
+    virtual void init();
+    void addPseudoConnection(int sourceParam, int destParam);
+    int pseudoSources[8]; // pseudoSources[destination] = source
+    Socket *sockets[8]; // pointers to sockets
     float *inputFloats[8];
     virtual float process(int functionID);
 

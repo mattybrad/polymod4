@@ -10,6 +10,7 @@ class VCF : public Module {
   public:
     VCF();
     virtual float process(int functionID);
+    virtual void init();
     MoogLadder filter;
     static const int FILTER_IN = 0;
     static const int FILTER_OUT = 1;

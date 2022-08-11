@@ -29,4 +29,8 @@ int main()
     socket.moduleFunction = &module2.processA;
     socket.process();
     std::cout << socket.outVal << std::endl;
+
+    enum {TEST,ENUM,STUFF};
+
+    std::cout << STUFF << std::endl;
 }
