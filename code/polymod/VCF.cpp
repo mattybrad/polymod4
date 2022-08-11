@@ -21,6 +21,7 @@ float VCF::process(int functionID)
   switch (functionID)
   {
   case LPF_OUT:
+    filter.SetFreq(500.0f + 400.0f * *inputFloats[FREQ_IN]);
     returnVal = filter.Process(*inputFloats[AUDIO_IN]);
     break;
   }

@@ -1,6 +1,6 @@
 Have now got a working system, in mono at least.
 A few next steps:
-    Tidy up the source code, making it nicer to define sockets/modules
+        Tidy up the source code, making it nicer to define sockets/modules
     Better pseudo connection system
     Also make pot definitions part of same slickening process
     InVal and OutVal might be unnecessary, could just use Val?

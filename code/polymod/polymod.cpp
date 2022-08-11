@@ -58,7 +58,6 @@ void calculateProcessOrder();
 void setOrder(Socket socket, int order);
 void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum);
 void removeConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum);
-void processConnection(uint8_t connectionNum);
 uint8_t findFreeConnectionSlot();
 void initOutput(int socketNumber, Module *module, int param);
 void initInput(int socketNumber, Module *module, int param);
@@ -80,8 +79,9 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		}
 
 		// set daisy seed output as final stage (IO module) output
-		out[0][i] = *io.inputFloats[IO::MAIN_OUTPUT_IN];
-		out[1][i] = *io.inputFloats[IO::MAIN_OUTPUT_IN];
+		float finalOutput = 0.25 * *io.inputFloats[IO::MAIN_OUTPUT_IN];
+		out[0][i] = finalOutput;
+		out[1][i] = finalOutput;
 	}
 }
 
@@ -115,7 +115,7 @@ int main(void)
 
 	vco1.freq = 100.08;
 	vco2.freq = 150.03;
-	tempLfo.freq = 0.2;
+	tempLfo.freq = 1.0;
 
 	// set up sockets
 	initOutput(0, &vco1, VCO::SQUARE_OUT);
@@ -125,7 +125,7 @@ int main(void)
 	initOutput(4, &vco2, VCO::SAW_OUT);
 	initOutput(5, &vco2, VCO::SINE_OUT);
 	initOutput(6, &tempLfo, VCO::SINE_OUT);
-	initOutput(7, &vcf, VCF::LPF_OUT);
+	initOutput(15, &vcf, VCF::LPF_OUT);
 
 	initInput(0, &io, IO::MAIN_OUTPUT_IN);
 	initInput(1, &vcf, VCF::AUDIO_IN);
@@ -240,7 +240,6 @@ void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum)
 	uint8_t slotNum = findFreeConnectionSlot();
 	if (useSerial)
 		hw.PrintLine("Connection slot %d", slotNum);
-	//outputSocketMappings[physicalOutputNum]->destSocket = inputSocketMappings[physicalInputNum];
 	connections[slotNum]._isConnected = true; // temp
 	connections[slotNum].physicalOutputNum = physicalOutputNum;
 	connections[slotNum].physicalInputNum = physicalInputNum;
@@ -263,14 +262,6 @@ void removeConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum)
 	}
 }
 
-void processConnection(uint8_t connectionNum)
-{
-	if (connections[connectionNum].isConnected())
-	{
-		//inputSocketMappings[connections[connectionNum].physicalInputNum]->inVal = outputSocketMappings[connections[connectionNum].physicalOutputNum]->outVal;
-	}
-}
-
 void setOrder(Socket *socket, int order)
 {
 	if(!socket->orderSet) {
@@ -281,16 +272,10 @@ void setOrder(Socket *socket, int order)
 				setOrder(socket->sourceSocket, order + 1);
 			}
 		} else if(socket->socketType == Socket::OUTPUT) {
-			// if(socket->pseudoSourceTemp != nullptr) {
-			// 	setOrder(socket->pseudoSourceTemp, order + 1);
-			// }
-			for(int i=0; i<8; i++) {
-				int pseudoConnNum = socket->module->pseudoSources[socket->param];
-				if(pseudoConnNum != -1) {
-					Socket *thisSocket = socket->module->sockets[pseudoConnNum];
-					if (thisSocket != nullptr) {
-						setOrder(thisSocket, order + 1);
-					}
+			for(int i=0; i<socket->module->numPseudoSources; i++) {
+				if(socket->module->pseudoSources[i][1] == socket->param) {
+					// pseudo socket destination matches output
+					setOrder(socket->module->sockets[socket->module->pseudoSources[i][0]], order + 1);
 				}
 			}
 		}
@@ -308,6 +293,7 @@ void calculateProcessOrder() {
 
 	// start at IO output (input socket)
 	setOrder(io.sockets[IO::MAIN_OUTPUT_IN], 0); // recursive function, sets order number for all sockets
+	// after this, sockets should have higher order numbers as they get further away from end of signal chain
 
 	// reset socket order
 	for (int i = 0; i < 32; i++)
@@ -316,7 +302,7 @@ void calculateProcessOrder() {
 		inputSocketOrder[i] = -1;
 	}
 
-	int orderIndex = 0;
+	int orderIndex = 0; // this number is HIGHEST at end of signal chain (opposite of above)
 	
 	// start at 64, maximum possible order number (?)
 	for(int i=64; i>=0; i--) {
@@ -343,9 +329,10 @@ void calculateProcessOrder() {
 	}
 
 	if(useSerial) {
+		// couuld go up to 32 here(?) but only including 8 for brevity
 		for (int i = 0; i < 8; i++)
 		{
-			hw.Print("%d %d ", outputSocketOrder[i], inputSocketOrder[i]);
+			hw.Print("OUT%d IN%d ", outputSocketOrder[i], inputSocketOrder[i]);
 		}
 		hw.PrintLine("...");
 	}
@@ -353,8 +340,10 @@ void calculateProcessOrder() {
 
 // annoyingly, the patch sockets on the PCB are ordered 7,6,5,4,3,2,1,0,15,14,13...
 // so this function fixes that
+// (ACTUALLY IT DOESN'T! COME BACK TO THIS LATER)
 int getSystemPinNum(int userPinNum) {
-	return 8*(userPinNum/8) + 7 - (userPinNum%8);
+	//return 8*(userPinNum/8) + 7 - (userPinNum%8);
+	return userPinNum;
 }
 
 void initOutput(int socketNumber, Module *module, int param) {

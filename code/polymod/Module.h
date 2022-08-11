@@ -8,7 +8,8 @@ class Module {
   public:
     Module();
     void addPseudoConnection(int sourceParam, int destParam);
-    int pseudoSources[8]; // pseudoSources[destination] = source
+    int pseudoSources[16][2]; // pseudoSources[source][dest]
+    int numPseudoSources = 0;
     Socket *sockets[8]; // pointers to sockets
     float *inputFloats[8];
     virtual float process(int functionID);

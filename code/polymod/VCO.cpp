@@ -11,17 +11,17 @@ VCO::VCO()
   saw.Init(_sampleRate);
   saw.SetWaveform(Oscillator::WAVE_POLYBLEP_SAW);
   saw.SetFreq(100);
-  saw.SetAmp(0.25);
+  saw.SetAmp(1.0);
 
   square.Init(_sampleRate);
   square.SetWaveform(Oscillator::WAVE_POLYBLEP_SQUARE);
   square.SetFreq(100);
-  square.SetAmp(0.25);
+  square.SetAmp(1.0);
 
   sine.Init(_sampleRate);
   sine.SetWaveform(Oscillator::WAVE_SIN);
   sine.SetFreq(100);
-  sine.SetAmp(0.25);
+  sine.SetAmp(1.0);
 }
 
 float VCO::process(int functionID) {
