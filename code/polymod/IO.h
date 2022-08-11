@@ -5,9 +5,10 @@
 class IO : public Module {
   public:
     IO();
-    //virtual void prepare();
-    virtual void process();
-    float getOutput();
+    virtual float process(int functionID);
+    float *mainIn = nullptr;
+    enum {MAIN_OUTPUT_IN, MAIN_INPUT_OUT};
+
   private:
 };
 

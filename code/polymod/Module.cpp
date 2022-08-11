@@ -1,15 +1,20 @@
 #include "Module.h"
 
-Module::Module() {
-  
-}
-
-void Module::prepare() {
-    for(uint8_t i=0; i<8; i++) {
-        _sockets[i].outVal = _sockets[i].newOutVal;
+Module::Module()
+{
+    for (int i = 0; i < 8; i++)
+    {
+        inputFloats[i] = nullptr;
+        pseudoSources[i] = -1;
     }
 }
 
-void Module::process() {
-    
+void Module::addPseudoConnection(int source, int dest)
+{
+    pseudoSources[dest] = source;
+}
+
+float Module::process(int functionID)
+{
+    return 0.0f;
 }

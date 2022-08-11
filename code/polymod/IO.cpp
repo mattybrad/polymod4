@@ -4,10 +4,7 @@ IO::IO() {
   
 }
 
-void IO::process() {
-  
-}
-
-float IO::getOutput() {
-  return _sockets[0].inVal;
+float IO::process(int functionID)
+{
+    return 0.0f;
 }

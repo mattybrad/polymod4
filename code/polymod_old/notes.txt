@@ -1,0 +1,78 @@
+complex (proper?) way to do ordering:
+
+on new connection/disconnection:
+
+start at main output socket, give orderNum 0
+list all source sockets
+for each 0 source:
+    give orderNum 1
+    for each source:
+        give orderNum 2
+
+        etc
+
+now give modules an order
+for each module, scan all sockets to find highest orderNum
+process all modules in descending orderNum order (highest first, ending with IO module)
+(except IO module also has audio input! which might be the first thing in chain! oh no!)
+
+---
+
+maybe better to process sockets instead of modules
+works as above but without needing to assign orderNums to modules
+but will it work in practice..?
+e.g.
+square wave through filter, filter modulated by lfo:
+    output 0
+    filter out 1
+    filter mod 2
+    lfo out 3
+    filter in 2
+    square wave out 3
+
+    so...
+
+    process lfo out, osc.process()
+    process square wave out, osc.process()
+    process filter mod, out=lfo in
+    process filter in, out=square in
+    process filter out, set freq, filter.process(filter in)
+    process output, out=filter in
+
+or...
+two vcos into a mixer
+    output 0
+    mixer out 1
+    mixer in A 2
+    mixer in B 2
+    vco A out 3
+    vco B out 3
+
+    so...
+
+    process vcos
+    mixer ins pass through
+    mixer out = sum of mixer ins
+
+--------
+
+might need to rewrite things with above in mind
+need to be able to process sockets rather than modules
+are modules even necessary, other than to keep things organised?
+so, something like...
+init modules
+add pseudoConnections between input/output sockets within modules
+make some physical connections
+a connected input socket should have pointer to its source output socket
+and/or a connected output socket should have a pointer to its destination input socket
+(sockets generally become more complex/active classes)
+start at IO output
+figure out processing output order
+process all sockets in order
+this means that socket class will need a process() function
+this should probably be defined in the module class, as a pointer?
+so, in vco init, sockets[0].processFunction = &processSquareOut (?)
+(some worries here about interdependent sockets, but can't quite think of a good problematic example)
+output socket process will be something daisySP-ish, referencing various bits of a module
+input socket process will be basically set socket outVal to value of source pointer
+(hopefully don't need to redefine this behaviour for each input socket)

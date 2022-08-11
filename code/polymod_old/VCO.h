@@ -9,14 +9,10 @@ using namespace daisy;
 class VCO : public Module {
   public:
     VCO();
-    virtual float process(int functionID);
-    float freq = 300.0;
-    Oscillator square;
-    Oscillator saw;
-    Oscillator sine;
-    enum {SQUARE_OUT, SAW_OUT, SINE_OUT};
-
+    virtual void process();
+    float tempFreq = 100.0f;
   private:
+    Oscillator _osc;
 };
 
 #endif

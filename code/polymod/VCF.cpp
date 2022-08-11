@@ -1,11 +1,28 @@
 #include "VCF.h"
 
-VCF::VCF() {
-  _filter.Init(48000.0f);
+// Module setup:
+// SOCKETS
+// 0 (in) Audio in
+// 2 (in) Freq mod in
+// 3 (out) Low pass filter out
+
+VCF::VCF()
+{
+  filter.Init(_sampleRate);
+  filter.SetRes(0.5);
+  filter.SetFreq(500.0);
+  addPseudoConnection(AUDIO_IN, LPF_OUT);
+  addPseudoConnection(FREQ_IN, LPF_OUT);
 }
 
-void VCF::process() {
-  _filter.SetRes(tempRes);
-  _filter.SetFreq(tempCutoff);
-  _sockets[1].outVal = _filter.Process(_sockets[0].inVal);
+float VCF::process(int functionID)
+{
+  float returnVal = 0.0f;
+  switch (functionID)
+  {
+  case LPF_OUT:
+    returnVal = filter.Process(*inputFloats[AUDIO_IN]);
+    break;
+  }
+  return returnVal;
 }

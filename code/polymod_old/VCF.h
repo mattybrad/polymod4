@@ -9,12 +9,11 @@ using namespace daisy;
 class VCF : public Module {
   public:
     VCF();
-    virtual float process(int functionID);
-    MoogLadder filter;
-    enum {AUDIO_IN, FREQ_IN, LPF_OUT};
-    float *filterIn = nullptr;
-
+    virtual void process();
+    float tempCutoff = 100.0f;
+    float tempRes = 0.5f;
   private:
+    MoogLadder _filter;
 };
 
 #endif
