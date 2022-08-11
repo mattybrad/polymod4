@@ -58,13 +58,14 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 	{
 		// this is the old way of doing things...
 		for(uint8_t j=0; j<MAX_CONNECTIONS; j++) {
-			processConnection(j);
+			//processConnection(j);
 		}
 		for(uint8_t j=0; j<16; j++) {
-			if(modules[i] != NULL) modules[i]->process();
+			//if(modules[i] != NULL) modules[i]->process();
 		}
 
 		// new way of doing things...
+
 
 		// set daisy seed output as final stage (IO module) output
 		out[0][i] = io.getOutput();
