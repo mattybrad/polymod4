@@ -11,8 +11,9 @@ class Module {
     int pseudoSources[16][2]; // pseudoSources[source][dest]
     int numPseudoSources = 0;
     Socket *sockets[8]; // pointers to sockets
-    float *inputFloats[8];
-    virtual float process(int functionID);
+    virtual float process(int functionID, int polyChannel);
+    static const int MAX_POLYPHONY = 4;
+    float* (*inputFloats)[MAX_POLYPHONY];
 
   protected:
     float _sampleRate = 48000.0f;

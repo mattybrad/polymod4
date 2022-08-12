@@ -24,7 +24,8 @@ VCO::VCO()
   sine.SetAmp(1.0);
 }
 
-float VCO::process(int functionID) {
+float VCO::process(int functionID, int polyChannel)
+{
   float returnVal = 0.0f;
   switch(functionID) {
     case SQUARE_OUT:

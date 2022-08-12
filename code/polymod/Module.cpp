@@ -4,9 +4,11 @@ Module::Module()
 {
     for (int i = 0; i < 8; i++)
     {
-        inputFloats[i] = nullptr;
-        pseudoSources[i][0] = -1;
-        pseudoSources[i][1] = -1;
+        for(int j=0; j<MAX_POLYPHONY; j++) {
+            inputFloats[i][j] = nullptr;
+            pseudoSources[i][0] = -1;
+            pseudoSources[i][1] = -1;
+        }
     }
 }
 
@@ -19,7 +21,7 @@ void Module::addPseudoConnection(int source, int dest)
     }
 }
 
-float Module::process(int functionID)
+float Module::process(int functionID, int polyChannel)
 {
     return 0.0f;
 }

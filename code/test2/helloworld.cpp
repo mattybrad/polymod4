@@ -1,5 +1,11 @@
 #include <iostream>
 
+int a[3] = {4,5,6};
+int* ap = a;
+
+int b[3][2] = {{3,1},{4,1},{5,9}};
+int (*bp)[2] = b;
+
 float testFunc(float inVal) {
     return inVal * 5.0f;
 }
@@ -11,29 +17,8 @@ int getSystemPinNum(int userPinNum)
 
 int main()
 {
-    // int testInt = 5;
-    // int testFloat = 1.2345;
-    // std::cout << "Learning about pointers..." << std::endl;
 
-    // module1.freq = 2.0f;
-    // module2.freq = 3.0f;
+    int b1 = bp[2][1];
     
-    // socket.module = &module1;
-    // socket.moduleFunction = &Module::processA;
-    // socket.process();
-    // std::cout << socket.outVal << std::endl;
-
-    // socket.module = &module2;
-    // socket.moduleFunction = &module2.processA;
-    // socket.process();
-    // std::cout << socket.outVal << std::endl;
-
-    // enum {TEST,ENUM,STUFF};
-
-    // std::cout << STUFF << std::endl;
-
-    for(int i=0; i<32; i++) {
-        int systemPin = getSystemPinNum(i);
-        std::cout << systemPin << std::endl;
-    }
+    std::cout << b1 << std::endl;
 }

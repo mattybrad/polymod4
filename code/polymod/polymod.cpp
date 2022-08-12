@@ -85,7 +85,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		}
 
 		// set daisy seed output as final stage (IO module) output
-		float finalOutput = 0.25 * *io.inputFloats[IO::MAIN_OUTPUT_IN];
+		float finalOutput = 0.25 * *io.inputFloats[IO::MAIN_OUTPUT_IN][0];
 		out[0][i] = finalOutput;
 		out[1][i] = finalOutput;
 	}
@@ -379,6 +379,8 @@ void initInput(int socketNumber, Module *module, int param)
 {
 	int systemSocketNumber = getSystemPinNum(socketNumber); // remap
 	inputSockets[systemSocketNumber].socketType = Socket::INPUT;
-	module->inputFloats[param] = &inputSockets[systemSocketNumber].inVal;
+	for(int i=0; i<Module::MAX_POLYPHONY; i++) {
+		module->inputFloats[param][i] = &inputSockets[systemSocketNumber].value[i];
+	}
 	module->sockets[param] = &inputSockets[systemSocketNumber];
 }

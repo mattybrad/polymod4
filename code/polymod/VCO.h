@@ -9,7 +9,7 @@ using namespace daisy;
 class VCO : public Module {
   public:
     VCO();
-    virtual float process(int functionID);
+    virtual float process(int functionID, int polyChannel);
     float freq = 300.0;
     Oscillator square;
     Oscillator saw;

@@ -4,7 +4,7 @@ IO::IO() {
   
 }
 
-float IO::process(int functionID)
+float IO::process(int functionID, int polyChannel)
 {
     return 0.0f;
 }
