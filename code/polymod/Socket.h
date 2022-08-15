@@ -14,8 +14,7 @@ class Socket {
     void process();
     Socket *destSocket = nullptr;
     Socket *sourceSocket = nullptr;
-    float inVal;
-    float outVal;
+    float value[Module::MAX_POLYPHONY];
     enum {UNUSED,INPUT,OUTPUT};
     int socketType = UNUSED;
      

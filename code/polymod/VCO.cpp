@@ -10,19 +10,17 @@ VCO::VCO()
 {
   for(int i=0; i<MAX_POLYPHONY; i++) {
     square[i].Init(_sampleRate);
-    square[i].SetWaveform(Oscillator::WAVE_POLYBLEP_SQUARE);
+    square[i].SetWaveform(Oscillator::WAVE_POLYBLEP_SAW);
     square[i].SetFreq(100+33.333f*i);
     square[i].SetAmp(1.0);
   }
 }
 
-float VCO::process(int functionID) {
+float VCO::process(int functionID, int polyChannel) {
   float returnVal = 0.0f;
   switch(functionID) {
-    case FREQ_IN:
-      break;
     case AUDIO_OUT:
-      returnVal = square[0].Process();
+      returnVal = square[polyChannel].Process();
       break;
   }
   return returnVal;

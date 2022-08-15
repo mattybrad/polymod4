@@ -12,7 +12,7 @@ Module::Module()
 
 void Module::addPseudoConnection(int source, int dest)
 {
-    if (numPseudoSources < 16)
+    if (numPseudoSources < MAX_MODULE_SOCKETS)
     {
         pseudoSources[numPseudoSources][0] = source;
         pseudoSources[numPseudoSources][1] = dest;
@@ -20,7 +20,7 @@ void Module::addPseudoConnection(int source, int dest)
     }
 }
 
-float Module::process(int functionID)
+float Module::process(int functionID, int polyChannel)
 {
     return 0.0f;
 }

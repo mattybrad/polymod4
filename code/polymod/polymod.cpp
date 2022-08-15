@@ -55,12 +55,23 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 {
 	for (size_t i = 0; i < size; i++)
 	{
-		for(int j=0; j<32; j++) {
-			
+		bool nullFound = false;
+		for (int j = 0; j < 64 && !nullFound; j++)
+		{
+			if(socketOrder[j] == nullptr) {
+				nullFound = true;
+			} else {
+				socketOrder[j]->process();
+			}
 		}
+
+		//socketOrder[2]->module->inputFloats[VCF::AUDIO_IN] = 0.11;
 
 		// set daisy seed output as final stage (IO module) output
 		float finalOutput = 0.0f;
+		for(int i=0; i<Module::MAX_POLYPHONY; i++) {
+			finalOutput += 0.1 * io.sockets[IO::MAIN_OUTPUT_IN]->value[i];
+		}
 		out[0][i] = finalOutput;
 		out[1][i] = finalOutput;
 	}
@@ -73,6 +84,14 @@ int main(void)
 	hw.Init();
 	hw.SetAudioBlockSize(16); // can increase this if having performance issues
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
+
+	// start serial log (wait for connection)
+	if (useSerial)
+	{
+		hw.StartLog(true);
+		hw.PrintLine("STARTED POLYMOD :)");
+	}
+
 	hw.StartAudio(AudioCallback);
 
 	// set up sockets
@@ -84,23 +103,18 @@ int main(void)
 	initInput(32, &io, IO::MAIN_OUTPUT_IN);
 	initInput(33, &vcf, VCF::AUDIO_IN);
 
-	// start serial log (wait for connection)
-	if (useSerial)
-	{
-		hw.StartLog(true);
-		hw.PrintLine("STARTED POLYMOD :)");
-	}
+	//addConnection(0,32);
+	addConnection(0, 33);
+	addConnection(1, 32);
+	/*hw.DelayMs(2000);
+	removeConnection(0, 33);
+	removeConnection(1, 32);
+	addConnection(0,32);*/
 
 	// main loop, everything happens in here
 	while (1)
 	{
 		// do nothing here for now, this is where all the shift reg stuff goes
-		addConnection(0, 33);
-		addConnection(1, 32);
-		hw.DelayMs(2000);
-		removeConnection(0, 33);
-		removeConnection(1, 32);
-		hw.DelayMs(2000);
 	}
 }
 
@@ -240,6 +254,8 @@ void initInput(int socketNumber, Module *module, int param)
 {
 	//int systemSocketNumber = getSystemPinNum(socketNumber); // remap
 	sockets[socketNumber].socketType = Socket::INPUT;
+	sockets[socketNumber].module = module;
+	sockets[socketNumber].param = param;
 	//module->inputFloats[param] = &inputSockets[socketNumber].inVal;
 	module->sockets[param] = &sockets[socketNumber];
 }
