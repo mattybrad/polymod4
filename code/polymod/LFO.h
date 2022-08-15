@@ -1,18 +1,17 @@
-#ifndef VCF_h
-#define VCF_h
+#ifndef LFO_h
+#define LFO_h
 #include "Module.h"
 #include "daisy_seed.h"
 #include "daisysp.h"
 using namespace daisysp;
 using namespace daisy;
 
-class VCF : public Module {
+class LFO : public Module {
   public:
-    VCF();
+    LFO();
     virtual float process(int functionID, int polyChannel);
-    MoogLadder filter[MAX_POLYPHONY];
-    Oscillator tempOsc;
-    enum {AUDIO_IN, FREQ_IN, LPF_OUT};
+    Oscillator square[MAX_POLYPHONY];
+    enum {FREQ_IN, AUDIO_OUT};
 
   private:
 };

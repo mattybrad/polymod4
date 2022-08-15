@@ -18,6 +18,7 @@ VCF::VCF()
   tempOsc.SetFreq(50.0);
   tempOsc.SetAmp(1.0);
   addPseudoConnection(AUDIO_IN, LPF_OUT);
+  addPseudoConnection(FREQ_IN, LPF_OUT);
 }
 
 float VCF::process(int functionID, int polyChannel)
@@ -26,7 +27,7 @@ float VCF::process(int functionID, int polyChannel)
   switch (functionID)
   {
   case LPF_OUT:
-    //filter.SetFreq(500.0f + 400.0f * *inputFloats[FREQ_IN]);
+    filter[polyChannel].SetFreq(500.0f + 400.0f * inputFloats[FREQ_IN][polyChannel]);
     returnVal = filter[polyChannel].Process(inputFloats[AUDIO_IN][polyChannel]);
     break;
   }

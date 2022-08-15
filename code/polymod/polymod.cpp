@@ -20,6 +20,7 @@ using namespace daisy::seed;
 #include "Module.h"
 #include "VCO.h"
 #include "VCF.h"
+#include "LFO.h"
 #include "IO.h"
 
 // socket stuff
@@ -39,7 +40,7 @@ DaisySeed hw;
 // declare modules
 VCO vco1;
 VCO vco2;
-VCO tempLfo;
+VCO lfo;
 VCF vcf;
 IO io;
 
@@ -100,14 +101,17 @@ int main(void)
 	}
 	initOutput(0, &vco1, VCO::AUDIO_OUT);
 	initOutput(1, &vcf, VCF::LPF_OUT);
+	initOutput(2, &lfo, LFO::AUDIO_OUT);
 	initInput(32, &io, IO::MAIN_OUTPUT_IN);
 	initInput(33, &vcf, VCF::AUDIO_IN);
+	initInput(34, &vcf, VCF::FREQ_IN);
 
 	//addConnection(0,32);
 	addConnection(0, 33);
 	addConnection(1, 32);
-	/*hw.DelayMs(2000);
-	removeConnection(0, 33);
+	hw.DelayMs(2000);
+	addConnection(2, 34);
+	/*removeConnection(0, 33);
 	removeConnection(1, 32);
 	addConnection(0,32);*/
 

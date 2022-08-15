@@ -8,7 +8,8 @@ IO.cpp \
 Module.cpp \
 Socket.cpp \
 VCO.cpp \
-VCF.cpp
+VCF.cpp \
+LFO.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../DaisyExamples/libDaisy/
