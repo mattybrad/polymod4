@@ -10,11 +10,8 @@ class VCO : public Module {
   public:
     VCO();
     virtual float process(int functionID);
-    float freq = 300.0;
-    Oscillator square;
-    Oscillator saw;
-    Oscillator sine;
-    enum {SQUARE_OUT, SAW_OUT, SINE_OUT};
+    Oscillator square[MAX_POLYPHONY];
+    enum {FREQ_IN, AUDIO_OUT};
 
   private:
 };

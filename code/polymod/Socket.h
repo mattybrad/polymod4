@@ -6,7 +6,8 @@
 class Socket {
   public:
     Socket();
-    int order = 999; // temp
+    int socketNum = -1;
+    int order = -1;
     bool orderSet = false;
     Module *module;
     int param = -1;

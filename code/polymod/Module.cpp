@@ -4,7 +4,7 @@ Module::Module()
 {
     for (int i = 0; i < 8; i++)
     {
-        inputFloats[i] = nullptr;
+        //inputFloats[i] = nullptr;
         pseudoSources[i][0] = -1;
         pseudoSources[i][1] = -1;
     }
@@ -12,10 +12,11 @@ Module::Module()
 
 void Module::addPseudoConnection(int source, int dest)
 {
-    if(numPseudoSources < 16) {
+    if (numPseudoSources < 16)
+    {
         pseudoSources[numPseudoSources][0] = source;
         pseudoSources[numPseudoSources][1] = dest;
-        numPseudoSources ++;
+        numPseudoSources++;
     }
 }
 

@@ -5,11 +5,9 @@
 class Connection {
   public:
     Connection();
-    bool isConnected();
-    void process();
     uint8_t physicalOutputNum;
     uint8_t physicalInputNum;
-    bool _isConnected = false;
+    bool isConnected = false;
 
   private:
     

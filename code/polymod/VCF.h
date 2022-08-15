@@ -10,9 +10,8 @@ class VCF : public Module {
   public:
     VCF();
     virtual float process(int functionID);
-    MoogLadder filter;
+    MoogLadder filter[MAX_POLYPHONY];
     enum {AUDIO_IN, FREQ_IN, LPF_OUT};
-    float *filterIn = nullptr;
 
   private:
 };
