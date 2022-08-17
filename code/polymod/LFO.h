@@ -9,7 +9,7 @@ using namespace daisy;
 class LFO : public Module {
   public:
     LFO();
-    virtual float process(int functionID, int polyChannel);
+    virtual float process(int functionID, int polyChannel, int sampleNum);
     Oscillator osc[MAX_POLYPHONY];
     enum {FREQ_IN, AUDIO_OUT};
 

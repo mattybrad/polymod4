@@ -16,7 +16,8 @@ LFO::LFO()
   }
 }
 
-float LFO::process(int functionID, int polyChannel) {
+float LFO::process(int functionID, int polyChannel, int sampleNum)
+{
   float returnVal = 0.0f;
   switch(functionID) {
     case AUDIO_OUT:

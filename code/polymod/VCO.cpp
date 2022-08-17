@@ -16,7 +16,8 @@ VCO::VCO()
   }
 }
 
-float VCO::process(int functionID, int polyChannel) {
+float VCO::process(int functionID, int polyChannel, int sampleNum)
+{
   float returnVal = 0.0f;
   switch(functionID) {
     case AUDIO_OUT:

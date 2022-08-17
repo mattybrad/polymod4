@@ -62,17 +62,16 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 			if(socketOrder[j] == nullptr) {
 				nullFound = true;
 			} else {
-				socketOrder[j]->process();
+				socketOrder[j]->process(i);
 			}
 		}
-
-		//socketOrder[2]->module->inputFloats[VCF::AUDIO_IN] = 0.11;
 
 		// set daisy seed output as final stage (IO module) output
 		float finalOutput = 0.0f;
 		for(int k=0; k<Module::MAX_POLYPHONY; k++) {
-			finalOutput += 0.1 * io.sockets[IO::MAIN_OUTPUT_IN]->value[k];
+			finalOutput += io.sockets[IO::MAIN_OUTPUT_IN]->value[k];
 		}
+		finalOutput = 0.1 * finalOutput;
 		out[0][i] = finalOutput;
 		out[1][i] = finalOutput;
 	}
@@ -83,7 +82,7 @@ int main(void)
 	// Daisy Seed config
 	hw.Configure();
 	hw.Init();
-	hw.SetAudioBlockSize(64); // can increase this if having performance issues
+	hw.SetAudioBlockSize(16); // can increase this if having performance issues
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
 	// start serial log (wait for connection)

@@ -9,7 +9,7 @@ using namespace daisy;
 class VCF : public Module {
   public:
     VCF();
-    virtual float process(int functionID, int polyChannel);
+    virtual float process(int functionID, int polyChannel, int sampleNum);
     MoogLadder filter[MAX_POLYPHONY];
     float tempFloat = 50.0f;
     float badFloat = 999.99f;

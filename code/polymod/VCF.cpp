@@ -17,16 +17,18 @@ VCF::VCF()
   addPseudoConnection(FREQ_IN, LPF_OUT);
 }
 
-float VCF::process(int functionID, int polyChannel)
+float VCF::process(int functionID, int polyChannel, int sampleNum)
 {
   float returnVal = 0.0f;
   switch (functionID)
   {
   case LPF_OUT:
-    /*tempFloat = 500.0f + (490.0f * inputFloats[FREQ_IN][polyChannel]);
-    float tempTempFloat = tempFloat;
-    if (tempTempFloat > 0.1f)
-      filter[polyChannel].SetFreq(tempTempFloat);*/
+    if(sampleNum == 0) {
+      tempFloat = 500.0f + (490.0f * inputFloats[FREQ_IN][polyChannel]);
+      float tempTempFloat = tempFloat;
+      if (tempTempFloat > 0.1f)
+        filter[polyChannel].SetFreq(tempTempFloat);
+    }
     returnVal = filter[polyChannel].Process(inputFloats[AUDIO_IN][polyChannel]);
     break;
   }

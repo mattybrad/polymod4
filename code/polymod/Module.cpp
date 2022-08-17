@@ -19,7 +19,7 @@ void Module::addPseudoConnection(int source, int dest)
     }
 }
 
-float Module::process(int functionID, int polyChannel)
+float Module::process(int functionID, int polyChannel, int sampleNum)
 {
     return 0.0f;
 }

@@ -11,7 +11,7 @@ class Socket {
     bool orderSet = false;
     Module *module;
     int param = -1;
-    void process();
+    void process(int sampleNum);
     Socket *destSocket = nullptr;
     Socket *sourceSocket = nullptr;
     float value[Module::MAX_POLYPHONY];
