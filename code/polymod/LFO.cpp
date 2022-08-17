@@ -9,10 +9,10 @@
 LFO::LFO()
 {
   for(int i=0; i<MAX_POLYPHONY; i++) {
-    square[i].Init(_sampleRate);
-    square[i].SetWaveform(Oscillator::WAVE_SIN);
-    square[i].SetFreq(0.1f*(i+1));
-    square[i].SetAmp(1.0);
+    osc[i].Init(_sampleRate);
+    osc[i].SetWaveform(Oscillator::WAVE_SIN);
+    osc[i].SetFreq(0.25f * (i+1));
+    osc[i].SetAmp(1.0);
   }
 }
 
@@ -20,7 +20,7 @@ float LFO::process(int functionID, int polyChannel) {
   float returnVal = 0.0f;
   switch(functionID) {
     case AUDIO_OUT:
-      returnVal = square[polyChannel].Process();
+      returnVal = osc[polyChannel].Process();
       break;
   }
   return returnVal;

@@ -40,7 +40,7 @@ DaisySeed hw;
 // declare modules
 VCO vco1;
 VCO vco2;
-VCO lfo;
+LFO lfo;
 VCF vcf;
 IO io;
 
@@ -70,8 +70,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 
 		// set daisy seed output as final stage (IO module) output
 		float finalOutput = 0.0f;
-		for(int i=0; i<Module::MAX_POLYPHONY; i++) {
-			finalOutput += 0.1 * io.sockets[IO::MAIN_OUTPUT_IN]->value[i];
+		for(int k=0; k<Module::MAX_POLYPHONY; k++) {
+			finalOutput += 0.1 * io.sockets[IO::MAIN_OUTPUT_IN]->value[k];
 		}
 		out[0][i] = finalOutput;
 		out[1][i] = finalOutput;
@@ -83,7 +83,7 @@ int main(void)
 	// Daisy Seed config
 	hw.Configure();
 	hw.Init();
-	hw.SetAudioBlockSize(16); // can increase this if having performance issues
+	hw.SetAudioBlockSize(64); // can increase this if having performance issues
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
 	// start serial log (wait for connection)
@@ -106,7 +106,6 @@ int main(void)
 	initInput(33, &vcf, VCF::AUDIO_IN);
 	initInput(34, &vcf, VCF::FREQ_IN);
 
-	//addConnection(0,32);
 	addConnection(0, 33);
 	addConnection(1, 32);
 	hw.DelayMs(2000);
@@ -119,6 +118,9 @@ int main(void)
 	while (1)
 	{
 		// do nothing here for now, this is where all the shift reg stuff goes
+		int a = (int)(1000.0f * vcf.tempFloat);
+		hw.PrintLine("%d", a);
+		hw.DelayMs(100);
 	}
 }
 

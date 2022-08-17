@@ -2,9 +2,8 @@
 
 Module::Module()
 {
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < MAX_MODULE_SOCKETS; i++)
     {
-        //inputFloats[i] = nullptr;
         pseudoSources[i][0] = -1;
         pseudoSources[i][1] = -1;
     }

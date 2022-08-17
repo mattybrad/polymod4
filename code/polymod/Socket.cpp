@@ -9,6 +9,7 @@ void Socket::process() {
         for (int i = 0; i < Module::MAX_POLYPHONY; i++)
         {
             value[i] = module->process(param, i);
+            //module->inputFloats[param][i] = value[i]; // ???
         }
     } else if (socketType == INPUT) {
         for (int i = 0; i < Module::MAX_POLYPHONY; i++)

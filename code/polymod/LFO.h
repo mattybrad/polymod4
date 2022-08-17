@@ -10,7 +10,7 @@ class LFO : public Module {
   public:
     LFO();
     virtual float process(int functionID, int polyChannel);
-    Oscillator square[MAX_POLYPHONY];
+    Oscillator osc[MAX_POLYPHONY];
     enum {FREQ_IN, AUDIO_OUT};
 
   private:
