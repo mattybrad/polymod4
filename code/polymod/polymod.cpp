@@ -107,18 +107,12 @@ int main(void)
 
 	addConnection(0, 33);
 	addConnection(1, 32);
-	hw.DelayMs(2000);
 	addConnection(2, 34);
-	/*removeConnection(0, 33);
-	removeConnection(1, 32);
-	addConnection(0,32);*/
 
 	// main loop, everything happens in here
 	while (1)
 	{
 		// do nothing here for now, this is where all the shift reg stuff goes
-		int a = (int)(1000.0f * vcf.tempFloat);
-		hw.PrintLine("%d", a);
 		hw.DelayMs(100);
 	}
 }

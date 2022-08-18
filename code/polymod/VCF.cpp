@@ -23,12 +23,9 @@ float VCF::process(int functionID, int polyChannel, int sampleNum)
   switch (functionID)
   {
   case LPF_OUT:
-    if(sampleNum == 0) {
-      tempFloat = 500.0f + (490.0f * inputFloats[FREQ_IN][polyChannel]);
-      float tempTempFloat = tempFloat;
-      if (tempTempFloat > 0.1f)
-        filter[polyChannel].SetFreq(tempTempFloat);
-    }
+    // for some reason, struggling to update the cutoff freq here without crashing everything
+    float newFreq = 2000.0f + 1950.0f * inputFloats[FREQ_IN][polyChannel];
+    filter[polyChannel].SetFreq(newFreq);
     returnVal = filter[polyChannel].Process(inputFloats[AUDIO_IN][polyChannel]);
     break;
   }

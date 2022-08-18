@@ -11,8 +11,6 @@ class VCF : public Module {
     VCF();
     virtual float process(int functionID, int polyChannel, int sampleNum);
     MoogLadder filter[MAX_POLYPHONY];
-    float tempFloat = 50.0f;
-    float badFloat = 999.99f;
     enum {AUDIO_IN, FREQ_IN, LPF_OUT};
 
   private:
