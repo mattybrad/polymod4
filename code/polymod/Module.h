@@ -10,7 +10,7 @@ class Module {
     void addPseudoConnection(int sourceParam, int destParam);
     int numPseudoSources = 0;
     virtual float process(int functionID, int polyChannel, int sampleNum);
-    static const int MAX_POLYPHONY = 8;
+    static const int MAX_POLYPHONY = 4;
     static const int MAX_MODULE_SOCKETS = 8;
     int pseudoSources[MAX_MODULE_SOCKETS][2]; // pseudoSources[source][dest]
     Socket *sockets[MAX_MODULE_SOCKETS]; // pointers to sockets

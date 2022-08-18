@@ -30,10 +30,23 @@ const int MAX_CONNECTIONS = 32;
 Connection connections[MAX_CONNECTIONS];
 
 // debugging stuff
-bool useSerial = true;
+bool useSerial = false;
 
 // define chain of 5 74hc165 shift registers (read many digital inputs)
 using My165Chain = ShiftRegister165<5>;
+ShiftRegister595 outputChain;
+My165Chain inputChain;
+
+// patching variables
+uint8_t inputReadings[32];
+uint8_t prevInputReadings[32];
+uint8_t stableCycles[32];
+uint8_t stableInputReadings[32];
+int bitNumber = 0;
+
+// analog variables
+float analogReadings[16];
+int analogChannel = 0;
 
 DaisySeed hw;
 
@@ -51,6 +64,7 @@ void calculateSocketOrder();
 void setSocketOrder(Socket *socket, int order);
 void initOutput(int socketNumber, Module *module, int param);
 void initInput(int socketNumber, Module *module, int param);
+void handlePhysicalConnections();
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
@@ -71,7 +85,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		for(int k=0; k<Module::MAX_POLYPHONY; k++) {
 			finalOutput += io.sockets[IO::MAIN_OUTPUT_IN]->value[k];
 		}
-		finalOutput = 0.1 * finalOutput;
+		finalOutput = 0.05 * finalOutput;
 		out[0][i] = finalOutput;
 		out[1][i] = finalOutput;
 	}
@@ -82,8 +96,25 @@ int main(void)
 	// Daisy Seed config
 	hw.Configure();
 	hw.Init();
-	hw.SetAudioBlockSize(16); // can increase this if having performance issues
+	hw.SetAudioBlockSize(64); // can increase this if having performance issues
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
+
+	// Polymod hardware config
+	My165Chain::Config inputChainConfig;
+	inputChainConfig.clk = D5;
+	inputChainConfig.latch = D6;
+	inputChainConfig.data[0] = D3;
+	inputChain.Init(inputChainConfig);
+	dsy_gpio_pin outputChainPins[3] = {D1, D2, D7};
+	outputChain.Init(outputChainPins, 5);
+	GPIO inputChainClockEnable;
+	inputChainClockEnable.Init(D4, GPIO::Mode::OUTPUT);
+	inputChainClockEnable.Write(false);
+	AdcChannelConfig analogInputs[2];
+	analogInputs[0].InitSingle(A0);
+	analogInputs[1].InitSingle(A1);
+	hw.adc.Init(analogInputs, 2);
+	hw.adc.Start();
 
 	// start serial log (wait for connection)
 	if (useSerial)
@@ -105,15 +136,15 @@ int main(void)
 	initInput(33, &vcf, VCF::AUDIO_IN);
 	initInput(34, &vcf, VCF::FREQ_IN);
 
-	addConnection(0, 33);
+	/*addConnection(0, 33);
 	addConnection(1, 32);
-	addConnection(2, 34);
+	addConnection(2, 34);*/
 
 	// main loop, everything happens in here
 	while (1)
 	{
 		// do nothing here for now, this is where all the shift reg stuff goes
-		hw.DelayMs(100);
+		handlePhysicalConnections();
 	}
 }
 
@@ -257,4 +288,80 @@ void initInput(int socketNumber, Module *module, int param)
 	sockets[socketNumber].param = param;
 	//module->inputFloats[param] = &inputSockets[socketNumber].inVal;
 	module->sockets[param] = &sockets[socketNumber];
+}
+
+void handlePhysicalConnections() {
+	// set output bits for patching output channels
+	for (int i = 0; i < 32; i++)
+	{
+		outputChain.Set(i, bitRead(i + 1, bitNumber));
+	}
+
+	// set bits to address 4051s
+	outputChain.Set(32, bitRead(analogChannel, 0));
+	outputChain.Set(33, bitRead(analogChannel, 1));
+	outputChain.Set(34, bitRead(analogChannel, 2));
+
+	// set LEDs
+	for (int i = 0; i < 5; i++)
+	{
+		outputChain.Set(35 + i, analogReadings[0] > ((float)i + 0.5) / 5.0);
+	}
+
+	// read/write from/to shift registers
+	outputChain.Write();
+	inputChain.Update();
+
+	for (int i = 0; i < 32; i++)
+	{
+		bitWrite(inputReadings[i], bitNumber, inputChain.State(i + 8));
+	}
+	if (bitNumber == 7)
+	{
+		for (int i = 0; i < 32; i++)
+		{
+			if (inputReadings[i] != prevInputReadings[i])
+			{
+				// change detected
+				stableCycles[i] = 0;
+			}
+			else
+			{
+				if (stableCycles[i] < 3)
+					stableCycles[i]++;
+			}
+			if (stableCycles[i] == 2)
+			{
+				if (inputReadings[i] > 0)
+				{
+					// connection
+					if (useSerial)
+						hw.Print("%d--->%d\n", inputReadings[i] - 1, i);
+					addConnection(inputReadings[i] - 1, i + 32);
+				}
+				else if (stableInputReadings[i] > 0)
+				{
+					// disconnection
+					if (useSerial)
+						hw.Print("%d-x->%d\n", stableInputReadings[i] - 1, i);
+					removeConnection(stableInputReadings[i] - 1, i + 32);
+				}
+				stableInputReadings[i] = inputReadings[i];
+			}
+			prevInputReadings[i] = inputReadings[i];
+		}
+	}
+
+	System::DelayUs(250); // seems to be required for 4051s to work properly - ideally replace blocking delay with callback
+	analogReadings[analogChannel] = hw.adc.GetFloat(0);
+	analogReadings[analogChannel + 8] = hw.adc.GetFloat(1);
+
+	//tempLfo.freq = 0.01 + 100.0f * analogReadings[0];
+
+	analogChannel++; // probably merge analog channel and bitNumber, they're basically the same
+	bitNumber = (bitNumber + 1) % 8;
+	if (analogChannel == 8)
+	{
+		analogChannel = 0;
+	}
 }
