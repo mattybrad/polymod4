@@ -64,6 +64,7 @@ void calculateSocketOrder();
 void setSocketOrder(Socket *socket, int order);
 void initOutput(int socketNumber, Module *module, int param);
 void initInput(int socketNumber, Module *module, int param);
+int getSystemPinNum(int userPinNum);
 void handlePhysicalConnections();
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
@@ -135,6 +136,7 @@ int main(void)
 	initInput(32, &io, IO::MAIN_OUTPUT_IN);
 	initInput(33, &vcf, VCF::AUDIO_IN);
 	initInput(34, &vcf, VCF::FREQ_IN);
+	initInput(35, &vco1, VCO::FREQ_IN);
 
 	/*addConnection(0, 33);
 	addConnection(1, 32);
@@ -271,23 +273,27 @@ void setSocketOrder(Socket *socket, int order)
 	}
 }
 
+int getSystemPinNum(int userPinNum)
+{
+	return 8 * (userPinNum / 8) + 7 - (userPinNum % 8);
+}
+
 void initOutput(int socketNumber, Module *module, int param)
 {
-	//int systemSocketNumber = getSystemPinNum(socketNumber); // remap
-	sockets[socketNumber].socketType = Socket::OUTPUT;
-	sockets[socketNumber].module = module;
-	sockets[socketNumber].param = param;
-	module->sockets[param] = &sockets[socketNumber];
+	int systemSocketNumber = getSystemPinNum(socketNumber); // remap
+	sockets[systemSocketNumber].socketType = Socket::OUTPUT;
+	sockets[systemSocketNumber].module = module;
+	sockets[systemSocketNumber].param = param;
+	module->sockets[param] = &sockets[systemSocketNumber];
 }
 
 void initInput(int socketNumber, Module *module, int param)
 {
-	//int systemSocketNumber = getSystemPinNum(socketNumber); // remap
-	sockets[socketNumber].socketType = Socket::INPUT;
-	sockets[socketNumber].module = module;
-	sockets[socketNumber].param = param;
-	//module->inputFloats[param] = &inputSockets[socketNumber].inVal;
-	module->sockets[param] = &sockets[socketNumber];
+	int systemSocketNumber = getSystemPinNum(socketNumber); // remap
+	sockets[systemSocketNumber].socketType = Socket::INPUT;
+	sockets[systemSocketNumber].module = module;
+	sockets[systemSocketNumber].param = param;
+	module->sockets[param] = &sockets[systemSocketNumber];
 }
 
 void handlePhysicalConnections() {

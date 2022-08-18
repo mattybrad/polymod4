@@ -6,4 +6,4 @@ Issues found with PCB/case so far:
 - Should have used AGND/3V3_A for pots
 - Don't need CE pin for input shift registers (74HC165)
 - Probably should just use PCB mounted sockets instead of trailing wires, but if doing trailing wires, move them to the underside of the PCB
-- MIDI jumper on wrong side (if needed)
+- MIDI jumper not needed

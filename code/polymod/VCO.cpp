@@ -14,6 +14,7 @@ VCO::VCO()
     square[i].SetFreq(100+33.333f*i);
     square[i].SetAmp(1.0);
   }
+  addPseudoConnection(FREQ_IN, AUDIO_OUT);
 }
 
 float VCO::process(int functionID, int polyChannel, int sampleNum)
@@ -21,6 +22,10 @@ float VCO::process(int functionID, int polyChannel, int sampleNum)
   float returnVal = 0.0f;
   switch(functionID) {
     case AUDIO_OUT:
+      if(sampleNum == 0) {
+        float newFreq = 100.0f + 33.333f * polyChannel + 50.0f * inputFloats[FREQ_IN][polyChannel];
+        square[polyChannel].SetFreq(newFreq);
+      }
       returnVal = square[polyChannel].Process();
       break;
   }

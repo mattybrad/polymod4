@@ -24,7 +24,7 @@ float VCF::process(int functionID, int polyChannel, int sampleNum)
   {
   case LPF_OUT:
     // for some reason, struggling to update the cutoff freq here without crashing everything
-    if(sampleNum == 1) {
+    if(sampleNum == 0) {
       float newFreq = 2000.0f + 1950.0f * inputFloats[FREQ_IN][polyChannel];
       filter[polyChannel].SetFreq(newFreq);
     }
