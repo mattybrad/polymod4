@@ -3,15 +3,17 @@ A few next steps:
         Tidy up the source code, making it nicer to define sockets/modules
         Better pseudo connection system
     Also make pot definitions part of same slickening process
-    InVal and OutVal might be unnecessary, could just use Val?
+        InVal and OutVal might be unnecessary, could just use Val?
         Centralise sample rate, don't just hardcode 48000 each time
     Add some error catching stuff to prevent compilation of bad configurations
         Add logical pin ordering (0 at top, 31 at bottom)
     Optimise delays - system tick stuff is blocking? and delayMS is too coarse (callback system?)
     Smooth analog controls (sounds too "steppy")
-    Add LFO module to help test filters etc
-    Add polyphony (!!!)
+        Add LFO module to help test filters etc
+        Add polyphony (!!!)
     Add RPS module
     Add CPU monitoring
     Stress-test the code
     Fade in connections
+    Fix bug where MIDI triggers on note off rather than note on sometimes
+    Add better MIDI note handling, note off, note timestamps, etc
