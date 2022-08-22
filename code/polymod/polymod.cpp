@@ -31,7 +31,7 @@ const int MAX_CONNECTIONS = 32;
 Connection connections[MAX_CONNECTIONS];
 
 // debugging stuff
-bool useSerial = false;
+bool useSerial = true;
 
 // define chain of 5 74hc165 shift registers (read many digital inputs)
 using My165Chain = ShiftRegister165<5>;
@@ -50,6 +50,7 @@ float analogReadings[16];
 int analogChannel = 0;
 
 DaisySeed hw;
+MidiUartHandler midi;
 
 // declare modules
 VCO vco1;
@@ -95,6 +96,28 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 	}
 }
 
+void HandleMidiMessage(MidiEvent m)
+{
+	switch (m.type)
+	{
+	case NoteOn:
+	{
+		hw.PrintLine("note on");
+		NoteOnEvent p = m.AsNoteOn();
+		// This is to avoid Max/MSP Note outs for now..
+		if (m.data[1] != 0)
+		{
+			p = m.AsNoteOn();
+			hw.PrintLine("note: %d", p.note);
+		}
+	}
+	break;
+	default:
+		hw.PrintLine("something else");
+		break;
+	}
+}
+
 int main(void)
 {
 	// Daisy Seed config
@@ -120,6 +143,12 @@ int main(void)
 	hw.adc.Init(analogInputs, 2);
 	hw.adc.Start();
 
+	MidiUartHandler::Config midiConfig;
+	midiConfig.transport_config.rx = D14;
+	midiConfig.transport_config.tx = D13;
+	midi.Init(midiConfig);
+	midi.StartReceive();
+
 	// start serial log (wait for connection)
 	if (useSerial)
 	{
@@ -142,10 +171,6 @@ int main(void)
 	initInput(34, &vcf, VCF::FREQ_IN);
 	initInput(35, &vco1, VCO::FREQ_IN);
 	initInput(36, &crusher, BitCrusher::AUDIO_IN);
-
-	/*addConnection(0, 33);
-	addConnection(1, 32);
-	addConnection(2, 34);*/
 
 	// main loop, everything happens in here
 	while (1)
@@ -361,6 +386,14 @@ void handlePhysicalConnections() {
 			}
 			prevInputReadings[i] = inputReadings[i];
 		}
+	}
+
+	// midi stuff here just temporarily
+	midi.Listen();
+	// Handle MIDI Events
+	while (midi.HasEvents())
+	{
+		HandleMidiMessage(midi.PopEvent());
 	}
 
 	System::DelayUs(250); // seems to be required for 4051s to work properly - ideally replace blocking delay with callback
