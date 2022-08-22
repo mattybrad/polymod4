@@ -9,7 +9,9 @@ Module.cpp \
 Socket.cpp \
 VCO.cpp \
 VCF.cpp \
-LFO.cpp
+LFO.cpp \
+Reverb.cpp \
+BitCrusher.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../DaisyExamples/libDaisy/

@@ -10,7 +10,7 @@
 #include "core_cm7.h"
 #include "sr_165.h"
 
-using namespace daisy;
+//using namespace daisy;
 using namespace daisy::seed;
 
 #include "Connection.h" 
@@ -21,6 +21,7 @@ using namespace daisy::seed;
 #include "VCO.h"
 #include "VCF.h"
 #include "LFO.h"
+#include "BitCrusher.h"
 #include "IO.h"
 
 // socket stuff
@@ -55,6 +56,7 @@ VCO vco1;
 VCO vco2;
 LFO lfo;
 VCF vcf;
+BitCrusher crusher;
 IO io;
 
 // declare functions
@@ -67,6 +69,7 @@ void initInput(int socketNumber, Module *module, int param);
 int getSystemPinNum(int userPinNum);
 void handlePhysicalConnections();
 
+float dummyFloat;
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
 	for (size_t i = 0; i < size; i++)
@@ -86,7 +89,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		for(int k=0; k<Module::MAX_POLYPHONY; k++) {
 			finalOutput += io.sockets[IO::MAIN_OUTPUT_IN]->value[k];
 		}
-		finalOutput = 0.05 * finalOutput;
+		finalOutput = 0.1 * finalOutput;
 		out[0][i] = finalOutput;
 		out[1][i] = finalOutput;
 	}
@@ -133,10 +136,12 @@ int main(void)
 	initOutput(0, &vco1, VCO::AUDIO_OUT);
 	initOutput(1, &vcf, VCF::LPF_OUT);
 	initOutput(2, &lfo, LFO::AUDIO_OUT);
+	initOutput(3, &crusher, BitCrusher::AUDIO_OUT);
 	initInput(32, &io, IO::MAIN_OUTPUT_IN);
 	initInput(33, &vcf, VCF::AUDIO_IN);
 	initInput(34, &vcf, VCF::FREQ_IN);
 	initInput(35, &vco1, VCO::FREQ_IN);
+	initInput(36, &crusher, BitCrusher::AUDIO_IN);
 
 	/*addConnection(0, 33);
 	addConnection(1, 32);
