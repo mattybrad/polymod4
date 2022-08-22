@@ -2,7 +2,7 @@
 TARGET = test1
 
 # Sources
-CPP_SOURCES = test1.cpp TestLib.cpp
+CPP_SOURCES = test1.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../DaisyExamples/libDaisy/
