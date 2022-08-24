@@ -14,8 +14,8 @@ class IO : public Module {
     void handleNoteOn(int noteNum);
     void handleNoteOff(int noteNum);
     enum { MAIN_OUTPUT_IN,MAIN_INPUT_OUT,MIDI_PITCH,MIDI_GATE };
-    float tempFreqs[MAX_POLYPHONY] = {-0.2, -0.1, 0, 0.0587};
-    float tempGates[MAX_POLYPHONY] = {0,0,0,0};
+    float tempFreqs[MAX_POLYPHONY];
+    float tempGates[MAX_POLYPHONY];
     enum { NOTE_NUM, NOTE_ON_TIME, NOTE_OFF_TIME };
     int midiNotes[MAX_POLYPHONY][3]; // note num, note on time, note off time
 

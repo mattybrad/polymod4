@@ -101,7 +101,7 @@ int main(void)
 	// Daisy Seed config
 	hw.Configure();
 	hw.Init();
-	hw.SetAudioBlockSize(64); // can increase this if having performance issues
+	hw.SetAudioBlockSize(8); // can increase this if having performance issues
 	hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
 
 	// Polymod hardware config
@@ -153,23 +153,16 @@ int main(void)
 	initInput(36, &crusher, BitCrusher::AUDIO_IN);
 
 	// temp connections
-	addConnection(7, 38);
-	addConnection(6, 39);
-	addConnection(3, 36);
-	addConnection(2, 37);
+	//addConnection(7, 38);
+	//addConnection(6, 39);
+	//addConnection(3, 36);
+	//addConnection(2, 37);
 
 	// main loop, everything happens in here
 	while (1)
 	{
 		// do nothing here for now, this is where all the shift reg stuff goes
-		//handlePhysicalConnections();
-
-		midi.Listen();
-		// Handle MIDI Events
-		while (midi.HasEvents())
-		{
-			io.handleMidiMessage(midi.PopEvent());
-		}
+		handlePhysicalConnections();
 	}
 }
 

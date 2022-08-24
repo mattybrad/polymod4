@@ -30,18 +30,24 @@ void IO::handleMidiMessage(MidiEvent m)
     switch (m.type)
     {
         case NoteOn:
-        if (m.data[1] > 0)
         {
-            NoteOnEvent p = m.AsNoteOn();
-            handleNoteOn(p.note);
-        } else {
+            if (m.data[1] > 0)
+            {
+                NoteOnEvent p = m.AsNoteOn();
+                handleNoteOn(p.note);
+            } else {
+                NoteOffEvent p = m.AsNoteOff();
+                handleNoteOff(p.note);
+            }
+        }
+        break;
+        case NoteOff:
+        {
             NoteOffEvent p = m.AsNoteOff();
             handleNoteOff(p.note);
         }
         break;
-        case NoteOff:
-        NoteOffEvent p = m.AsNoteOff();
-        handleNoteOff(p.note);
+        default:
         break;
     }
 }
