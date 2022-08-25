@@ -14,7 +14,9 @@ Reverb.cpp \
 BitCrusher.cpp \
 VCA.cpp \
 Envelope.cpp \
-Mult.cpp
+Mult.cpp \
+Noise.cpp \
+Mixer.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../DaisyExamples/libDaisy/
