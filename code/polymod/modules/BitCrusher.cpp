@@ -1,17 +1,11 @@
 #include "BitCrusher.h"
 
-// Module setup:
-// SOCKETS
-// 0 (in) Audio in
-// 2 (in) Freq mod in
-// 3 (out) Low pass filter out
-
 BitCrusher::BitCrusher()
 {
     for (int i = 0; i < MAX_POLYPHONY; i++)
     {
         bc[i].Init(_sampleRate);
-        bc[i].SetBitDepth(2);
+        bc[i].SetBitDepth(4);
         bc[i].SetCrushRate(4000.0f);
     }
     addPseudoConnection(AUDIO_IN, AUDIO_OUT);

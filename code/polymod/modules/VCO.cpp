@@ -24,7 +24,7 @@ float VCO::process(int functionID, int polyChannel, int sampleNum)
     case AUDIO_OUT:
       if(sampleNum == 0) {
         //float newFreq = 100.0f + 33.333f * polyChannel + 50.0f * inputFloats[FREQ_IN][polyChannel];
-        float newFreq = 261.6256f * pow(2.0, 10.0 * inputFloats[FREQ_IN][polyChannel]);
+        float newFreq = 261.6256f * pow(2.0, 10.0 * (inputFloats[FREQ_IN][polyChannel] + freqControl - 0.5));
         square[polyChannel].SetFreq(newFreq);
       }
       returnVal = square[polyChannel].Process();

@@ -21,6 +21,9 @@ float LFO::process(int functionID, int polyChannel, int sampleNum)
   float returnVal = 0.0f;
   switch(functionID) {
     case CONTROL_OUT:
+      if(sampleNum == 0) {
+        osc[polyChannel].SetFreq(0.1+100*freqControl*freqControl);
+      }
       returnVal = osc[polyChannel].Process();
       break;
   }

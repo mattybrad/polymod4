@@ -10,6 +10,7 @@ class VCO : public Module {
   public:
     VCO();
     virtual float process(int functionID, int polyChannel, int sampleNum);
+    float freqControl;
     Oscillator square[MAX_POLYPHONY];
     enum {FREQ_IN, AUDIO_OUT};
 

@@ -19,3 +19,5 @@ A few next steps:
         Add better MIDI note handling, note off, note timestamps, etc
     Why does whole thing crash when filter receives LFO signal?!
     Values should default to zero (or some defined value) when not connected
+    Bit crusher is doing something weird where it somehow removes polyphony from signal chain?!
+    

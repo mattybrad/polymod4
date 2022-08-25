@@ -52,6 +52,7 @@ int bitNumber = 0;
 
 // analog variables
 float analogReadings[16];
+float *knobParams[16];
 int analogChannel = 0;
 
 DaisySeed hw;
@@ -76,6 +77,7 @@ void addConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum);
 void removeConnection(uint8_t physicalOutputNum, uint8_t physicalInputNum);
 void calculateSocketOrder();
 void setSocketOrder(Socket *socket, int order);
+void initKnob(int knobNum, float *param);
 void initOutput(int socketNumber, Module *module, int param);
 void initInput(int socketNumber, Module *module, int param);
 int getSystemPinNum(int userPinNum);
@@ -102,7 +104,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 		for(int j=0; j<Module::MAX_POLYPHONY; j++) {
 			finalOutput += io.sockets[IO::MAIN_OUTPUT_IN]->value[j];
 		}
-		finalOutput = 0.3 * finalOutput;
+		finalOutput = 0.1 * finalOutput;
 		out[0][i] = finalOutput;
 		out[1][i] = finalOutput;
 	}
@@ -181,9 +183,24 @@ int main(void)
 	initInput(41, &mixer, Mixer::INPUT_1);
 	initInput(42, &mixer, Mixer::INPUT_2);
 	initInput(43, &env2, Envelope::GATE_IN);
+	
+	// set up knobs
+	for(int i=0; i<16; i++) {
+		knobParams[i] = nullptr;
+	}
+
+	initKnob(0, &vco1.freqControl);
+	initKnob(1, &vcf.cutoffControl);
+	initKnob(2, &vcf.resControl);
+	initKnob(3, &lfo.freqControl);
+
+	//initKnob(4, &lfo.testFreq);
+	//initKnob(5, &lfo.testFreq);
+	//initKnob(6, &lfo.testFreq);
+	//initKnob(7, &lfo.testFreq);
 
 	// temp connections
-	bool useTempConnections = false;
+	bool useTempConnections = true;
 	if(useTempConnections) {
 		// "full" synth voice with separate filter/amp envelopes
 		addConnection(0, 33);
@@ -199,8 +216,8 @@ int main(void)
 
 	for (int i = 0; i < Module::MAX_POLYPHONY; i++)
 	{
-		env1.adsr[i].SetTime(ADSR_SEG_ATTACK, .5);
-		env1.adsr[i].SetTime(ADSR_SEG_DECAY, .5);
+		env1.adsr[i].SetTime(ADSR_SEG_ATTACK, 2);
+		env1.adsr[i].SetTime(ADSR_SEG_DECAY, 2);
 		env1.adsr[i].SetTime(ADSR_SEG_RELEASE, 1.0);
 		env1.adsr[i].SetSustainLevel(.5);
 	}
@@ -341,6 +358,10 @@ int getSystemPinNum(int userPinNum)
 	return 8 * (userPinNum / 8) + 7 - (userPinNum % 8);
 }
 
+void initKnob(int knobNum, float *param) {
+	knobParams[knobNum] = param;
+}
+
 void initOutput(int socketNumber, Module *module, int param)
 {
 	//int systemSocketNumber = getSystemPinNum(socketNumber); // remap
@@ -435,7 +456,12 @@ void handlePhysicalConnections() {
 	analogReadings[analogChannel] = hw.adc.GetFloat(0);
 	analogReadings[analogChannel + 8] = hw.adc.GetFloat(1);
 
-	//tempLfo.freq = 0.01 + 100.0f * analogReadings[0];
+	// temporarily handling knobs here
+	for(int i=0; i<16; i++) {
+		if(knobParams[i] != nullptr) {
+			*knobParams[i] = analogReadings[i];
+		}
+	}
 
 	analogChannel++; // probably merge analog channel and bitNumber, they're basically the same
 	bitNumber = (bitNumber + 1) % 8;
