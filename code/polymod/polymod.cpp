@@ -17,17 +17,17 @@ using namespace daisy::seed;
 #include "Socket.h"
 
 // include modules
-#include "Module.h"
-#include "VCO.h"
-#include "VCF.h"
-#include "VCA.h"
-#include "LFO.h"
-#include "BitCrusher.h"
-#include "Envelope.h"
-#include "Mult.h"
-#include "Mixer.h"
-#include "Noise.h"
-#include "IO.h"
+#include "modules/Module.h"
+#include "modules/VCO.h"
+#include "modules/VCF.h"
+#include "modules/VCA.h"
+#include "modules/LFO.h"
+#include "modules/BitCrusher.h"
+#include "modules/Envelope.h"
+#include "modules/Mult.h"
+#include "modules/Mixer.h"
+#include "modules/Noise.h"
+#include "modules/IO.h"
 
 // socket stuff
 Socket sockets[64];
@@ -86,6 +86,7 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 {
 	for (size_t i = 0; i < size; i++)
 	{
+		io.mainInputValue = in[0][i];
 		bool nullFound = false;
 		for (int j = 0; j < 64 && !nullFound; j++)
 		{
@@ -98,10 +99,10 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 
 		// set daisy seed output as final stage (IO module) output
 		float finalOutput = 0.0f;
-		for(int k=0; k<Module::MAX_POLYPHONY; k++) {
-			finalOutput += io.sockets[IO::MAIN_OUTPUT_IN]->value[k];
+		for(int j=0; j<Module::MAX_POLYPHONY; j++) {
+			finalOutput += io.sockets[IO::MAIN_OUTPUT_IN]->value[j];
 		}
-		finalOutput = 0.1 * finalOutput;
+		finalOutput = 0.3 * finalOutput;
 		out[0][i] = finalOutput;
 		out[1][i] = finalOutput;
 	}
@@ -165,6 +166,7 @@ int main(void)
 	initOutput(10, &noise, Noise::WHITE_NOISE_OUT);
 	initOutput(11, &mixer, Mixer::OUTPUT);
 	initOutput(12, &env2, Envelope::CONTROL_OUT);
+	initOutput(13, &io, IO::MAIN_INPUT_OUT);
 
 	initInput(32, &io, IO::MAIN_OUTPUT_IN);
 	initInput(33, &vcf, VCF::AUDIO_IN);

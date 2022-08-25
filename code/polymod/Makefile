@@ -4,19 +4,19 @@ TARGET = polymod
 # Sources
 CPP_SOURCES = polymod.cpp \
 Connection.cpp \
-IO.cpp \
-Module.cpp \
 Socket.cpp \
-VCO.cpp \
-VCF.cpp \
-LFO.cpp \
-Reverb.cpp \
-BitCrusher.cpp \
-VCA.cpp \
-Envelope.cpp \
-Mult.cpp \
-Noise.cpp \
-Mixer.cpp
+modules/Module.cpp \
+modules/IO.cpp \
+modules/VCO.cpp \
+modules/VCF.cpp \
+modules/LFO.cpp \
+modules/Reverb.cpp \
+modules/BitCrusher.cpp \
+modules/VCA.cpp \
+modules/Envelope.cpp \
+modules/Mult.cpp \
+modules/Noise.cpp \
+modules/Mixer.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../DaisyExamples/libDaisy/

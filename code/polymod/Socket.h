@@ -1,7 +1,7 @@
 #ifndef Socket_h
 #define Socket_h
 #include <stdint.h>
-#include "Module.h"
+#include "modules/Module.h"
 
 class Socket {
   public:

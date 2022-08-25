@@ -18,7 +18,7 @@ float IO::process(int functionID, int polyChannel, int sampleNum)
         break;
 
         case MAIN_INPUT_OUT:
-
+        returnVal = mainInputValue;
         break;
 
     }
@@ -49,7 +49,7 @@ void IO::handleMidiMessage(MidiEvent m)
         break;
         case AllNotesOff:
         {
-            AllNotesOffEvent p = m.AsAllNotesOff();
+            //AllNotesOffEvent p = m.AsAllNotesOff();
             handleAllNotesOff();
         }
         break;
