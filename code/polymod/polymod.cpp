@@ -20,6 +20,7 @@ using namespace daisy::seed;
 #include "Module.h"
 #include "VCO.h"
 #include "VCF.h"
+#include "VCA.h"
 #include "LFO.h"
 #include "BitCrusher.h"
 #include "IO.h"
@@ -57,6 +58,7 @@ VCO vco1;
 VCO vco2;
 LFO lfo;
 VCF vcf;
+VCA vca;
 BitCrusher crusher;
 IO io;
 
@@ -146,11 +148,14 @@ int main(void)
 	initOutput(3, &crusher, BitCrusher::AUDIO_OUT);
 	initOutput(4, &io, IO::MIDI_PITCH);
 	initOutput(5, &io, IO::MIDI_GATE);
+	initOutput(6, &vca, VCA::AUDIO_OUT);
 	initInput(32, &io, IO::MAIN_OUTPUT_IN);
 	initInput(33, &vcf, VCF::AUDIO_IN);
 	initInput(34, &vcf, VCF::FREQ_IN);
 	initInput(35, &vco1, VCO::FREQ_IN);
 	initInput(36, &crusher, BitCrusher::AUDIO_IN);
+	initInput(37, &vca, VCA::AUDIO_IN);
+	initInput(38, &vca, VCA::CONTROL_IN);
 
 	// temp connections
 	//addConnection(7, 38);

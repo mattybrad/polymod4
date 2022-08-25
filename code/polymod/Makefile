@@ -11,7 +11,8 @@ VCO.cpp \
 VCF.cpp \
 LFO.cpp \
 Reverb.cpp \
-BitCrusher.cpp
+BitCrusher.cpp \
+VCA.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../DaisyExamples/libDaisy/
