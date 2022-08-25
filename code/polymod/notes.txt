@@ -20,4 +20,6 @@ A few next steps:
     Why does whole thing crash when filter receives LFO signal?!
     Values should default to zero (or some defined value) when not connected
     Bit crusher is doing something weird where it somehow removes polyphony from signal chain?!
-    
+    Plan/write patch save system (QSPI? SD? External EEPROM?)
+    Try setting up some nice patches, e.g. krell, filtered noise
+    Think of some cool poly-specific modules, e.g. harmoniser

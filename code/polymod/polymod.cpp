@@ -205,7 +205,7 @@ int main(void)
 	initKnob(11, &env2.releaseControl);
 
 	// temp connections
-	bool useTempConnections = true;
+	bool useTempConnections = false;
 	if(useTempConnections) {
 		// "full" synth voice with separate filter/amp envelopes
 		addConnection(0, 33);
