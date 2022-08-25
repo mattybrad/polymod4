@@ -1,11 +1,5 @@
 #include "VCF.h"
 
-// Module setup:
-// SOCKETS
-// 0 (in) Audio in
-// 2 (in) Freq mod in
-// 3 (out) Low pass filter out
-
 VCF::VCF()
 {
     for (int i = 0; i < MAX_POLYPHONY; i++)

@@ -194,10 +194,15 @@ int main(void)
 	initKnob(2, &vcf.resControl);
 	initKnob(3, &lfo.freqControl);
 
-	//initKnob(4, &lfo.testFreq);
-	//initKnob(5, &lfo.testFreq);
-	//initKnob(6, &lfo.testFreq);
-	//initKnob(7, &lfo.testFreq);
+	initKnob(4, &env1.attackControl);
+	initKnob(5, &env1.decayControl);
+	initKnob(6, &env1.sustainControl);
+	initKnob(7, &env1.releaseControl);
+
+	initKnob(8, &env2.attackControl);
+	initKnob(9, &env2.decayControl);
+	initKnob(10, &env2.sustainControl);
+	initKnob(11, &env2.releaseControl);
 
 	// temp connections
 	bool useTempConnections = true;

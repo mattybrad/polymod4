@@ -11,6 +11,10 @@ class Envelope : public Module {
     Envelope();
     virtual float process(int functionID, int polyChannel, int sampleNum);
     Adsr adsr[MAX_POLYPHONY];
+    float attackControl;
+    float decayControl;
+    float sustainControl;
+    float releaseControl;
     enum {GATE_IN, CONTROL_OUT};
 
   private:

@@ -19,6 +19,12 @@ float Envelope::process(int functionID, int polyChannel, int sampleNum)
     switch (functionID)
     {
     case CONTROL_OUT:
+        if(sampleNum == 0) {
+            adsr[polyChannel].SetTime(ADSR_SEG_ATTACK, attackControl);
+            adsr[polyChannel].SetTime(ADSR_SEG_DECAY, decayControl);
+            adsr[polyChannel].SetSustainLevel(sustainControl);
+            adsr[polyChannel].SetTime(ADSR_SEG_RELEASE, 3 * releaseControl);
+        }
         bool gate = inputFloats[GATE_IN][polyChannel] > 0.1;
         returnVal = adsr[polyChannel].Process(gate);
         break;
