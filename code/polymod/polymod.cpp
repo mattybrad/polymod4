@@ -64,7 +64,8 @@ LFO lfo;
 VCF vcf;
 VCA vca;
 BitCrusher crusher;
-Envelope env;
+Envelope env1;
+Envelope env2;
 Mult mult;
 Mixer mixer;
 Noise noise;
@@ -157,12 +158,13 @@ int main(void)
 	initOutput(4, &io, IO::MIDI_PITCH);
 	initOutput(5, &io, IO::MIDI_GATE);
 	initOutput(6, &vca, VCA::AUDIO_OUT);
-	initOutput(7, &env, Envelope::CONTROL_OUT);
+	initOutput(7, &env1, Envelope::CONTROL_OUT);
 
 	initOutput(8, &mult, Mult::OUTPUT_1);
 	initOutput(9, &mult, Mult::OUTPUT_2);
 	initOutput(10, &noise, Noise::WHITE_NOISE_OUT);
 	initOutput(11, &mixer, Mixer::OUTPUT);
+	initOutput(12, &env2, Envelope::CONTROL_OUT);
 
 	initInput(32, &io, IO::MAIN_OUTPUT_IN);
 	initInput(33, &vcf, VCF::AUDIO_IN);
@@ -171,22 +173,34 @@ int main(void)
 	initInput(36, &crusher, BitCrusher::AUDIO_IN);
 	initInput(37, &vca, VCA::AUDIO_IN);
 	initInput(38, &vca, VCA::CONTROL_IN);
-	initInput(39, &env, Envelope::GATE_IN);
+	initInput(39, &env1, Envelope::GATE_IN);
 
 	initInput(40, &mult, Mult::INPUT);
 	initInput(41, &mixer, Mixer::INPUT_1);
 	initInput(42, &mixer, Mixer::INPUT_2);
+	initInput(43, &env2, Envelope::GATE_IN);
 
 	// temp connections
 	bool useTempConnections = false;
 	if(useTempConnections) {
-		addConnection(0, 37);
-		addConnection(1, 32);
-		addConnection(6, 33);
-		addConnection(2, 34);
+		// "full" synth voice with separate filter/amp envelopes
+		addConnection(0, 33);
+		addConnection(1, 37);
+		addConnection(6, 32);
 		addConnection(4, 35);
-		addConnection(5, 39);
-		addConnection(7, 38);
+		addConnection(5, 40);
+		addConnection(8, 39);
+		addConnection(9, 43);
+		addConnection(7, 34);
+		addConnection(12, 38);
+	}
+
+	for (int i = 0; i < Module::MAX_POLYPHONY; i++)
+	{
+		env1.adsr[i].SetTime(ADSR_SEG_ATTACK, .5);
+		env1.adsr[i].SetTime(ADSR_SEG_DECAY, .5);
+		env1.adsr[i].SetTime(ADSR_SEG_RELEASE, 1.0);
+		env1.adsr[i].SetSustainLevel(.5);
 	}
 
 	// main loop, everything happens in here
