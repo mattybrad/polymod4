@@ -28,9 +28,9 @@ float VCF::process(int functionID, int polyChannel, int sampleNum)
         {
             //float newFreq = 2000.0f + 1950.0f * inputFloats[FREQ_IN][polyChannel];
             float newFreq = 65.4f * pow(2.0, 10.0 * inputFloats[FREQ_IN][polyChannel]);
-            filter[polyChannel].SetFreq(newFreq);
             if(newFreq < 0.1) newFreq = 0.1;
-            else if(newFreq > 10000.0) newFreq = 10000.0;
+            else if(newFreq > 25000) newFreq = 25000; // not sure exactly what max freq is, or why there is a max
+            filter[polyChannel].SetFreq(newFreq);
         }
         returnVal = filter[polyChannel].Process(inputFloats[AUDIO_IN][polyChannel]);
         break;

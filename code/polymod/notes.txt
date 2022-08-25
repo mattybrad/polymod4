@@ -18,3 +18,4 @@ A few next steps:
         Fix bug where MIDI triggers on note off rather than note on sometimes
         Add better MIDI note handling, note off, note timestamps, etc
     Why does whole thing crash when filter receives LFO signal?!
+    Values should default to zero (or some defined value) when not connected
