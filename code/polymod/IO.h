@@ -13,6 +13,7 @@ class IO : public Module {
     void handleMidiMessage(MidiEvent m);
     void handleNoteOn(int noteNum);
     void handleNoteOff(int noteNum);
+    void handleAllNotesOff();
     enum { MAIN_OUTPUT_IN,MAIN_INPUT_OUT,MIDI_PITCH,MIDI_GATE };
     float tempFreqs[MAX_POLYPHONY];
     float tempGates[MAX_POLYPHONY];

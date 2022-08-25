@@ -11,8 +11,8 @@ LFO::LFO()
   for(int i=0; i<MAX_POLYPHONY; i++) {
     osc[i].Init(_sampleRate);
     osc[i].SetWaveform(Oscillator::WAVE_SIN);
-    osc[i].SetFreq(0.25f * (i+1));
-    osc[i].SetAmp(1.0);
+    osc[i].SetFreq(0.25f);
+    osc[i].SetAmp(0.2);
   }
 }
 

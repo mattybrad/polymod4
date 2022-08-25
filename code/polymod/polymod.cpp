@@ -24,6 +24,7 @@ using namespace daisy::seed;
 #include "LFO.h"
 #include "BitCrusher.h"
 #include "Envelope.h"
+#include "Mult.h"
 #include "IO.h"
 
 // socket stuff
@@ -62,6 +63,7 @@ VCF vcf;
 VCA vca;
 BitCrusher crusher;
 Envelope env;
+Mult mult;
 IO io;
 
 // declare functions
@@ -152,6 +154,10 @@ int main(void)
 	initOutput(5, &io, IO::MIDI_GATE);
 	initOutput(6, &vca, VCA::AUDIO_OUT);
 	initOutput(7, &env, Envelope::CONTROL_OUT);
+
+	initOutput(8, &mult, Mult::OUTPUT_1);
+	initOutput(9, &mult, Mult::OUTPUT_2);
+
 	initInput(32, &io, IO::MAIN_OUTPUT_IN);
 	initInput(33, &vcf, VCF::AUDIO_IN);
 	initInput(34, &vcf, VCF::FREQ_IN);
@@ -161,13 +167,15 @@ int main(void)
 	initInput(38, &vca, VCA::CONTROL_IN);
 	initInput(39, &env, Envelope::GATE_IN);
 
+	initInput(40, &mult, Mult::INPUT);
+
 	// temp connections
-	bool useTempConnections = true;
+	bool useTempConnections = false;
 	if(useTempConnections) {
 		addConnection(0, 37);
-		//addConnection(1, 37);
-		addConnection(6, 32);
-		//addConnection(2, 34);
+		addConnection(1, 32);
+		addConnection(6, 33);
+		addConnection(2, 34);
 		addConnection(4, 35);
 		addConnection(5, 39);
 		addConnection(7, 38);

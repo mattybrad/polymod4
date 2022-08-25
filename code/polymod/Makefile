@@ -13,7 +13,8 @@ LFO.cpp \
 Reverb.cpp \
 BitCrusher.cpp \
 VCA.cpp \
-Envelope.cpp
+Envelope.cpp \
+Mult.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../DaisyExamples/libDaisy/

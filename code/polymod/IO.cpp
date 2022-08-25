@@ -47,6 +47,12 @@ void IO::handleMidiMessage(MidiEvent m)
             handleNoteOff(p.note);
         }
         break;
+        case AllNotesOff:
+        {
+            AllNotesOffEvent p = m.AsAllNotesOff();
+            handleAllNotesOff();
+        }
+        break;
         default:
         break;
     }
@@ -80,5 +86,15 @@ void IO::handleNoteOff(int noteNum)
             midiNotes[i][NOTE_OFF_TIME] = System::GetNow();
             tempGates[i] = 0.0;
         }
+    }
+}
+
+// this doesn't seem to be working...
+void IO::handleAllNotesOff()
+{
+    for (int i = 0; i < MAX_POLYPHONY; i++)
+    {
+        midiNotes[i][NOTE_OFF_TIME] = System::GetNow();
+        tempGates[i] = 0.0;
     }
 }
