@@ -20,7 +20,7 @@ float LFO::process(int functionID, int polyChannel, int sampleNum)
 {
   float returnVal = 0.0f;
   switch(functionID) {
-    case AUDIO_OUT:
+    case CONTROL_OUT:
       returnVal = osc[polyChannel].Process();
       break;
   }

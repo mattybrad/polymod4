@@ -23,6 +23,7 @@ using namespace daisy::seed;
 #include "VCA.h"
 #include "LFO.h"
 #include "BitCrusher.h"
+#include "Envelope.h"
 #include "IO.h"
 
 // socket stuff
@@ -60,6 +61,7 @@ LFO lfo;
 VCF vcf;
 VCA vca;
 BitCrusher crusher;
+Envelope env;
 IO io;
 
 // declare functions
@@ -144,11 +146,12 @@ int main(void)
 	}
 	initOutput(0, &vco1, VCO::AUDIO_OUT);
 	initOutput(1, &vcf, VCF::LPF_OUT);
-	initOutput(2, &lfo, LFO::AUDIO_OUT);
+	initOutput(2, &lfo, LFO::CONTROL_OUT);
 	initOutput(3, &crusher, BitCrusher::AUDIO_OUT);
 	initOutput(4, &io, IO::MIDI_PITCH);
 	initOutput(5, &io, IO::MIDI_GATE);
 	initOutput(6, &vca, VCA::AUDIO_OUT);
+	initOutput(7, &env, Envelope::CONTROL_OUT);
 	initInput(32, &io, IO::MAIN_OUTPUT_IN);
 	initInput(33, &vcf, VCF::AUDIO_IN);
 	initInput(34, &vcf, VCF::FREQ_IN);
@@ -156,12 +159,19 @@ int main(void)
 	initInput(36, &crusher, BitCrusher::AUDIO_IN);
 	initInput(37, &vca, VCA::AUDIO_IN);
 	initInput(38, &vca, VCA::CONTROL_IN);
+	initInput(39, &env, Envelope::GATE_IN);
 
 	// temp connections
-	//addConnection(7, 38);
-	//addConnection(6, 39);
-	//addConnection(3, 36);
-	//addConnection(2, 37);
+	bool useTempConnections = true;
+	if(useTempConnections) {
+		addConnection(0, 37);
+		//addConnection(1, 37);
+		addConnection(6, 32);
+		//addConnection(2, 34);
+		addConnection(4, 35);
+		addConnection(5, 39);
+		addConnection(7, 38);
+	}
 
 	// main loop, everything happens in here
 	while (1)
@@ -301,20 +311,20 @@ int getSystemPinNum(int userPinNum)
 
 void initOutput(int socketNumber, Module *module, int param)
 {
-	int systemSocketNumber = getSystemPinNum(socketNumber); // remap
-	sockets[systemSocketNumber].socketType = Socket::OUTPUT;
-	sockets[systemSocketNumber].module = module;
-	sockets[systemSocketNumber].param = param;
-	module->sockets[param] = &sockets[systemSocketNumber];
+	//int systemSocketNumber = getSystemPinNum(socketNumber); // remap
+	sockets[socketNumber].socketType = Socket::OUTPUT;
+	sockets[socketNumber].module = module;
+	sockets[socketNumber].param = param;
+	module->sockets[param] = &sockets[socketNumber];
 }
 
 void initInput(int socketNumber, Module *module, int param)
 {
-	int systemSocketNumber = getSystemPinNum(socketNumber); // remap
-	sockets[systemSocketNumber].socketType = Socket::INPUT;
-	sockets[systemSocketNumber].module = module;
-	sockets[systemSocketNumber].param = param;
-	module->sockets[param] = &sockets[systemSocketNumber];
+	//int systemSocketNumber = getSystemPinNum(socketNumber); // remap
+	sockets[socketNumber].socketType = Socket::INPUT;
+	sockets[socketNumber].module = module;
+	sockets[socketNumber].param = param;
+	module->sockets[param] = &sockets[socketNumber];
 }
 
 void handlePhysicalConnections() {
@@ -364,14 +374,16 @@ void handlePhysicalConnections() {
 					// connection
 					if (useSerial)
 						hw.Print("%d--->%d\n", inputReadings[i] - 1, i);
-					addConnection(inputReadings[i] - 1, i + 32);
+					//addConnection(inputReadings[i] - 1, i + 32);
+					addConnection(getSystemPinNum(inputReadings[i] - 1), getSystemPinNum(i + 32));
 				}
 				else if (stableInputReadings[i] > 0)
 				{
 					// disconnection
 					if (useSerial)
 						hw.Print("%d-x->%d\n", stableInputReadings[i] - 1, i);
-					removeConnection(stableInputReadings[i] - 1, i + 32);
+					//removeConnection(stableInputReadings[i] - 1, i + 32);
+					removeConnection(getSystemPinNum(stableInputReadings[i] - 1), getSystemPinNum(i + 32));
 				}
 				stableInputReadings[i] = inputReadings[i];
 			}

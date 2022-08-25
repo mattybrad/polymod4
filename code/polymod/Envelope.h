@@ -1,17 +1,17 @@
-#ifndef LFO_h
-#define LFO_h
+#ifndef Envelope_h
+#define Envelope_h
 #include "Module.h"
 #include "daisy_seed.h"
 #include "daisysp.h"
 using namespace daisysp;
 using namespace daisy;
 
-class LFO : public Module {
+class Envelope : public Module {
   public:
-    LFO();
+    Envelope();
     virtual float process(int functionID, int polyChannel, int sampleNum);
-    Oscillator osc[MAX_POLYPHONY];
-    enum {FREQ_IN, CONTROL_OUT};
+    Adsr adsr[MAX_POLYPHONY];
+    enum {GATE_IN, CONTROL_OUT};
 
   private:
 };
