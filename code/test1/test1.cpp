@@ -6,7 +6,18 @@ using namespace daisy;
 using namespace daisysp;
 
 DaisySeed hw;
-MidiUartHandler midi;
+
+struct StorageTestData
+{
+	StorageTestData() : a(0xdeadbeee) {}
+
+	uint32_t a;
+
+	bool operator==(const StorageTestData &rhs) { return a == rhs.a; }
+	bool operator!=(const StorageTestData &rhs) { return !operator==(rhs); }
+};
+
+using StorageTestClass = PersistentStorage<StorageTestData>;
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
@@ -14,29 +25,6 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 	{
 		out[0][i] = in[0][i];
 		out[1][i] = in[1][i];
-	}
-}
-
-// Typical Switch case for Message Type.
-void HandleMidiMessage(MidiEvent m)
-{
-	switch (m.type)
-	{
-	case NoteOn:
-	{
-		hw.PrintLine("note on");
-		NoteOnEvent p = m.AsNoteOn();
-		// This is to avoid Max/MSP Note outs for now..
-		if (m.data[1] != 0)
-		{
-			p = m.AsNoteOn();
-			hw.PrintLine("note: %d", p.note);
-		}
-	}
-	break;
-	default:
-		hw.PrintLine("something else");
-		break;
 	}
 }
 
@@ -48,21 +36,21 @@ int main(void)
 	hw.StartAudio(AudioCallback);
 
 	hw.StartLog(true);
-	hw.PrintLine("Attempting MIDI input...");
+	hw.PrintLine("QSPI test...");
 
-	MidiUartHandler::Config midiConfig;
-	midiConfig.transport_config.rx = daisy::seed::D14;
-	midiConfig.transport_config.tx = daisy::seed::D13;
-	midi.Init(midiConfig);
-	midi.StartReceive();
+	daisy::QSPIHandle::Status s = hw.qspi.GetStatus();
+	hw.PrintLine("qspi status: %d", s);
 
-	for (;;)
-	{
-		midi.Listen();
-		// Handle MIDI Events
-		while (midi.HasEvents())
-		{
-			HandleMidiMessage(midi.PopEvent());
-		}
-	}
+	StorageTestClass storage(hw.qspi);
+	StorageTestData defaults;
+	storage.Init(defaults);
+	//auto &data = storage.GetSettings();
+	//data.a = 123;
+	//storage.Save();
+	auto state = storage.GetState();
+	auto val = storage.GetSettings().a;
+
+	hw.PrintLine("got to here...");
+	hw.PrintLine("storage stage: %d", state);
+	hw.PrintLine("storage value: %d", val);
 }
